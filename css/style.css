@@ -11,8 +11,15 @@ img{max-width:100%;display:block}
 .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
 header{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .header-inner{min-height:72px;display:flex;align-items:center;gap:24px}
-.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
-.logo{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:700 29px Georgia,serif}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+.logo{
+  width:58px;
+  height:44px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  flex:0 0 auto;
+}
 .brand strong{display:block;color:var(--gold);letter-spacing:.12em;font-size:13px}
 .brand small{display:block;color:var(--muted);font-size:10px}
 nav{display:flex;gap:24px;font-size:13px}
