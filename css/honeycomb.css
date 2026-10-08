@@ -1,0 +1,196 @@
+
+/* REZONANSLAR hero persona honeycomb
+   Desktop: 3 + 4 + 3
+   Tablet: 3 + 3 + 3 + 1
+   Mobile: 2-column compact grid
+*/
+.hero-personas{
+  --hex-w: 116px;
+  --hex-h: 132px;
+  --hex-gap: 10px;
+  width:min(100%, 560px);
+  min-height:420px;
+  margin-inline:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  filter:drop-shadow(0 18px 30px rgba(75,51,7,.10));
+}
+
+.hex-row{
+  display:flex;
+  justify-content:center;
+  gap:var(--hex-gap);
+  width:100%;
+}
+
+.hex-row + .hex-row{
+  margin-top:-27px;
+}
+
+.persona-hex{
+  position:relative;
+  width:var(--hex-w);
+  height:var(--hex-h);
+  flex:0 0 var(--hex-w);
+  clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  isolation:isolate;
+  color:#fff;
+  background:
+    radial-gradient(circle at 35% 28%,rgba(255,255,255,.25),transparent 25%),
+    linear-gradient(145deg,#4c3a13 0%,#b88a19 48%,#201b12 100%);
+  transform:translateZ(0);
+  transition:transform .22s ease, filter .22s ease;
+}
+
+.persona-hex::before{
+  content:"";
+  position:absolute;
+  inset:3px;
+  z-index:-1;
+  clip-path:inherit;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.08),rgba(0,0,0,.20)),
+    radial-gradient(circle at 50% 35%,rgba(201,162,39,.36),rgba(20,17,12,.94) 72%);
+}
+
+.persona-hex::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 42%,rgba(10,9,7,.84) 100%);
+  opacity:.72;
+  transition:opacity .22s ease;
+}
+
+.persona-hex:hover,
+.persona-hex:focus-visible{
+  transform:translateY(-7px) scale(1.055);
+  filter:drop-shadow(0 12px 14px rgba(201,162,39,.30));
+  z-index:4;
+  outline:none;
+}
+
+.persona-hex:hover::after,
+.persona-hex:focus-visible::after{
+  opacity:.92;
+}
+
+.hex-initial{
+  position:relative;
+  z-index:1;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:28px;
+  letter-spacing:.04em;
+  color:#f3d46c;
+  text-shadow:0 2px 10px rgba(0,0,0,.55);
+  transition:transform .22s ease, opacity .22s ease;
+}
+
+.hex-name{
+  position:absolute;
+  left:8px;
+  right:8px;
+  bottom:19px;
+  z-index:2;
+  text-align:center;
+  font-size:11px;
+  line-height:1.15;
+  font-weight:700;
+  letter-spacing:.03em;
+  opacity:0;
+  transform:translateY(7px);
+  transition:opacity .22s ease,transform .22s ease;
+}
+
+.persona-hex:hover .hex-name,
+.persona-hex:focus-visible .hex-name{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.persona-hex:hover .hex-initial,
+.persona-hex:focus-visible .hex-initial{
+  transform:translateY(-12px) scale(.85);
+}
+
+/* Slight tonal separation by persona until approved portraits are bound. */
+.hazan{background:linear-gradient(145deg,#4d342a,#a66c43 55%,#17120f)}
+.lucian{background:linear-gradient(145deg,#1b252d,#586675 55%,#0d1115)}
+.layla{background:linear-gradient(145deg,#5a351c,#c18a42 55%,#17100a)}
+.aurelia{background:linear-gradient(145deg,#2c2034,#785d7f 55%,#110d14)}
+.vivian{background:linear-gradient(145deg,#3a2c2d,#9b7774 55%,#161112)}
+.clara{background:linear-gradient(145deg,#38162f,#a4337b 55%,#120812)}
+.deniz-ekin{background:linear-gradient(145deg,#173644,#4f8796 55%,#091419)}
+.aras{background:linear-gradient(145deg,#3e2c18,#a87935 55%,#160f08)}
+.seren{background:linear-gradient(145deg,#2a1c21,#854353 55%,#10090c)}
+.mahir{background:linear-gradient(145deg,#42301d,#8a673d 55%,#160f09)}
+
+@media(max-width:1000px){
+  .hero-personas{
+    --hex-w:104px;
+    --hex-h:118px;
+    min-height:auto;
+    display:grid;
+    grid-template-columns:repeat(3,var(--hex-w));
+    justify-content:center;
+    gap:8px;
+    padding:24px 0 8px;
+  }
+
+  .hex-row{
+    display:contents;
+  }
+
+  .hex-row + .hex-row{margin-top:0}
+
+  .persona-hex{
+    width:var(--hex-w);
+    height:var(--hex-h);
+  }
+
+  .persona-hex:last-child{
+    /* no-op; keeps source order intact */
+  }
+
+  .hero-personas .mahir{
+    grid-column:2;
+  }
+}
+
+@media(max-width:620px){
+  .hero-personas{
+    --hex-w:112px;
+    --hex-h:126px;
+    grid-template-columns:repeat(2,var(--hex-w));
+    gap:8px;
+    padding-top:18px;
+  }
+
+  .hero-personas .mahir{
+    grid-column:auto;
+  }
+
+  .hex-name{
+    opacity:1;
+    transform:none;
+    bottom:16px;
+    font-size:10px;
+  }
+
+  .hex-initial{
+    transform:translateY(-9px) scale(.9);
+  }
+}
+
+@media(max-width:380px){
+  .hero-personas{
+    --hex-w:102px;
+    --hex-h:116px;
+  }
+}
