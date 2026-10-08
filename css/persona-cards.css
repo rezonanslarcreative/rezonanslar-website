@@ -1,0 +1,248 @@
+
+/* =========================================================
+   REZONANSLAR — 6 FEATURED PERSPECTIVE PERSONA CARDS
+   Desktop: 3 + 3 cinematic cards in 3D perspective
+   Hover: rotate to front, rise, scale +20%
+   ========================================================= */
+
+.persona-card-stage{
+  width:min(100%,760px);
+  min-height:520px;
+  display:grid;
+  place-items:center;
+  perspective:1500px;
+  perspective-origin:50% 45%;
+  margin-inline:auto;
+}
+
+.persona-card-grid{
+  width:min(700px,100%);
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:34px 28px;
+  align-items:center;
+  justify-items:center;
+  transform-style:preserve-3d;
+  padding:30px 6px 36px;
+}
+
+.persona-card{
+  position:relative;
+  width:178px;
+  aspect-ratio:3 / 4;
+  display:block;
+  border-radius:14px;
+  transform-style:preserve-3d;
+  transform:
+    rotateY(var(--ry))
+    rotateZ(var(--rz))
+    translateZ(0)
+    scale(.96);
+  transform-origin:center center;
+  transition:
+    transform .48s cubic-bezier(.2,.78,.25,1),
+    filter .38s ease,
+    opacity .28s ease;
+  filter:drop-shadow(0 18px 22px rgba(68,48,12,.18));
+  z-index:2;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.persona-card:nth-child(2),
+.persona-card:nth-child(5){
+  transform:
+    rotateY(var(--ry))
+    rotateZ(var(--rz))
+    translateY(-12px)
+    scale(.98);
+}
+
+.persona-card-face{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  border-radius:14px;
+  background:#17130e;
+  border:1px solid rgba(201,162,39,.72);
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,.07),
+    inset 0 -45px 58px rgba(0,0,0,.24);
+  transform:translateZ(1px);
+}
+
+.persona-card-face::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  z-index:3;
+  border:1px solid rgba(228,193,91,.30);
+  border-radius:9px;
+  pointer-events:none;
+}
+
+.persona-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s cubic-bezier(.2,.78,.25,1);
+}
+
+/* Face focus */
+.persona-card.hazan img{object-position:54% 34%}
+.persona-card.lucian img{object-position:48% 34%}
+.persona-card.seren img{object-position:50% 31%}
+.persona-card.aras img{object-position:48% 31%}
+.persona-card.vivian img{object-position:54% 31%}
+.persona-card.mahir img{object-position:48% 35%}
+
+.persona-card-shade{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.02) 35%,rgba(11,9,7,.82) 100%),
+    linear-gradient(120deg,rgba(255,220,113,.13),transparent 30% 72%,rgba(255,255,255,.08));
+  pointer-events:none;
+  transition:opacity .35s ease;
+}
+
+.persona-card-name{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:15px;
+  z-index:4;
+  color:#f3d872;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.05;
+  text-align:center;
+  letter-spacing:.025em;
+  text-shadow:0 2px 12px rgba(0,0,0,.85);
+  transition:
+    transform .35s ease,
+    font-size .35s ease;
+}
+
+.persona-card-grid:hover .persona-card:not(:hover),
+.persona-card-grid:focus-within .persona-card:not(:focus-visible){
+  opacity:.62;
+  filter:drop-shadow(0 10px 13px rgba(68,48,12,.10)) saturate(.72);
+}
+
+/* Full front view + 20% scale on hover */
+.persona-card:hover,
+.persona-card:focus-visible{
+  transform:
+    rotateY(0deg)
+    rotateZ(0deg)
+    translateY(-12px)
+    translateZ(150px)
+    scale(1.20);
+  filter:drop-shadow(0 30px 35px rgba(57,39,8,.32)) saturate(1.08);
+  z-index:50;
+  outline:none;
+}
+
+.persona-card:hover img,
+.persona-card:focus-visible img{
+  transform:scale(1.025);
+}
+
+.persona-card:hover .persona-card-shade,
+.persona-card:focus-visible .persona-card-shade{
+  opacity:.82;
+}
+
+.persona-card:hover .persona-card-name,
+.persona-card:focus-visible .persona-card-name{
+  transform:translateY(-3px);
+  font-size:18px;
+}
+
+/* Tablet */
+@media(max-width:1000px){
+  .persona-card-stage{
+    min-height:470px;
+  }
+
+  .persona-card-grid{
+    width:min(590px,100%);
+    gap:28px 20px;
+  }
+
+  .persona-card{
+    width:150px;
+  }
+
+  .persona-card:hover,
+  .persona-card:focus-visible{
+    transform:
+      rotateY(0)
+      rotateZ(0)
+      translateY(-8px)
+      translateZ(110px)
+      scale(1.15);
+  }
+}
+
+/* Mobile: 2 x 3, lighter perspective */
+@media(max-width:620px){
+  .persona-card-stage{
+    min-height:auto;
+    padding:16px 0 6px;
+  }
+
+  .persona-card-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px 14px;
+    width:min(360px,100%);
+    padding:8px 0 20px;
+  }
+
+  .persona-card{
+    width:min(144px,38vw);
+    transform:
+      rotateY(calc(var(--ry) * .45))
+      rotateZ(calc(var(--rz) * .5))
+      scale(.97);
+  }
+
+  .persona-card:nth-child(2),
+  .persona-card:nth-child(5){
+    transform:
+      rotateY(calc(var(--ry) * .45))
+      rotateZ(calc(var(--rz) * .5))
+      translateY(0)
+      scale(.97);
+  }
+
+  .persona-card:hover,
+  .persona-card:focus-visible{
+    transform:
+      rotateY(0)
+      rotateZ(0)
+      translateY(-4px)
+      scale(1.06);
+  }
+
+  .persona-card-grid:hover .persona-card:not(:hover),
+  .persona-card-grid:focus-within .persona-card:not(:focus-visible){
+    opacity:.88;
+  }
+
+  .persona-card-name{
+    font-size:15px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .persona-card,
+  .persona-card img,
+  .persona-card-name{
+    transition:none !important;
+  }
+}
