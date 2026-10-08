@@ -5,11 +5,11 @@
    Mobile: 2-column compact grid
 */
 .hero-personas{
-  --hex-w: 116px;
-  --hex-h: 132px;
-  --hex-gap: 10px;
-  width:min(100%, 560px);
-  min-height:420px;
+  --hex-w: 148px;
+  --hex-h: 168px;
+  --hex-gap: 12px;
+  width:min(100%, 700px);
+  min-height:500px;
   margin-inline:auto;
   display:flex;
   flex-direction:column;
@@ -26,7 +26,7 @@
 }
 
 .hex-row + .hex-row{
-  margin-top:-27px;
+  margin-top:-35px;
 }
 
 .persona-hex{
@@ -134,8 +134,8 @@
 
 @media(max-width:1000px){
   .hero-personas{
-    --hex-w:104px;
-    --hex-h:118px;
+    --hex-w:116px;
+    --hex-h:132px;
     min-height:auto;
     display:grid;
     grid-template-columns:repeat(3,var(--hex-w));
@@ -166,8 +166,8 @@
 
 @media(max-width:620px){
   .hero-personas{
-    --hex-w:112px;
-    --hex-h:126px;
+    --hex-w:118px;
+    --hex-h:134px;
     grid-template-columns:repeat(2,var(--hex-w));
     gap:8px;
     padding-top:18px;
