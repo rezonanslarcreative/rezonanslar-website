@@ -1,0 +1,14 @@
+REZONANSLAR - 10.10.2026 masaüstü haber slider düzeltmesi
+
+1. GitHub Desktop -> Repository -> Show in Explorer.
+2. Mevcut repository klasörünün HARİCİ bir yedeğini al.
+3. .git klasörünü ASLA silme. GitHub Desktop bağlantısını korur.
+4. Bu paketteki rezonanslar-website klasörünün İÇİNDEKİLERİ mevcut repo klasörüne kopyala.
+5. Yalnızca dosya değiştirmeyi onayla; .git veya çalışan diğer dosyaları silme.
+6. GitHub Desktop Changes ekranında kontrol et, ardından commit ve Push origin yap.
+7. Canlı sayfayı Ctrl+F5 ile yeniden yükle. Haberler kartları masaüstünde tek sıra halinde sağdan sola akmalı.
+
+Önerilen commit: fix: enforce horizontal news carousel on desktop
+
+Not: Bu paket GitHub'ın canlı deposundan çekilmedi, son çalışma paketinden türetildi.
+Eksik/yerel değişiklikler varsa, önce karşılaştırma yap.

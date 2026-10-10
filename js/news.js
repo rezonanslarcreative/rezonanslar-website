@@ -36,6 +36,7 @@
     feed.classList.toggle('is-empty', entries.length===0);
     if(!entries.length)return;
     const viewport=el('div','news-marquee-viewport');
+    viewport.setAttribute('aria-label', language==='tr'?'Kayan haberler':'Scrolling news');
     const track=el('div','news-marquee-track');
     const minimumCards=Math.max(entries.length,4);
     const repeated=[];
@@ -44,6 +45,7 @@
     repeated.slice(0, minimumCards).forEach(item=>track.append(buildCard(item,language)));
     const duration=Math.max(28, minimumCards*7);
     track.style.setProperty('--marquee-duration', duration+'s');
+    track.setAttribute('data-layout','horizontal');
     viewport.append(track);
     feed.append(viewport);
   }
