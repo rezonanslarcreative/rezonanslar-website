@@ -1,0 +1,11 @@
+/* REZONANSLAR – shared navigation */
+.header-inner {position:relative;}
+.main-navigation {display:flex; align-items:center; gap:clamp(7px,1.1vw,19px);}
+.nav-artists {position:relative; display:flex; align-items:center; gap:2px;}
+.nav-drop-toggle {appearance:none;border:0;background:transparent;color:#af8615;cursor:pointer;font-size:15px;padding:8px 5px;}
+.nav-dropdown {position:absolute;display:none;left:0;top:calc(100% - 1px);width:min(250px,90vw);max-height:65vh;overflow:auto;z-index:50;padding:9px;background:#fffdf8;border:1px solid #e8d9af;border-radius:10px;box-shadow:0 16px 35px #27201327;}
+.nav-dropdown a {display:block!important;padding:8px 11px!important;text-decoration:none;white-space:normal;color:#211d15!important;border-radius:5px;font-size:13px;}
+.nav-dropdown a:hover,.nav-dropdown a:focus-visible {background:#f5edd6;color:#8b6709!important;}
+.nav-artists:hover .nav-dropdown,.nav-artists:focus-within .nav-dropdown,.nav-artists.open .nav-dropdown {display:block;}
+@media(max-width:850px){.main-navigation{gap:8px;}.nav-dropdown{position:static;box-shadow:none;width:100%;max-height:none;}.nav-artists{flex-wrap:wrap;}.nav-dropdown{flex-basis:100%;}.nav-drop-toggle{padding:8px;}}
+@media(min-width:851px){.nav-dropdown{min-width:230px;}}
