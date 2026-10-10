@@ -1,0 +1,13 @@
+REZONANSLAR WEBSITE – RELEASE 2026-10-11 – News Carousel v6
+
+Bu dosya GitHub Desktop Changes bölümünde değişikliğin görünmesini doğrulamak için oluşturulmuştur.
+Anasayfa yalnızca css/news-carousel-v6.css ve js/news-carousel-v6.js dosyalarını kullanır.
+Otomatik akış, transform/animationFrame ile sağdan sola 58px/s çalışır; fare üstündeyken durur.
+Oklar önceki ve sonraki karta ilerler.
+
+YÜKLEME: ZIP içindeki rezonanslar-website klasörünün DOSYALARINI repo köküne yerleştir.
+.git klasörünü koru; klasörün içindeki .git klasörünü ve git geçmişini ASLA silme.
+Eski index.html proje kökünde yenisiyle değiştirilecek.
+
+Kontrol: GitHub Desktop Changes bölümünde index.html, js/news-carousel-v6.js, css/news-carousel-v6.css ve bu manifest görünmeli.
+Yayın adresi: https://rezonanslarcreative.github.io/rezonanslar-website/

@@ -175,7 +175,12 @@
 
     const onPrevious = () => move(-1);
     const onNext = () => move(1);
-    const onEnter = () => { hovered = true; };
+    // Mouse deliberately moving over the cards pauses autoplay. Do NOT pause
+    // merely because scrolling the page has moved the carousel underneath an
+    // already-stationary pointer (a common desktop false hover).
+    const onPointerMove = event => {
+      if (event.pointerType === 'mouse' || event.pointerType === 'pen') hovered = true;
+    };
     const onLeave = () => { hovered = false; };
     // Only pause for keyboard-focused *content*. Arrow buttons retain focus
     // after clicks, and must not indefinitely prevent automatic scrolling.
@@ -199,7 +204,7 @@
 
     previous.addEventListener('click', onPrevious);
     next.addEventListener('click', onNext);
-    shell.addEventListener('mouseenter', onEnter);
+    shell.addEventListener('pointermove', onPointerMove);
     shell.addEventListener('mouseleave', onLeave);
     shell.addEventListener('focusin', onFocus);
     shell.addEventListener('focusout', onBlur);

@@ -1,0 +1,32 @@
+/* REZONANSLAR – News carousel v6 – scoped entirely to the homepage. */
+.news-section{background:linear-gradient(145deg,#fffdf8 0%,#f7f0e1 100%)}
+.news-topline{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.news-topline .section-head{margin-bottom:26px}
+.news-artist-link{font-size:13px;font-weight:700;color:#98771a;white-space:nowrap;margin-bottom:35px}
+.news-filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+.news-filter{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:100px;padding:9px 16px;font-size:13px;cursor:pointer}
+.news-filter.active,.news-filter:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+#news-feed.news-grid{display:block !important;grid-template-columns:none !important;position:relative;width:100%;overflow:hidden}
+#news-feed .news-carousel-shell{position:relative;width:100%;overflow:hidden;isolation:isolate}
+#news-feed .news-marquee-viewport{overflow:hidden;width:100%;padding:3px 0 14px;touch-action:pan-y;outline-offset:3px}
+#news-feed .news-marquee-track{display:flex !important;flex-direction:row !important;flex-wrap:nowrap !important;gap:18px;width:max-content !important;max-width:none !important;will-change:transform;position:relative;transform:translate3d(0,0,0)}
+#news-feed .news-card{display:flex;box-sizing:border-box;flex:0 0 350px;width:350px;max-width:350px;min-width:0;flex-direction:column;border:1px solid var(--line);border-radius:17px;background:#fff;overflow:hidden;box-shadow:0 9px 28px rgba(40,30,10,.05)}
+#news-feed .news-card:hover{box-shadow:0 13px 34px rgba(40,30,10,.12)}
+#news-feed .news-art{min-height:118px;background:radial-gradient(circle at 77% 10%,rgba(247,221,144,.42),transparent 45%),linear-gradient(125deg,#211911,#674523);display:flex;align-items:flex-start;justify-content:space-between;padding:22px 24px;color:#f4dd9a;background-size:cover;background-position:center center}
+#news-feed .news-art.has-image{min-height:220px;background-position:center top}
+#news-feed .news-art[data-type="social"]:not(.has-image){background:linear-gradient(125deg,#242127,#614d50)}
+#news-feed .news-art-mark{font:normal 50px/1 Georgia,serif;opacity:.75;text-shadow:0 2px 10px rgba(0,0,0,.2)}
+#news-feed .news-art-kind{font-size:10px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;max-width:150px;text-shadow:0 2px 10px rgba(0,0,0,.25)}
+#news-feed .news-body{padding:23px;display:flex;flex-direction:column;flex:1}
+#news-feed .news-meta{font-size:11px;color:#937421;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+#news-feed .news-card h3{font-size:25px;line-height:1.2;margin:12px 0 9px}
+#news-feed .news-card p{font-size:14px;color:var(--muted);margin:0 0 24px}
+#news-feed .news-more{font-weight:700;font-size:13px;color:#97771e;margin-top:auto;align-self:flex-start}
+#news-feed .news-more:hover{text-decoration:underline}
+#news-feed .news-arrow{position:absolute;z-index:3;top:67px;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:54px;padding:0;border:1px solid #d9bd65;border-radius:13px;background:rgba(255,252,243,.96);color:#95731b;font:normal 39px/1 Georgia,serif;box-shadow:0 4px 19px rgba(35,27,9,.14);cursor:pointer}
+#news-feed .news-arrow:hover{background:#c9a227;color:#fff}
+#news-feed .news-arrow:focus-visible{outline:3px solid #c9a227;outline-offset:3px}
+#news-feed .news-arrow-prev{left:6px}#news-feed .news-arrow-next{right:6px}
+.news-empty{color:var(--muted);padding:24px 0}
+@media(max-width:900px){#news-feed .news-card{flex-basis:310px;width:310px;max-width:310px}#news-feed .news-card h3{font-size:23px}#news-feed .news-art.has-image{min-height:205px}}
+@media(max-width:620px){.news-topline{display:block}.news-artist-link{display:inline-block;margin-bottom:25px}#news-feed .news-marquee-track{gap:14px}#news-feed .news-card{flex-basis:280px;width:280px;max-width:280px}#news-feed .news-card h3{font-size:21px}#news-feed .news-art.has-image{min-height:185px}#news-feed .news-arrow{width:36px;height:46px;border-radius:10px;font-size:32px}#news-feed .news-arrow-prev{left:2px}#news-feed .news-arrow-next{right:2px}}
