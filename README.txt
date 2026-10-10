@@ -1,9 +1,11 @@
-REZONANSLAR ABOUT & CONTACT PATCH
+REZONANSLAR — LUCIAN CROSS REPERTUVAR DÜZELTMESİ
 
-Kaynak: 9 Ekim tarihli haberler güncellemesindeki index.html.
-Dosyaları GitHub Desktop > Repository > Show in Explorer ile açılan depoya kopyalayın.
-index.html dosyasını değiştirmeyi onaylayın. css/about-contact.css ve js/contact.js yeni dosyalardır.
-DİKKAT: Eğer haberler paketinden sonra index.html üzerinde başka değişiklik yaptıysanız mevcut index.html'i üzerine yazmayın; önce karşılaştırın.
-Sadece iletişim e-postası: selcuk.yabar@gmail.com
-Sosyal bağlantılar: YouTube ve Instagram
-Commit: feat: expand about section and add email and social links
+Yalnızca artists/lucian-cross/index.html dosyasını günceller.
+Görseller, CSS, menüler ve diğer sayfalar değiştirilmez.
+
+GitHub Desktop > Repository > Show in Explorer > ZIP içindeki artists klasörünü repository ana dizinine kopyalayın.
+Mevcut dosyayı değiştirmeden önce GitHub Desktop Changes ekranında yalnızca şarkı isimlerinin değiştiğini doğrulayın.
+
+Commit: fix: update Lucian Cross official repertoire
+
+Not: Sıralama 10 Ekim 2026 tarihinde kullanıcının gönderdiği dosya listesidir.
