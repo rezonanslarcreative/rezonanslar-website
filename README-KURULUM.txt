@@ -1,16 +1,23 @@
-REZONANSLAR / Hakkımızda 2 sütunlu düzenleme
+REZONANSLAR — GitHub görsel güncellemesi (10.10.2026)
 
-Bu paket yalnızca iki site dosyasını değiştirir/ekler:
-- about/index.html (mevcut dosyanın yerine)
-- css/about-profile.css (yeni dosya)
+Bu ZIP dosyasının İÇİNDEKİ dosya ve klasörleri, GitHub Desktop > Repository > Show in Explorer ile açtığınız rezonanslar-website depo köküne kopyalayın.
 
-Başlık, Hakkımızda metninin tüm paragrafları ve en alttaki motto korunmuştur.
-Diğer sayfa dosyalarına dokunulmaz. Ortak iletişim bileşeni korunur.
+Değişen HTML dosyaları:
+- artists/index.html: yalnızca 4 eksik kartın monogramları gerçek görselle değiştirildi.
+- about/index.html: iki sütunlu mevcut hakkımızda metni korunuyor, Selçuk Yabar portresi eklendi.
 
-ÖNEMLİ: Selçuk Yabar’ın gerçek fotoğrafı henüz sağlanmadığı için portre alanında
-SY monogramlı yer tutucu var. Fotoğraf verildikten sonra about/index.html dosyasındaki
-.about-person-placeholder düğümü, gerçek fotoğrafı gösteren img ile değiştirilir.
-Örnek: <img src="../assets/team/selcuk-yabar.webp" alt="Selçuk Yabar portresi" width="800" height="1000" loading="lazy">
+Yeni dosyalar:
+- assets/personas/layla-rezonans.webp
+- assets/personas/aurelia-nox.webp
+- assets/personas/clara-stone.webp
+- assets/personas/deniz-ekin.webp
+- assets/team/selcuk-yabar.webp
+- css/about-profile.css
 
-GitHub Desktop: Dosyaları kopyala, Changes incele, commit ardından push.
-Commit: style: add responsive founder profile layout to about page
+ÖNEMLİ: Hakkımızda iki sütun paketini önceden yüklemiş olsanız bile bu paketteki about/index.html onu portreyle tamamlar. Ana sayfanın index.html dosyasına dokunulmaz.
+
+ÖNCE GitHub Desktop Changes ekranını kontrol edin; sonra commit yapın.
+Commit: feat: add missing artist cards and founder portrait
+Push origin sonrasında /artists/ ve /about/ sayfalarını kontrol edin.
+
+Portre kullanıcı fotoğrafından esinlenilerek üretilmiş bir görseldir.
