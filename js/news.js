@@ -167,8 +167,8 @@
         if (progress >= 1) manual = null;
       } else if (!hovered && !focused && !dragging && !document.hidden &&
                  !reducedMotion.matches && time > touchPauseUntil && cycleWidth) {
-        // 34 px/sec yields a gentle, continuous right-to-left news flow.
-        viewport.scrollLeft = wrap(viewport.scrollLeft + elapsed * 0.034);
+        // 60 px/sec: continuous, clearly visible right-to-left motion.
+        viewport.scrollLeft = wrap(viewport.scrollLeft + elapsed * 0.060);
       }
       frameId = requestAnimationFrame(animate);
     }
@@ -177,8 +177,18 @@
     const onNext = () => move(1);
     const onEnter = () => { hovered = true; };
     const onLeave = () => { hovered = false; };
-    const onFocus = () => { focused = true; };
-    const onBlur = () => { focused = shell.contains(document.activeElement); };
+    // Only pause for keyboard-focused *content*. Arrow buttons retain focus
+    // after clicks, and must not indefinitely prevent automatic scrolling.
+    const shouldPauseForFocus = () => {
+      const node = document.activeElement;
+      return !!(node && shell.contains(node) &&
+        (node.classList.contains('news-more') || node === viewport));
+    };
+    const onFocus = () => { focused = shouldPauseForFocus(); };
+    const onBlur = () => {
+      // Focus may move to another child after focusout. Defer to let it settle.
+      queueMicrotask(() => { focused = shouldPauseForFocus(); });
+    };
     const onPointerDown = e => { if (e.pointerType === 'touch') dragging = true; };
     const onPointerUp = e => { if (e.pointerType === 'touch') { dragging = false; touchPauseUntil = performance.now() + 1500; } };
     const onResize = () => { measure(); previousTime = 0; };
