@@ -1,23 +1,10 @@
-REZONANSLAR — GitHub görsel güncellemesi (10.10.2026)
+REZONANSLAR – 10 Sanatçı Profil Sayfası V2
 
-Bu ZIP dosyasının İÇİNDEKİ dosya ve klasörleri, GitHub Desktop > Repository > Show in Explorer ile açtığınız rezonanslar-website depo köküne kopyalayın.
-
-Değişen HTML dosyaları:
-- artists/index.html: yalnızca 4 eksik kartın monogramları gerçek görselle değiştirildi.
-- about/index.html: iki sütunlu mevcut hakkımızda metni korunuyor, Selçuk Yabar portresi eklendi.
-
-Yeni dosyalar:
-- assets/personas/layla-rezonans.webp
-- assets/personas/aurelia-nox.webp
-- assets/personas/clara-stone.webp
-- assets/personas/deniz-ekin.webp
-- assets/team/selcuk-yabar.webp
-- css/about-profile.css
-
-ÖNEMLİ: Hakkımızda iki sütun paketini önceden yüklemiş olsanız bile bu paketteki about/index.html onu portreyle tamamlar. Ana sayfanın index.html dosyasına dokunulmaz.
-
-ÖNCE GitHub Desktop Changes ekranını kontrol edin; sonra commit yapın.
-Commit: feat: add missing artist cards and founder portrait
-Push origin sonrasında /artists/ ve /about/ sayfalarını kontrol edin.
-
-Portre kullanıcı fotoğrafından esinlenilerek üretilmiş bir görseldir.
+Paket içeriği: artists/<sanatci>/index.html (10 dosya), css/artist-profile.css.
+GitHub Desktop: Repository > Show in Explorer; ZIP içindekileri proje köküne kopyalayın.
+Değişenler: yalnızca bireysel sanatçı HTML sayfaları + yeni CSS. Diğer sayfalar etkilenmez.
+Gereklilik: Önceki profil görselleri paketinin assets/personas klasöründeki görselleri depoda mevcut olmalı.
+Repertuvar alanı yayında olma doğrulaması değildir. Gerçek müzik platformu URL'leri eklenene kadar sahte Spotify/Apple bağlantıları kullanılmaz.
+TR/EN desteği site.js içindeki data-tr/data-en yaklaşımıyla uyumludur. Ortak iletişim js/shared-contact.js bileşeninden gelir.
+Kurulum sonrası desktop/tablet/mobile, dil geçişi, breadcrumb, menü ve iletişim bölümünü test edin.
+Önerilen commit: feat: build ten responsive artist profile pages
