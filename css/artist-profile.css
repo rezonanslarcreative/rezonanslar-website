@@ -3,3 +3,10 @@
 
 /* Official streaming links – artist pages only */
 .artist-page .artist-official-links{margin:20px 0 12px}.artist-page .artist-official-links .artist-link{min-width:140px;gap:7px}.artist-page .artist-official-links .youtube{background:transparent;color:#222}.artist-page .artist-official-links .artist-link:focus-visible{outline:3px solid #C9A227;outline-offset:3px}
+
+/* v7: Prevent artist hero grid intrinsic width from pushing mobile menu/page sideways. */
+@media (max-width:850px){
+  .artist-page .artist-hero{grid-template-columns:minmax(0,1fr)}
+  .artist-page .artist-hero > *{min-width:0;max-width:100%}
+  .artist-page .artist-hero p{overflow-wrap:anywhere}
+}

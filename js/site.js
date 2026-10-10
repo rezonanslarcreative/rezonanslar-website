@@ -10,6 +10,39 @@ function applyLang(next){
  document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>applyLang(b.dataset.lang)));
-const menu=document.querySelector(".menu"),nav=document.querySelector("nav");
-if(menu&&nav)menu.addEventListener("click",()=>nav.classList.toggle("open"));
+/* Responsive main menu: scoped to header (not breadcrumb navigation). */
+const menu=document.querySelector('header .menu');
+const nav=document.querySelector('header nav.main-navigation');
+if(menu && nav){
+  nav.id = nav.id || 'rezonanslar-primary-navigation';
+  menu.setAttribute('type','button');
+  menu.setAttribute('aria-controls',nav.id);
+  menu.setAttribute('aria-expanded','false');
+  const closeMenu=()=>{
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded','false');
+    nav.querySelectorAll('.nav-artists.open').forEach(group=>{
+      group.classList.remove('open');
+      const toggle=group.querySelector('.nav-drop-toggle');
+      if(toggle)toggle.setAttribute('aria-expanded','false');
+    });
+  };
+  menu.addEventListener('click',()=>{
+    const next=!nav.classList.contains('open');
+    if(!next) closeMenu();
+    else {nav.classList.add('open');menu.setAttribute('aria-expanded','true');}
+  });
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape' && nav.classList.contains('open')){
+      closeMenu();menu.focus();
+    }
+  });
+  document.addEventListener('click',event=>{
+    if(nav.classList.contains('open') && !event.target.closest('header .header-inner'))closeMenu();
+  });
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>1000 && nav.classList.contains('open'))closeMenu();
+  });
+}
 applyLang(lang);

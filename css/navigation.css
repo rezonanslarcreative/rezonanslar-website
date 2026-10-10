@@ -9,3 +9,76 @@
 .nav-artists:hover .nav-dropdown,.nav-artists:focus-within .nav-dropdown,.nav-artists.open .nav-dropdown {display:block;}
 @media(max-width:850px){.main-navigation{gap:8px;}.nav-dropdown{position:static;box-shadow:none;width:100%;max-height:none;}.nav-artists{flex-wrap:wrap;}.nav-dropdown{flex-basis:100%;}.nav-drop-toggle{padding:8px;}}
 @media(min-width:851px){.nav-dropdown{min-width:230px;}}
+
+/* v7 — Mobile/tablet navigation. Override generic nav rules deliberately.
+   Do not affect desktop styling, artist cards, news slider or page layouts. */
+@media (max-width:1000px){
+  header .header-inner{
+    min-height:78px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto auto;
+    align-items:center;
+    gap:8px;
+    padding-top:8px;
+    padding-bottom:8px;
+    position:relative;
+  }
+  header .brand{grid-column:1;grid-row:1;min-width:0;margin-right:0;gap:7px;}
+  header .brand .logo{width:76px;max-height:60px;flex-shrink:0;}
+  header .brand strong{font-size:11px;letter-spacing:.075em;line-height:1.25;}
+  header .brand small{font-size:9px;line-height:1.4;}
+  header .lang{grid-column:2;grid-row:1;margin:0;gap:0;white-space:nowrap;}
+  header .lang button{min-height:42px;padding:8px 6px;}
+  header .menu{
+    grid-column:3;grid-row:1;
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;margin:0;padding:0;
+    border:1px solid var(--line);border-radius:10px;
+    background:#fffdf8;cursor:pointer;line-height:1;
+  }
+  header nav.main-navigation{
+    display:none;
+    position:absolute;top:100%;left:0;right:0;
+    z-index:110;
+    max-height:calc(100dvh - 78px);
+    overflow-y:auto;overscroll-behavior:contain;
+    margin:0;padding:12px 18px 18px;
+    flex-direction:column;align-items:stretch;gap:2px;
+    background:#fffdf8;border:1px solid var(--line);
+    border-top:0;border-radius:0 0 14px 14px;
+    box-shadow:0 16px 30px rgba(32,25,12,.12);
+  }
+  header nav.main-navigation.open{display:flex;}
+  header nav.main-navigation > a{
+    display:flex;align-items:center;min-height:45px;
+    padding:8px 10px;border-radius:8px;font-size:15px;
+  }
+  header nav.main-navigation > a:hover,
+  header nav.main-navigation > a:focus-visible {background:#f6edd6;}
+  header .nav-artists{
+    display:grid;grid-template-columns:minmax(0,1fr) 44px;
+    align-items:center;width:100%;gap:0;
+  }
+  header .nav-artists-link{display:flex;align-items:center;min-height:45px;padding:8px 10px;font-size:15px;}
+  header .nav-drop-toggle{
+    display:flex;align-items:center;justify-content:center;
+    min-height:44px;min-width:44px;padding:0;
+    font-size:19px;border-radius:8px;
+  }
+  header .nav-drop-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  header .main-navigation .nav-artists .nav-dropdown{
+    display:none;position:static;grid-column:1/-1;
+    width:100%;max-height:none;overflow:visible;
+    margin:0 0 8px;padding:4px 8px 6px;
+    box-shadow:none;border:0;border-left:2px solid var(--gold);
+    background:#fbf6eb;border-radius:0 8px 8px 0;
+  }
+  header .main-navigation .nav-artists.open .nav-dropdown{display:block;}
+  header .nav-dropdown a{min-height:40px;display:flex!important;align-items:center;padding:7px 10px!important;font-size:14px;}
+}
+@media (max-width:390px){
+  header .brand .logo{width:62px;max-height:52px;}
+  header .brand strong{font-size:10px;letter-spacing:.055em;}
+  header .lang button{padding:7px 5px;}
+  header .menu{width:42px;height:42px;}
+}
