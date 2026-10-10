@@ -1,10 +1,20 @@
-REZONANSLAR – 10 Sanatçı Profil Sayfası V2
+REZONANSLAR — HAZAN PROFİL SAYFASI GÜNCELLEMESİ
+10 Ekim 2026
 
-Paket içeriği: artists/<sanatci>/index.html (10 dosya), css/artist-profile.css.
-GitHub Desktop: Repository > Show in Explorer; ZIP içindekileri proje köküne kopyalayın.
-Değişenler: yalnızca bireysel sanatçı HTML sayfaları + yeni CSS. Diğer sayfalar etkilenmez.
-Gereklilik: Önceki profil görselleri paketinin assets/personas klasöründeki görselleri depoda mevcut olmalı.
-Repertuvar alanı yayında olma doğrulaması değildir. Gerçek müzik platformu URL'leri eklenene kadar sahte Spotify/Apple bağlantıları kullanılmaz.
-TR/EN desteği site.js içindeki data-tr/data-en yaklaşımıyla uyumludur. Ortak iletişim js/shared-contact.js bileşeninden gelir.
-Kurulum sonrası desktop/tablet/mobile, dil geçişi, breadcrumb, menü ve iletişim bölümünü test edin.
-Önerilen commit: feat: build ten responsive artist profile pages
+Bu paket YALNIZCA artists/hazan/index.html dosyasını içerir.
+Kaynak: En son hazırlanan 10 sanatçı profil sayfası paketindeki Hazan HTML.
+
+Korunanlar:
+- Hazan görseli ve mevcut görsel yolu (assets/personas/hazan-profile-card.webp)
+- Header / Sanatçılar dropdown / TR-EN / CSS / responsive kuralları
+- 9 mevcut repertuvar başlığı
+- Global js/shared-contact.js çağrısı / iletişim bölümü
+- Yapım ve söz/yönetim künyesi
+
+Eklenen: Spotify + YouTube resmî sanatçı bağlantıları, yeni sekmede açılır.
+
+Kurulum: ZIP içindeki artists/hazan/index.html dosyasını mevcut repo kökünde aynı klasöre kopyalayın. Başka dosya silmeyin/değiştirmeyin. GitHub Desktop Changes ekranında yalnızca bu HTML değişikliği görünmeli.
+
+ÖNEMLİ: Canlı GitHub sürümü otomatik karşılaştırılmamıştır. Bu dosya, daha önce hazırlanan 10 sanatçı profili paketindeki sürümü temel alır. Deponuzdaki dosyada daha yeni değişiklikler varsa üzerine yazmadan önce karşılaştırın.
+
+Commit: feat: add official Spotify and YouTube links to Hazan profile
