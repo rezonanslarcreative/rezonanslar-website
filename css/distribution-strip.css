@@ -1,0 +1,35 @@
+/* REZONANSLAR — homepage distribution ticker. Scoped: homepage only. */
+.hero.hero--with-platforms {display:flex;flex-direction:column;justify-content:center;align-items:stretch}
+.hero.hero--with-platforms > .hero-grid {padding-top:70px;padding-bottom:32px}
+.distribution-strip {
+  display:grid; grid-template-columns:215px minmax(0,1fr); gap:18px;align-items:center;
+  min-height:78px; margin:0 auto 24px; padding:10px 14px;
+  border-top:1px solid rgba(201,162,39,.32);
+  border-bottom:1px solid rgba(201,162,39,.32);
+  border-radius:12px;
+  background:rgba(255,253,248,.67);
+  overflow:hidden;
+}
+.distribution-heading {display:flex;align-items:center;gap:9px;min-width:0;line-height:1.24;color:#524635;font-size:11px;font-weight:600}
+.distribution-number {font-family:Georgia,serif;font-size:27px;line-height:1;color:#A27D18;font-weight:700;flex:none}
+.distribution-window {min-width:0;overflow:hidden;position:relative;mask-image:linear-gradient(to right,transparent,#000 20px,#000 calc(100% - 20px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 20px,#000 calc(100% - 20px),transparent)}
+.distribution-track {display:flex;width:max-content;animation:distribution-flow 59s linear infinite;will-change:transform}
+.distribution-window:hover .distribution-track,.distribution-window:focus-within .distribution-track{animation-play-state:paused}
+.distribution-set {display:flex;align-items:center;gap:11px;flex:none;padding-right:11px}
+.platform-item {display:flex;align-items:center;gap:7px;white-space:nowrap;flex:none;height:39px;padding:5px 11px 5px 6px;border:1px solid rgba(201,162,39,.22);border-radius:20px;background:#fffdf9;color:#373027;font-weight:600;font-size:12px;line-height:1;box-shadow:0 2px 8px rgba(46,32,9,.035)}
+.platform-item img {width:26px;height:26px;object-fit:contain;border-radius:6px;display:block;flex:none}
+@keyframes distribution-flow {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:1000px){
+  .hero.hero--with-platforms>.hero-grid{padding-top:52px;padding-bottom:26px}
+  .distribution-strip{grid-template-columns:185px minmax(0,1fr);gap:12px}
+}
+@media(max-width:620px){
+  .hero.hero--with-platforms>.hero-grid{padding-top:44px;padding-bottom:20px}
+  .distribution-strip{display:block;min-height:0;padding:10px 0 12px;margin-bottom:17px}
+  .distribution-heading{padding:0 15px 9px;gap:8px}
+  .distribution-number{font-size:23px}
+  .distribution-window{width:100%;}
+  .platform-item{height:36px;font-size:11px;padding:4px 10px 4px 5px}
+  .platform-item img{width:24px;height:24px}
+}
+@media(prefers-reduced-motion:reduce){.distribution-track{animation-duration:110s}}
