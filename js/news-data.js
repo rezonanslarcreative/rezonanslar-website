@@ -3,7 +3,7 @@
   date, albümün çıkış tarihi değil, haberin yayına hazırlandığı tarihtir.
   Amazon yayın bildirimleri kullanıcı tarafından sağlanan DistroKid e-posta ekranına dayanır.
   Platforma özgü Amazon ürün bağlantıları henüz verilmediği için sanatçı profiline yönlendirilir.
-  type: release, social, studio  |  status: live, plan, soon
+  type: release, soon, social, studio  |  status: live, plan, soon
   Yeni haber için listenin başına bir kayıt ekleyin.
   Haber animasyonunun çalışan v8 koduna dokunmayın.
 */
@@ -11,6 +11,27 @@
    11 Ekim 2026 haber hazırlık tarihidir; her eserin çıkış tarihi olarak yorumlanmamalıdır.
    DistroKid promo e-postalarındaki otomatik tasarımlar fiziki billboard veya kaset değildir. */
 window.REZONANSLAR_NEWS = [
+  // Yakında: yayın tarihi henüz açıklanmayan projeler; date duyuru kayıt tarihidir.
+  {
+    date: "2026-10-14", type: "soon", status: "soon",
+    title: {tr: "Layla Rezonans — Yeni Proje Yakında", en: "Layla Rezonans — New Project Coming Soon"},
+    description: {
+      tr: "Layla Rezonans’tan yeni bir müzik yolculuğu çok yakında dinleyicilerle buluşacak. Yayın tarihi ve detaylar yakında açıklanacak.",
+      en: "A new musical journey from Layla Rezonans is coming soon. The release date and further details will be announced soon."
+    },
+    image: "assets/news/layla-yakinda.webp",
+    link: {tr: "Yakında Açıklanacak", en: "To Be Announced"}
+  },
+  {
+    date: "2026-10-14", type: "soon", status: "soon",
+    title: {tr: "Hazan & Mahir Köz — Düet Projesi Yakında", en: "Hazan & Mahir Köz — Duet Project Coming Soon"},
+    description: {
+      tr: "Hazan ve Mahir Köz’ü bir araya getiren özel düet projesi çok yakında REZONANSLAR dinleyicileriyle buluşacak. Yayın tarihi yakında açıklanacak.",
+      en: "A special duet bringing Hazan and Mahir Köz together is coming soon for REZONANSLAR listeners. The release date will be announced soon."
+    },
+    image: "assets/news/hazan-mahir-duet-yakinda.webp",
+    link: {tr: "Yakında Açıklanacak", en: "To Be Announced"}
+  },
   {
     date: "2026-10-11", type: "studio", status: "live",
     title: {tr: "Albüm tanıtımlarında yeni görsel materyaller", en: "New promotional artwork for album campaigns"},

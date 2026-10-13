@@ -1,0 +1,22 @@
+REZONANSLAR – Yakında sekmesi / minimum güncelleme — 14 Ekim 2026
+
+Değişen dosyalar:
+  index.html                      (Yeni Yayınlar'dan sonra Yakında filtresi ve sürüm sorguları)
+  js/news-data.js                 (Layla + Hazan & Mahir Köz duyuru kartları, TR/EN)
+  js/news-carousel-v8.js          (Yakında etiketi, 2 aynı pasif buton, yayın tarihi bilgisi)
+  css/news-carousel-v8.css        (Yalnızca Yakında kartlarına ait görsel ve buton stili)
+  assets/news/layla-yakinda.webp  (onaylanan önizlemeden kart görseli)
+  assets/news/hazan-mahir-duet-yakinda.webp (onaylanan önizlemeden kart görseli)
+
+Kurulum:
+  1. ZIP'teki belirtilen dosyaları repository KÖK dizinine, dizinlerini koruyarak kopyalayın.
+  2. GitHub Desktop Changes bölümünde 4 güncel dosya + 2 yeni görsel görünmeli.
+  3. Commit: feat: add coming-soon news category and artist teasers
+  4. Push origin; GitHub Pages güncellenince Ctrl+F5 yapın.
+  5. Anasayfa Haberler -> Yakında: Layla ve Hazan & Mahir duyurularını doğrulayın.
+  6. Tümü, Yeni Yayınlar, Sosyal Medya, Stüdyo Haberleri, TR/EN, mobil, oklar, duraklatma ve otomatik kaymayı da kontrol edin.
+
+Yayın tarihi henüz açıklanmadığından hiçbir karta sahte tarih veya geçersiz URL verilmedi.
+İki düğme de aynı "Yakında Açıklanacak" metnine sahip, pasif (henüz bağlantı yok).
+
+Not: ZIP'teki mevcut HTML/JS/CSS dosyaları 12 Ekim SEO commit sürümü baz alınarak hazırlanmıştır.

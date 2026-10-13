@@ -10,6 +10,7 @@
   const empty = document.getElementById('news-empty');
   const labels = {
     release: {tr:'Yeni Yayınlar',en:'Releases'},
+    soon: {tr:'Yakında',en:'Coming Soon'},
     social: {tr:'Sosyal Medya',en:'Social Media'},
     studio: {tr:'Stüdyo Haberleri',en:'Studio News'}
   };
@@ -34,7 +35,9 @@
     art.dataset.type=item.type;
     if(item.image){
       art.classList.add('has-image');
-      art.style.backgroundImage=`linear-gradient(180deg,rgba(20,16,10,.08),rgba(20,16,10,.62)),url("${item.image}")`;
+      art.style.backgroundImage=item.type==='soon'
+        ? `url("${item.image}")`
+        : `linear-gradient(180deg,rgba(20,16,10,.08),rgba(20,16,10,.62)),url("${item.image}")`;
     }
     art.append(create('span','news-art-kind',(labels[item.type]||labels.studio)[lang]),create('span','news-art-mark','R'));
     const body=create('div','news-body');
@@ -43,13 +46,21 @@
     const state=(statuses[item.status]||statuses.live)[lang];
     const title=(item.title?.[lang])||item.title?.tr||'';
     const desc=(item.description?.[lang])||item.description?.tr||'';
-    body.append(create('div','news-meta',`${formatted} · ${state}`),create('h3','',title),create('p','',desc));
+    const metadata=item.type==='soon'
+      ? (lang==='tr'?'Yakında · Yayın tarihi açıklanacak':'Coming Soon · Release date TBA')
+      : `${formatted} · ${state}`;
+    body.append(create('div','news-meta',metadata),create('h3','',title),create('p','',desc));
     if(item.url){
       const link=create('a','news-more',((item.link?.[lang])||'Detaylar')+' →');
       link.href=item.url;
       if(/^https?:\/\//i.test(item.url)){link.target='_blank';link.rel='noopener noreferrer';}
       if(duplicate) link.tabIndex=-1;
       body.append(link);
+    }else if(item.type==='soon'){
+      const announcement=create('button','news-soon-button',(item.link?.[lang]|| (lang==='tr'?'Yakında Açıklanacak':'To Be Announced'))+'  →');
+      announcement.type='button';
+      announcement.disabled=true;
+      body.append(announcement);
     }
     card.append(art,body);
     return card;
