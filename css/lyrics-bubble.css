@@ -9,7 +9,7 @@
 .rzlb-bubble{box-sizing:border-box;display:none;position:fixed;z-index:9999;width:min(370px,calc(100vw - 24px));max-height:min(64vh,610px);border:1px solid #d1a554;border-radius:20px;background:#fffaf0;color:#3d2b16;box-shadow:0 20px 65px #25160c5c;overflow:visible;contain:layout;isolation:isolate}
 .rzlb-bubble.rzlb-visible{display:flex;flex-direction:column}
 .rzlb-bubble::after{content:"";position:absolute;left:22px;top:calc(100% - 1px);width:19px;height:19px;background:#fffaf0;border-right:1px solid #d1a554;border-bottom:1px solid #d1a554;transform:rotate(45deg);pointer-events:none;z-index:-1}
-.rzlb-bubble.rzlb-pinned{top:105px!important;right:16px!important;left:auto!important;bottom:auto!important;max-height:min(70vh,650px)}
+.rzlb-bubble.rzlb-pinned{top:105px!important;left:16px!important;right:auto!important;bottom:auto!important;max-height:min(70vh,650px)}
 .rzlb-bubble.rzlb-pinned::after{left:auto;right:30px;top:calc(100% - 1px)}
 .rzlb-head{padding:14px 15px 12px;background:linear-gradient(110deg,#422d16,#77501d);border-radius:18px 18px 0 0;color:#fff7df;display:flex;flex-direction:column;gap:9px;flex:0 0 auto}
 .rzlb-overline{letter-spacing:.14em;color:#edcf8b;font-size:10px;font-weight:700;text-transform:uppercase}
