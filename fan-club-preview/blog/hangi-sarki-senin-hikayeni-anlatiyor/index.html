@@ -67,6 +67,10 @@
 .hs-reply-panel textarea{display:block;width:100%;min-height:170px;max-width:100%;padding:14px 15px;border:1px solid #d7c9ad;border-radius:10px;background:#fff;color:#30271c;font:14px/1.65 Arial,Helvetica,sans-serif}
 .hs-reply-panel textarea:focus-visible{outline:3px solid #c9a227;outline-offset:1px}
 .hs-private-note{display:flex;align-items:flex-start;gap:9px;border-radius:10px;background:#fff6e4;border:1px solid #e8d4a6;padding:13px 15px;color:#795c29;font-size:12px;line-height:1.65;margin:14px 0}
+.hs-submit-area{margin-top:19px;display:flex;flex-direction:column;gap:8px}
+.hs-submit-button{appearance:none;width:100%;min-height:51px;padding:12px 18px;border:1px solid #bea16c;background:linear-gradient(120deg,#eee1c3,#e3d4b4);color:#77684e;border-radius:11px;font-size:14px;font-weight:700;letter-spacing:.01em;cursor:not-allowed;opacity:1}
+.hs-submit-button:disabled{opacity:1}
+.hs-submit-caption{margin:0!important;line-height:1.6!important;font-size:12px!important;color:#806c48!important}
 .hs-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
 .hs-action{appearance:none;min-height:42px;border-radius:10px;padding:9px 18px;font-size:12px;font-weight:700;cursor:pointer}
 .hs-action.primary{border:1px solid #b78b2d;background:#c9a227;color:#241707}
@@ -289,6 +293,10 @@
 <p class="hs-terms-note" data-tr="KVKK aydınlatması ayrı bir bilgilendirmedir; yukarıdaki kutular kişisel veri işleme için toplu açık rıza değildir. Bu önizlemede işaretler sunucuya iletilmez veya kaydedilmez." data-en="Privacy information is provided separately. The above boxes are not bundled consent to personal-data processing. In this preview, checkbox choices are neither transmitted nor stored.">KVKK aydınlatması ayrı bir bilgilendirmedir; yukarıdaki kutular kişisel veri işleme için toplu açık rıza değildir. Bu önizlemede işaretler sunucuya iletilmez veya kaydedilmez.</p>
 <div class="hs-precheck-row"><button type="button" class="hs-precheck-btn" id="hs-check" data-tr="Koşulları Kontrol Et (Demo)" data-en="Check Requirements (Demo)">Koşulları Kontrol Et (Demo)</button><span id="hs-check-status" class="hs-precheck-status" role="status" aria-live="polite"></span></div>
 </section>
+<div class="hs-submit-area" aria-labelledby="hs-submission-label">
+  <button id="hs-submit" class="hs-submit-button" type="button" disabled aria-describedby="hs-submission-label" data-tr="Hikâyeyi Gönder · Yakında" data-en="Submit Story · Coming Soon">Hikâyeyi Gönder · Yakında</button>
+  <p id="hs-submission-label" class="hs-submit-caption" data-tr="Hikâye gönderimi, üyelik ve güvenli moderasyon altyapısı tamamlandıktan sonra açılacak. Bu önizlemede hiçbir içerik veya onay kaydedilmiyor." data-en="Story submission will open after membership and secure moderation are in place. This preview does not save any stories or acknowledgements.">Hikâye gönderimi, üyelik ve güvenli moderasyon altyapısı tamamlandıktan sonra açılacak. Bu önizlemede hiçbir içerik veya onay kaydedilmiyor.</p>
+</div>
 <div class="hs-actions"><button id="hs-copy" type="button" class="hs-action primary" data-tr="Taslağı Kopyala" data-en="Copy Draft">Taslağı Kopyala</button><button id="hs-clear" type="button" class="hs-action secondary" data-tr="Temizle" data-en="Clear">Temizle</button></div>
 <div class="hs-feedback" id="hs-copy-feedback" role="status" aria-live="polite"></div>
 </div></div></section>
