@@ -45,6 +45,14 @@
 .hs-track-question{font-size:13px;color:#695d4c;line-height:1.65;display:block;flex:1}
 .hs-card-select{font-size:11px;font-weight:700;color:#916718;margin-top:23px}
 .hs-song-card.is-selected .hs-card-select{color:#765119}
+.hs-card-footer{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:21px}
+.hs-card-footer .hs-card-select{margin-top:0}
+.hs-metrics{display:inline-flex;align-items:center;justify-content:flex-end;gap:10px;margin-left:auto;white-space:nowrap;color:#896a39;flex-shrink:0}
+.hs-metric{display:inline-flex;gap:5px;align-items:center;font-size:12px;font-variant-numeric:tabular-nums}
+.hs-metric-icon{font-size:14px;color:#b68b37}
+.hs-metric-count{font-weight:700;min-width:10px}
+.hs-song-card.is-selected .hs-metric-count{color:#6b4e22}
+/* Preview only: dashes are intentional; never imply votes/comments without saved, verified data. */
 .hs-reply{background:radial-gradient(ellipse at 95% 10%,#ead29c,transparent 45%),#f6eddb;border-top:1px solid #e1cd9e;padding:72px 0 88px}
 .hs-reply-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}
 .hs-reply-copy p{color:#6e604d;line-height:1.85}
@@ -81,6 +89,7 @@
 .hs-outlinks a:hover{background:#fff2}
 .hs-outlinks a:focus-visible{outline:3px solid #f0c978;outline-offset:3px}
 .hs-aside-cta{font-size:12px;color:#927735;padding-top:30px;text-align:center}
+.hs-metrics-note{font-size:12px;color:#7a6130;margin:24px auto 0;max-width:890px;text-align:center;line-height:1.7}
 @media(min-width:1001px) and (max-width:1190px){header .main-navigation{gap:6px;font-size:12px}}
 @media(max-width:950px){.hs-hero-grid{grid-template-columns:1fr .75fr;gap:23px}.hs-reply-inner,.hs-future-grid{gap:24px}.hs-song-card{padding:18px;min-height:220px}.hs-song-card.is-selected{padding:17px}}
 @media(max-width:760px){.hs-hero-grid,.hs-reply-inner,.hs-future-grid{grid-template-columns:1fr}.hs-hero-grid{padding:58px 0 75px}.hs-photo-wrap{width:min(320px,76%);margin-top:35px}.hs-song-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hs-reply-panel{padding:23px}.hs-intro{padding:55px 0 30px}.hs-list{padding:30px 0 66px}}
@@ -119,57 +128,112 @@
  <span class="hs-card-top"><span class="hs-track-num">01</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Derin Hisler</span>
  <span class="hs-track-question" data-tr="Hiç kimseye anlatamadığın bir duyguyu içinde taşıdın mı?" data-en="Have you ever carried a feeling you could never put into words?">Hiç kimseye anlatamadığın bir duyguyu içinde taşıdın mı?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="icimdeki-telas" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">02</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">İçimdeki Telaş</span>
  <span class="hs-track-question" data-tr="Kalbini hızlandıran bir haber, karşılaşma veya bekleyiş hatırlıyor musun?" data-en="Do you remember a meeting, message, or moment of waiting that made your heart race?">Kalbini hızlandıran bir haber, karşılaşma veya bekleyiş hatırlıyor musun?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="hazan-mevsiminde-asklar" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">03</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Hazan Mevsiminde Aşklar</span>
  <span class="hs-track-question" data-tr="Bir mevsim, seni hiç unutamadığın bir aşka geri götürüyor mu?" data-en="Does a particular season take you back to a love you have never forgotten?">Bir mevsim, seni hiç unutamadığın bir aşka geri götürüyor mu?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="can-ozum" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">04</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Can Özüm</span>
  <span class="hs-track-question" data-tr="Hayatında 'iyi ki varsın' demek istediğin biri var mı?" data-en="Is there someone in your life you wish you could thank simply for being there?">Hayatında 'iyi ki varsın' demek istediğin biri var mı?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="muhur" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">05</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Mühür</span>
  <span class="hs-track-question" data-tr="Hangi anı kalbinde silinmeyecek bir iz bıraktı?" data-en="Which memory left a mark on your heart that time could not erase?">Hangi anı kalbinde silinmeyecek bir iz bıraktı?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="yalan-yillar" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">06</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Yalan Yıllar</span>
  <span class="hs-track-question" data-tr="Geriye baktığında farklı yaşamak istediğin bir dönem oldu mu?" data-en="Is there a time in your past you sometimes wish you could live differently?">Geriye baktığında farklı yaşamak istediğin bir dönem oldu mu?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="gunahi-bana-sevabi-sana" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">07</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Günahı Bana Sevabı Sana</span>
  <span class="hs-track-question" data-tr="Bir ilişkide bütün sorumluluğu üzerine aldığını hissettiğin oldu mu?" data-en="Have you ever felt you were carrying all the responsibility in a relationship?">Bir ilişkide bütün sorumluluğu üzerine aldığını hissettiğin oldu mu?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="sabret-ey-yar" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">08</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Sabret Ey Yâr</span>
  <span class="hs-track-question" data-tr="Bir kavuşmayı umut ederek uzun süre beklediğin oldu mu?" data-en="Have you ever waited a long time, holding on to the hope of a reunion?">Bir kavuşmayı umut ederek uzun süre beklediğin oldu mu?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
 <button class="hs-song-card" type="button" data-song="dunya-bir-yana" aria-pressed="false">
  <span class="hs-card-top"><span class="hs-track-num">09</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
  <span class="hs-track-title">Dünya Bir Yana</span>
  <span class="hs-track-question" data-tr="Bir insanın varlığı sana bütün dünyadan daha değerli geldi mi?" data-en="Has someone's presence ever meant more to you than the rest of the world?">Bir insanın varlığı sana bütün dünyadan daha değerli geldi mi?</span>
- <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ <span class="hs-card-footer">
+  <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+  <span class="hs-metrics" aria-hidden="true">
+    <span class="hs-metric" data-metric="votes" title="Seçim sayısı henüz mevcut değil"><span class="hs-metric-icon">♥</span><span class="hs-metric-count">—</span></span>
+    <span class="hs-metric" data-metric="comments" title="Yorum sayısı henüz mevcut değil"><span class="hs-metric-icon">✎</span><span class="hs-metric-count">—</span></span>
+  </span>
+ </span>
  </button>
-</div><p class="hs-aside-cta" data-tr="* Sorular, şarkı isimlerinden ve genel duygusal temalardan ilham alan özgün anlatı davetleridir; şarkı sözü alıntısı değildir." data-en="* Prompts are original reflections inspired by song titles and emotional themes, not quoted lyrics.">* Sorular, şarkı isimlerinden ve genel duygusal temalardan ilham alan özgün anlatı davetleridir; şarkı sözü alıntısı değildir.</p></div></section>
+</div><p class="hs-metrics-note" data-tr="Kartların sağ altındaki ♥ seçim, ✎ yorum sayısı içindir. Üyelik ve etkileşim sistemi açılmadığından şimdilik gerçek sayı yerine — gösterilir." data-en="The ♥ and ✎ symbols at the bottom right are reserved for song selections and approved comments. Until membership and engagement are live, — is shown instead of unverified counts.">Kartların sağ altındaki ♥ seçim, ✎ yorum sayısı içindir. Üyelik ve etkileşim sistemi açılmadığından şimdilik gerçek sayı yerine — gösterilir.</p>
+<p class="hs-aside-cta" data-tr="* Sorular, şarkı isimlerinden ve genel duygusal temalardan ilham alan özgün anlatı davetleridir; şarkı sözü alıntısı değildir." data-en="* Prompts are original reflections inspired by song titles and emotional themes, not quoted lyrics.">* Sorular, şarkı isimlerinden ve genel duygusal temalardan ilham alan özgün anlatı davetleridir; şarkı sözü alıntısı değildir.</p></div></section>
 <section class="hs-reply" id="hs-reply"><div class="hs-shell hs-reply-inner"><div class="hs-reply-copy">
 <span class="hs-kicker" data-tr="SENİN HİKÂYEN" data-en="YOUR STORY">SENİN HİKÂYEN</span>
 <h2 data-tr="Bu Şarkı Sana Neyi Hatırlatıyor?" data-en="What Does This Song Remind You Of?">Bu Şarkı Sana Neyi Hatırlatıyor?</h2>
@@ -218,6 +282,15 @@ function render(){
   selectedName.textContent=current.title;
   selectedQuestion.textContent=current[lang()];
   draft.placeholder=lang()==="tr"?"Bu şarkı bana ... hatırlatıyor; çünkü ...":"This song reminds me of ... because ...";
+  cards.forEach(function(button){
+    button.querySelectorAll(".hs-metric").forEach(function(metric){
+      var isVote=metric.dataset.metric==="votes";
+      var label=lang()==="tr"
+       ?(isVote?"Seçim sayısı henüz mevcut değil":"Yorum sayısı henüz mevcut değil")
+       :(isVote?"Song selection count not available yet":"Comment count not available yet");
+      metric.title=label;
+    });
+  });
   feedback.textContent="";
 }
 cards.forEach(function(button){button.addEventListener("click",function(){var next=songs.find(function(item){return item.id===button.dataset.song;});if(!next)return;current=next;render();});});
