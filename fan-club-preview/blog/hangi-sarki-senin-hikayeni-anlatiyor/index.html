@@ -1,0 +1,236 @@
+<!doctype html><html lang="tr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Hazan şarkılarından ilham alan REZONANSLAR Fan Club katılımlı blog serisi — etkileşim tasarım önizlemesi, resmî yayın değildir.">
+<title>Hangi Şarkı Senin Hikâyeni Anlatıyor? | Hazan — Fan Club Önizleme</title>
+<link rel="icon" href="../../../assets/rezonanslar-logo.png" type="image/png">
+<link rel="stylesheet" href="../../../css/style.css"><link rel="stylesheet" href="../../../css/navigation.css?v=20261011-mobile-v7"><link rel="stylesheet" href="../../../css/about-contact.css">
+<style>
+:root{--hs-gold:#c9a227;--hs-cream:#fff9ed;--hs-paper:#fffdf8;--hs-ink:#241b12}
+.hs{overflow:hidden}
+.hs-preview{padding:10px 20px;background:#2d2419;color:#ffe5b1;text-align:center;font-size:11px;font-weight:700;letter-spacing:.045em}
+.hs-shell{width:min(1190px,calc(100% - 40px));margin:auto}
+.hs-kicker{color:#b8892d;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+.hs-hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,#15110d,#3b2816);color:#fff}
+.hs-hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 65% 25%,#d7a34250,transparent 49%),radial-gradient(ellipse at 20% 90%,#a9843140,transparent 43%)}
+.hs-hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background:repeating-linear-gradient(108deg,transparent 0 85px,#cfad3b12 86px 87px,transparent 88px 180px)}
+.hs-hero-grid{display:grid;grid-template-columns:1fr .86fr;gap:54px;align-items:center;padding:65px 0 82px}
+.hs-hero .hs-kicker{color:#edcd8e}
+.hs-hero h1{font:500 clamp(44px,5.5vw,73px)/1.08 Georgia,serif;color:#fff9ec;letter-spacing:-.02em;margin:20px 0 22px}
+.hs-hero h1 em{font-style:normal;color:#eac47e}
+.hs-hero p{color:#eadfc9;font-size:17px;line-height:1.8;max-width:580px}
+.hs-hero-cta{display:inline-flex;justify-content:center;align-items:center;min-height:47px;border-radius:999px;background:linear-gradient(135deg,#bf9128,#dfbb62);color:#23190e;font-weight:700;font-size:13px;padding:10px 24px;margin-top:23px}
+.hs-hero-cta:hover{background:#f1cf7e}
+.hs-photo-wrap{position:relative;max-width:415px;margin:0 auto}
+.hs-photo-wrap:before{content:"";position:absolute;inset:-20px;border:1px solid #e5b54f6a;border-radius:50%}
+.hs-photo-wrap:after{content:"";position:absolute;inset:-42px;border:1px dashed #b9924075;border-radius:50%}
+.hs-photo-wrap img{position:relative;z-index:1;display:block;width:100%;aspect-ratio:1;border-radius:50%;border:6px solid #e4c682;object-fit:cover;object-position:center 25%;box-shadow:0 20px 70px #0009}
+.hs-photo-label{position:absolute;z-index:2;bottom:0;left:50%;transform:translateX(-50%);border-radius:999px;padding:10px 22px;background:#f7e9c9;color:#664611;box-shadow:0 12px 40px #0009;font:500 20px Georgia,serif;white-space:nowrap}
+.hs-intro{padding:78px 0 45px;text-align:center}
+.hs-intro h2,.hs-section-head h2,.hs-reply-head h2{font:500 clamp(33px,4vw,53px)/1.14 Georgia,serif;color:#372617;margin:12px auto 15px}
+.hs-intro p{font-size:16px;line-height:1.9;color:#6d6152;max-width:790px;margin:0 auto 15px}
+.hs-album{margin:0 auto;display:inline-flex;align-items:center;gap:9px;border:1px solid #e7d19e;background:#fff8ea;padding:8px 15px;border-radius:999px;color:#906a23;font-size:12px;font-weight:700}
+.hs-list{padding:36px 0 85px}
+.hs-section-head{margin-bottom:27px;max-width:900px}
+.hs-section-head p{color:#71665a;line-height:1.8}
+.hs-song-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.hs-song-card{position:relative;appearance:none;border:1px solid #e7dac3;background:linear-gradient(155deg,#fffefa,#f9f2e5);border-radius:17px;min-height:220px;padding:23px;display:flex;flex-direction:column;align-items:stretch;text-align:left;cursor:pointer;box-shadow:0 14px 30px #32200e0c;transition:transform .2s,border-color .2s,box-shadow .2s;color:#312415;font-family:Arial,Helvetica,sans-serif}
+.hs-song-card:hover{transform:translateY(-3px);border-color:#cfaa60;box-shadow:0 16px 36px #32200e1c}
+.hs-song-card.is-selected{background:linear-gradient(135deg,#fffaf0,#f1e1bc);border:2px solid #c9a227;padding:22px;box-shadow:0 15px 35px #79521b23}
+.hs-song-card:focus-visible{outline:3px solid #a67b26;outline-offset:3px}
+.hs-card-top{display:flex;align-items:center;justify-content:space-between}
+.hs-track-num{font:500 29px Georgia,serif;color:#c29c51}
+.hs-card-mark{color:#c69a40;font-size:22px}
+.hs-track-title{font:500 25px/1.2 Georgia,serif;color:#483010;display:block;margin:12px 0 10px}
+.hs-track-question{font-size:13px;color:#695d4c;line-height:1.65;display:block;flex:1}
+.hs-card-select{font-size:11px;font-weight:700;color:#916718;margin-top:23px}
+.hs-song-card.is-selected .hs-card-select{color:#765119}
+.hs-reply{background:radial-gradient(ellipse at 95% 10%,#ead29c,transparent 45%),#f6eddb;border-top:1px solid #e1cd9e;padding:72px 0 88px}
+.hs-reply-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}
+.hs-reply-copy p{color:#6e604d;line-height:1.85}
+.hs-selected{padding:20px 24px;background:#fffdf8;border:1px solid #d9bb78;border-radius:13px;margin:27px 0 0}
+.hs-selected-label{display:block;color:#937024;font-size:11px;font-weight:700;letter-spacing:.13em;margin-bottom:7px}
+.hs-selected strong{font:500 25px Georgia,serif;color:#674a20}
+.hs-selected p{color:#6b5a40;line-height:1.7;margin:12px 0 0;font-size:15px}
+.hs-reply-panel{background:#fffdfa;border:1px solid #e2cfaa;border-radius:18px;padding:32px;box-shadow:0 20px 48px #4e321617}
+.hs-reply-panel h3{font:500 28px/1.25 Georgia,serif;color:#443013}
+.hs-reply-panel p{color:#786953;font-size:13px;line-height:1.7;margin:13px 0 21px}
+.hs-reply-panel label{display:block;font-weight:700;font-size:13px;color:#735221;margin:18px 0 8px}
+.hs-reply-panel textarea{display:block;width:100%;min-height:170px;max-width:100%;padding:14px 15px;border:1px solid #d7c9ad;border-radius:10px;background:#fff;color:#30271c;font:14px/1.65 Arial,Helvetica,sans-serif}
+.hs-reply-panel textarea:focus-visible{outline:3px solid #c9a227;outline-offset:1px}
+.hs-private-note{display:flex;align-items:flex-start;gap:9px;border-radius:10px;background:#fff6e4;border:1px solid #e8d4a6;padding:13px 15px;color:#795c29;font-size:12px;line-height:1.65;margin:14px 0}
+.hs-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.hs-action{appearance:none;min-height:42px;border-radius:10px;padding:9px 18px;font-size:12px;font-weight:700;cursor:pointer}
+.hs-action.primary{border:1px solid #b78b2d;background:#c9a227;color:#241707}
+.hs-action.secondary{border:1px solid #dbcba9;background:#fffaf0;color:#705427}
+.hs-action:hover{filter:brightness(.96)}
+.hs-action:focus-visible{outline:3px solid #c9a227;outline-offset:3px}
+.hs-feedback{min-height:21px;font-size:12px;color:#6e5422;margin-top:11px}
+.hs-future{padding:90px 0}
+.hs-future h2{font:500 clamp(30px,3.9vw,49px)/1.17 Georgia,serif;color:#473017;margin:13px 0 20px}
+.hs-future-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hs-future p{color:#6f6253;line-height:1.9}
+.hs-future-list{display:grid;gap:12px}
+.hs-future-item{padding:18px 20px;border:1px solid #e8d7b1;background:#fffaf0;border-radius:13px;display:flex;align-items:center;gap:13px;color:#5b4224;font-size:13px}
+.hs-future-item span{font-size:22px;color:#af8531}
+.hs-channels{background:#20170f;padding:62px 0;text-align:center;color:#f6e7c9}
+.hs-channels h2{color:#ffefd2;font:500 clamp(29px,3.4vw,44px)/1.2 Georgia,serif}
+.hs-channels p{color:#d3c5ab;max-width:600px;margin:17px auto 26px;line-height:1.7}
+.hs-outlinks{display:flex;flex-wrap:wrap;justify-content:center;gap:11px}
+.hs-outlinks a{min-height:44px;display:inline-flex;align-items:center;padding:10px 22px;border-radius:999px;border:1px solid #d6b36f;color:#f9deb0;font-weight:700;font-size:13px}
+.hs-outlinks a:hover{background:#fff2}
+.hs-outlinks a:focus-visible{outline:3px solid #f0c978;outline-offset:3px}
+.hs-aside-cta{font-size:12px;color:#927735;padding-top:30px;text-align:center}
+@media(min-width:1001px) and (max-width:1190px){header .main-navigation{gap:6px;font-size:12px}}
+@media(max-width:950px){.hs-hero-grid{grid-template-columns:1fr .75fr;gap:23px}.hs-reply-inner,.hs-future-grid{gap:24px}.hs-song-card{padding:18px;min-height:220px}.hs-song-card.is-selected{padding:17px}}
+@media(max-width:760px){.hs-hero-grid,.hs-reply-inner,.hs-future-grid{grid-template-columns:1fr}.hs-hero-grid{padding:58px 0 75px}.hs-photo-wrap{width:min(320px,76%);margin-top:35px}.hs-song-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hs-reply-panel{padding:23px}.hs-intro{padding:55px 0 30px}.hs-list{padding:30px 0 66px}}
+@media(max-width:490px){.hs-shell{width:min(1190px,calc(100% - 32px))}.hs-hero h1{font-size:clamp(44px,10vw,58px)}.hs-song-grid{grid-template-columns:1fr}.hs-song-card{min-height:190px}.hs-reply{padding:55px 0}.hs-reply-panel{padding:20px}.hs-hero p{font-size:15px}.hs-intro p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.hs-song-card{transition:none}html{scroll-behavior:auto}}
+</style></head><body>
+<div class="hs-preview" role="status"><span data-tr="ETKİLEŞİMLİ BLOG ÖNİZLEMESİ • Henüz gerçek oy ve yorum gönderimi yok" data-en="INTERACTIVE BLOG PREVIEW • Voting and public comments are not live">ETKİLEŞİMLİ BLOG ÖNİZLEMESİ • Henüz gerçek oy ve yorum gönderimi yok</span></div>
+<header><div class="wrap header-inner">
+<a class="brand" href="../../../"><img class="logo" src="../../../assets/rezonanslar-logo.png" alt="REZONANSLAR logo"><span><strong>REZONANSLAR</strong><small>Creative Studio</small></span></a>
+<button class="menu" aria-label="Menü" aria-expanded="false">☰</button>
+<nav aria-label="Ana menü" class="main-navigation">
+<a href="../../../" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+<div class="nav-artists"><a class="nav-artists-link" href="../../../artists/" data-tr="Sanatçılar" data-en="Artists">Sanatçılar</a><button class="nav-drop-toggle" type="button" aria-label="Sanatçı listesini aç" aria-expanded="false" aria-controls="artist-dropdown">▾</button><div class="nav-dropdown" id="artist-dropdown" role="menu" aria-label="Sanatçı profilleri"><a role="menuitem" href="../../../artists/hazan/">Hazan</a><a role="menuitem" href="../../../artists/lucian-cross/">Lucian Cross</a><a role="menuitem" href="../../../artists/layla-rezonans/">Layla Rezonans</a><a role="menuitem" href="../../../artists/aurelia-nox/">Aurelia Nox</a><a role="menuitem" href="../../../artists/vivian-hale/">Vivian Hale</a><a role="menuitem" href="../../../artists/clara-stone/">Clara Stone</a><a role="menuitem" href="../../../artists/deniz-ekin/">Deniz &amp; Ekin</a><a role="menuitem" href="../../../artists/aras-demir/">Aras Demir</a><a role="menuitem" href="../../../artists/seren-vega/">Seren Vega</a><a role="menuitem" href="../../../artists/mahir-koz/">Mahir Köz</a></div></div>
+<a href="../../../about/" data-tr="Hakkımızda" data-en="About">Hakkımızda</a>
+<a href="../../../work-with-us/" data-tr="Bizimle Çalışın" data-en="Work With Us">Bizimle Çalışın</a>
+<a href="../../../songwriters/" data-tr="Söz Yazarları" data-en="Songwriters">Söz Yazarları</a>
+<a href="../../" data-tr="Fan Club" data-en="Fan Club">Fan Club</a>
+<a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
+</nav><div class="lang"><button data-lang="tr" class="active">TR</button><button data-lang="en">EN</button></div></div></header>
+<main class="hs">
+<section class="hs-hero"><div class="hs-shell hs-hero-grid"><div>
+<span class="hs-kicker" data-tr="REZONANSLAR FAN CLUB • HAYRAN HİKÂYELERİ" data-en="REZONANSLAR FAN CLUB • FAN STORIES">REZONANSLAR FAN CLUB • HAYRAN HİKÂYELERİ</span>
+<h1><span data-tr="Hangi Şarkı" data-en="Which Song">Hangi Şarkı</span> <em data-tr="Senin Hikâyeni Anlatıyor?" data-en="Tells Your Story?">Senin Hikâyeni Anlatıyor?</em></h1>
+<p data-tr="Bazı şarkıları dinleriz. Bazılarında ise kendimizi buluruz. Hazan'ın dokuz şarkısı arasından seni en çok anlatanı seç ve nedenini keşfet." data-en="Some songs we listen to. In others, we find ourselves. Choose the one that speaks to you most among Hazan's nine songs — and explore why.">Bazı şarkıları dinleriz. Bazılarında ise kendimizi buluruz. Hazan'ın dokuz şarkısı arasından seni en çok anlatanı seç ve nedenini keşfet.</p>
+<a class="hs-hero-cta" href="#sarkilar" data-tr="Şarkını Seç ↓" data-en="Choose Your Song ↓">Şarkını Seç ↓</a>
+</div><div class="hs-photo-wrap"><img src="../../../assets/personas/hazan-profile-card.webp" width="420" height="420" alt="Hazan — REZONANSLAR sanatçı profili"><div class="hs-photo-label">Hazan</div></div></div></section>
+<section class="hs-intro"><div class="hs-shell"><span class="hs-kicker" data-tr="MÜZİĞİN SENDE BIRAKTIĞI İZ" data-en="THE MARK MUSIC LEAVES">MÜZİĞİN SENDE BIRAKTIĞI İZ</span><h2 data-tr="Bir Şarkı, Bir Anı, Bir Hikâye" data-en="One Song, One Memory, One Story">Bir Şarkı, Bir Anı, Bir Hikâye</h2>
+<p data-tr="Bazen bir şarkı, kimseye anlatamadığımız bir duyguyu tarif eder. Bazen yıllar öncesinden bir yüzü, bir sokağı, bir bekleyişi hatırlatır. Sen hangi şarkıda kendinden bir parça buluyorsun?" data-en="Sometimes a song captures a feeling we could never explain. Sometimes it brings back a face, a street, or a moment of waiting from years ago. Which song holds a piece of your story?">Bazen bir şarkı, kimseye anlatamadığımız bir duyguyu tarif eder. Bazen yıllar öncesinden bir yüzü, bir sokağı, bir bekleyişi hatırlatır. Sen hangi şarkıda kendinden bir parça buluyorsun?</p>
+<div class="hs-album"><span aria-hidden="true">♫</span><span data-tr="Hazan • Aşk Hatıraları • 9 şarkı" data-en="Hazan • Aşk Hatıraları • 9 songs">Hazan • Aşk Hatıraları • 9 şarkı</span></div>
+</div></section>
+<section class="hs-list" id="sarkilar"><div class="hs-shell"><div class="hs-section-head"><span class="hs-kicker" data-tr="ŞARKINI SEÇ" data-en="CHOOSE YOUR SONG">ŞARKINI SEÇ</span>
+<h2 data-tr="Hangi Şarkı Sana Dokunuyor?" data-en="Which Song Speaks to You?">Hangi Şarkı Sana Dokunuyor?</h2>
+<p data-tr="Her kartta kendi hayatına dönüp bakmanı sağlayacak bir soru var. Bir şarkı seçtiğinde aşağıdaki hikâye alanı senin için değişir." data-en="Each card invites you to reflect on a moment in your own life. Choose a song to update the story prompt below.">Her kartta kendi hayatına dönüp bakmanı sağlayacak bir soru var. Bir şarkı seçtiğinde aşağıdaki hikâye alanı senin için değişir.</p>
+</div><div class="hs-song-grid" role="group" aria-label="Hazan şarkıları">
+<button class="hs-song-card is-selected" type="button" data-song="derin-hisler" aria-pressed="true">
+ <span class="hs-card-top"><span class="hs-track-num">01</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Derin Hisler</span>
+ <span class="hs-track-question" data-tr="Hiç kimseye anlatamadığın bir duyguyu içinde taşıdın mı?" data-en="Have you ever carried a feeling you could never put into words?">Hiç kimseye anlatamadığın bir duyguyu içinde taşıdın mı?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="icimdeki-telas" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">02</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">İçimdeki Telaş</span>
+ <span class="hs-track-question" data-tr="Kalbini hızlandıran bir haber, karşılaşma veya bekleyiş hatırlıyor musun?" data-en="Do you remember a meeting, message, or moment of waiting that made your heart race?">Kalbini hızlandıran bir haber, karşılaşma veya bekleyiş hatırlıyor musun?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="hazan-mevsiminde-asklar" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">03</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Hazan Mevsiminde Aşklar</span>
+ <span class="hs-track-question" data-tr="Bir mevsim, seni hiç unutamadığın bir aşka geri götürüyor mu?" data-en="Does a particular season take you back to a love you have never forgotten?">Bir mevsim, seni hiç unutamadığın bir aşka geri götürüyor mu?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="can-ozum" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">04</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Can Özüm</span>
+ <span class="hs-track-question" data-tr="Hayatında 'iyi ki varsın' demek istediğin biri var mı?" data-en="Is there someone in your life you wish you could thank simply for being there?">Hayatında 'iyi ki varsın' demek istediğin biri var mı?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="muhur" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">05</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Mühür</span>
+ <span class="hs-track-question" data-tr="Hangi anı kalbinde silinmeyecek bir iz bıraktı?" data-en="Which memory left a mark on your heart that time could not erase?">Hangi anı kalbinde silinmeyecek bir iz bıraktı?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="yalan-yillar" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">06</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Yalan Yıllar</span>
+ <span class="hs-track-question" data-tr="Geriye baktığında farklı yaşamak istediğin bir dönem oldu mu?" data-en="Is there a time in your past you sometimes wish you could live differently?">Geriye baktığında farklı yaşamak istediğin bir dönem oldu mu?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="gunahi-bana-sevabi-sana" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">07</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Günahı Bana Sevabı Sana</span>
+ <span class="hs-track-question" data-tr="Bir ilişkide bütün sorumluluğu üzerine aldığını hissettiğin oldu mu?" data-en="Have you ever felt you were carrying all the responsibility in a relationship?">Bir ilişkide bütün sorumluluğu üzerine aldığını hissettiğin oldu mu?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="sabret-ey-yar" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">08</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Sabret Ey Yâr</span>
+ <span class="hs-track-question" data-tr="Bir kavuşmayı umut ederek uzun süre beklediğin oldu mu?" data-en="Have you ever waited a long time, holding on to the hope of a reunion?">Bir kavuşmayı umut ederek uzun süre beklediğin oldu mu?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+<button class="hs-song-card" type="button" data-song="dunya-bir-yana" aria-pressed="false">
+ <span class="hs-card-top"><span class="hs-track-num">09</span><span class="hs-card-mark" aria-hidden="true">♪</span></span>
+ <span class="hs-track-title">Dünya Bir Yana</span>
+ <span class="hs-track-question" data-tr="Bir insanın varlığı sana bütün dünyadan daha değerli geldi mi?" data-en="Has someone's presence ever meant more to you than the rest of the world?">Bir insanın varlığı sana bütün dünyadan daha değerli geldi mi?</span>
+ <span class="hs-card-select" aria-hidden="true" data-tr="Bu şarkıyı seç →" data-en="Choose this song →">Bu şarkıyı seç →</span>
+ </button>
+</div><p class="hs-aside-cta" data-tr="* Sorular, şarkı isimlerinden ve genel duygusal temalardan ilham alan özgün anlatı davetleridir; şarkı sözü alıntısı değildir." data-en="* Prompts are original reflections inspired by song titles and emotional themes, not quoted lyrics.">* Sorular, şarkı isimlerinden ve genel duygusal temalardan ilham alan özgün anlatı davetleridir; şarkı sözü alıntısı değildir.</p></div></section>
+<section class="hs-reply" id="hs-reply"><div class="hs-shell hs-reply-inner"><div class="hs-reply-copy">
+<span class="hs-kicker" data-tr="SENİN HİKÂYEN" data-en="YOUR STORY">SENİN HİKÂYEN</span>
+<h2 data-tr="Bu Şarkı Sana Neyi Hatırlatıyor?" data-en="What Does This Song Remind You Of?">Bu Şarkı Sana Neyi Hatırlatıyor?</h2>
+<p data-tr="Seçtiğin şarkıyı ve ona eşlik eden soruyu burada görebilirsin. Dilersen kendi kelimelerinle küçük bir hikâye taslağı hazırlayabilirsin." data-en="See your selected song and its question here. You can also write a personal draft in your own words, if you wish.">Seçtiğin şarkıyı ve ona eşlik eden soruyu burada görebilirsin. Dilersen kendi kelimelerinle küçük bir hikâye taslağı hazırlayabilirsin.</p>
+<div class="hs-selected" aria-live="polite"><span class="hs-selected-label" data-tr="SEÇTİĞİN ŞARKI" data-en="YOUR SELECTED SONG">SEÇTİĞİN ŞARKI</span>
+<strong id="hs-selected-song">Derin Hisler</strong><p id="hs-selected-question">Hiç kimseye anlatamadığın bir duyguyu içinde taşıdın mı?</p></div>
+</div><div class="hs-reply-panel"><span class="hs-kicker" data-tr="ÖZEL TASLAK ALANI" data-en="PRIVATE DRAFT AREA">ÖZEL TASLAK ALANI</span>
+<h3 data-tr="Hikâyeni kendi kelimelerinle anlat" data-en="Tell Your Story in Your Own Words">Hikâyeni kendi kelimelerinle anlat</h3>
+<p data-tr="Buraya yazdıkların yalnızca bu sayfa açıkken tarayıcında tutulur. Hiçbir yere gönderilmez veya kalıcı olarak kaydedilmez." data-en="What you write remains in this page while it is open. It is not sent anywhere or saved permanently.">Buraya yazdıkların yalnızca bu sayfa açıkken tarayıcında tutulur. Hiçbir yere gönderilmez veya kalıcı olarak kaydedilmez.</p>
+<label for="hs-draft" data-tr="Hikâye taslağım" data-en="My story draft">Hikâye taslağım</label>
+<textarea id="hs-draft" rows="6" maxlength="3000" placeholder="Bu şarkı bana ... hatırlatıyor; çünkü ..."></textarea>
+<div class="hs-private-note"><span aria-hidden="true">♧</span><span data-tr="Bu bir deneme alanıdır. Üyelik, oylama ve herkese açık yorum sistemi henüz aktif değil. Gerçek paylaşım veya yöneticiye gönderim yapılmaz. Gizli kişisel bilgilerini yazmamanı öneririz." data-en="This is a demo workspace. Membership, voting and public comments are not available yet. Nothing is posted or sent to moderators. Avoid entering sensitive personal details.">Bu bir deneme alanıdır. Üyelik, oylama ve herkese açık yorum sistemi henüz aktif değil. Gerçek paylaşım veya yöneticiye gönderim yapılmaz. Gizli kişisel bilgilerini yazmamanı öneririz.</span></div>
+<div class="hs-actions"><button id="hs-copy" type="button" class="hs-action primary" data-tr="Taslağı Kopyala" data-en="Copy Draft">Taslağı Kopyala</button><button id="hs-clear" type="button" class="hs-action secondary" data-tr="Temizle" data-en="Clear">Temizle</button></div>
+<div class="hs-feedback" id="hs-copy-feedback" role="status" aria-live="polite"></div>
+</div></div></section>
+<section class="hs-future"><div class="hs-shell hs-future-grid"><div><span class="hs-kicker" data-tr="İLERİDE FAN CLUB'DA" data-en="COMING TO THE FAN CLUB">İLERİDE FAN CLUB'DA</span>
+<h2 data-tr="Hikâyeler Buluştuğunda" data-en="When Our Stories Meet">Hikâyeler Buluştuğunda</h2>
+<p data-tr="Ücretsiz üyelik açıldığında dinleyiciler seçtikleri şarkı üzerine yorum gönderebilecek. Yorumlar yayınlanmadan önce incelenecek; hikâyeler ancak açık izin alınarak ayrıca öne çıkarılabilecek." data-en="When free membership launches, listeners will be able to submit comments about the songs they choose. Comments will be reviewed before publication; individual stories will be featured separately only with explicit permission.">Ücretsiz üyelik açıldığında dinleyiciler seçtikleri şarkı üzerine yorum gönderebilecek. Yorumlar yayınlanmadan önce incelenecek; hikâyeler ancak açık izin alınarak ayrıca öne çıkarılabilecek.</p>
+<p data-tr="Hangi şarkının daha çok seçildiğini gösteren gerçek sonuçlar ise ancak güvenli oylama sistemi kurulduktan sonra yayımlanacak." data-en="Real song-selection results will appear only after a secure voting system is introduced.">Hangi şarkının daha çok seçildiğini gösteren gerçek sonuçlar ise ancak güvenli oylama sistemi kurulduktan sonra yayımlanacak.</p>
+</div><div class="hs-future-list"><div class="hs-future-item"><span aria-hidden="true">♡</span><strong data-tr="Ücretsiz üyelik ve favori sanatçılar" data-en="Free membership and favorite artists">Ücretsiz üyelik ve favori sanatçılar</strong></div>
+<div class="hs-future-item"><span aria-hidden="true">✎</span><strong data-tr="Onaylı yorumlar ve hayran hikâyeleri" data-en="Moderated comments and fan stories">Onaylı yorumlar ve hayran hikâyeleri</strong></div>
+<div class="hs-future-item"><span aria-hidden="true">♪</span><strong data-tr="Gerçek şarkı anketleri ve sonuçları" data-en="Real song polls and results">Gerçek şarkı anketleri ve sonuçları</strong></div></div></div></section>
+<section class="hs-channels"><div class="hs-shell"><h2 data-tr="Hazan'ın Müzik Dünyasını Keşfet" data-en="Explore Hazan's Music">Hazan'ın Müzik Dünyasını Keşfet</h2>
+<p data-tr="Bu yazıyı okurken Hazan'ın şarkılarını da dinlemek istersen, resmî sanatçı sayfasını ve müzik kanallarını ziyaret edebilirsin." data-en="If you'd like to listen while reading, visit Hazan's official artist page and music channels.">Bu yazıyı okurken Hazan'ın şarkılarını da dinlemek istersen, resmî sanatçı sayfasını ve müzik kanallarını ziyaret edebilirsin.</p>
+<div class="hs-outlinks"><a href="../../../artists/hazan/" data-tr="Hazan Profili ↗" data-en="Hazan Profile ↗">Hazan Profili ↗</a><a href="https://open.spotify.com/artist/1vcSTknEd4NG81UeY8WkPy" target="_blank" rel="noopener noreferrer">Spotify ↗</a><a href="https://www.youtube.com/@hazanrezonanslar" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div>
+</div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© 2026 REZONANSLAR Creative Studio</span><span data-tr="Her Rezonans Bir Hikâye Anlatır." data-en="Every Resonance Tells a Story.">Her Rezonans Bir Hikâye Anlatır.</span></div></footer>
+<script src="../../../js/site.js?v=20261011-mobile-v7"></script><script src="../../../js/navigation.js"></script><script src="../../../js/shared-contact.js" data-root="../../../"></script>
+<script>
+(function(){
+"use strict";
+var songs=[{"id":"derin-hisler","title":"Derin Hisler","tr":"Hiç kimseye anlatamadığın bir duyguyu içinde taşıdın mı?","en":"Have you ever carried a feeling you could never put into words?"},{"id":"icimdeki-telas","title":"İçimdeki Telaş","tr":"Kalbini hızlandıran bir haber, karşılaşma veya bekleyiş hatırlıyor musun?","en":"Do you remember a meeting, message, or moment of waiting that made your heart race?"},{"id":"hazan-mevsiminde-asklar","title":"Hazan Mevsiminde Aşklar","tr":"Bir mevsim, seni hiç unutamadığın bir aşka geri götürüyor mu?","en":"Does a particular season take you back to a love you have never forgotten?"},{"id":"can-ozum","title":"Can Özüm","tr":"Hayatında 'iyi ki varsın' demek istediğin biri var mı?","en":"Is there someone in your life you wish you could thank simply for being there?"},{"id":"muhur","title":"Mühür","tr":"Hangi anı kalbinde silinmeyecek bir iz bıraktı?","en":"Which memory left a mark on your heart that time could not erase?"},{"id":"yalan-yillar","title":"Yalan Yıllar","tr":"Geriye baktığında farklı yaşamak istediğin bir dönem oldu mu?","en":"Is there a time in your past you sometimes wish you could live differently?"},{"id":"gunahi-bana-sevabi-sana","title":"Günahı Bana Sevabı Sana","tr":"Bir ilişkide bütün sorumluluğu üzerine aldığını hissettiğin oldu mu?","en":"Have you ever felt you were carrying all the responsibility in a relationship?"},{"id":"sabret-ey-yar","title":"Sabret Ey Yâr","tr":"Bir kavuşmayı umut ederek uzun süre beklediğin oldu mu?","en":"Have you ever waited a long time, holding on to the hope of a reunion?"},{"id":"dunya-bir-yana","title":"Dünya Bir Yana","tr":"Bir insanın varlığı sana bütün dünyadan daha değerli geldi mi?","en":"Has someone's presence ever meant more to you than the rest of the world?"}];
+var cards=Array.prototype.slice.call(document.querySelectorAll(".hs-song-card"));
+var panel=document.getElementById("hs-reply");
+var selectedName=document.getElementById("hs-selected-song");
+var selectedQuestion=document.getElementById("hs-selected-question");
+var draft=document.getElementById("hs-draft");
+var feedback=document.getElementById("hs-copy-feedback");
+var copy=document.getElementById("hs-copy");
+var clear=document.getElementById("hs-clear");
+var current=songs[0];
+function lang(){return document.documentElement.lang==="en"?"en":"tr";}
+function render(){
+  cards.forEach(function(button){var on=button.dataset.song===current.id;button.classList.toggle("is-selected",on);button.setAttribute("aria-pressed",String(on));});
+  selectedName.textContent=current.title;
+  selectedQuestion.textContent=current[lang()];
+  draft.placeholder=lang()==="tr"?"Bu şarkı bana ... hatırlatıyor; çünkü ...":"This song reminds me of ... because ...";
+  feedback.textContent="";
+}
+cards.forEach(function(button){button.addEventListener("click",function(){var next=songs.find(function(item){return item.id===button.dataset.song;});if(!next)return;current=next;render();});});
+document.querySelectorAll("[data-lang]").forEach(function(button){button.addEventListener("click",render);});
+copy.addEventListener("click",async function(){
+ var t=draft.value.trim();
+ if(!t){feedback.textContent=lang()==="tr"?"Önce bir hikâye taslağı yaz.":"Write a story draft first.";draft.focus();return;}
+ try{
+  if(!navigator.clipboard||!navigator.clipboard.writeText)throw new Error("clipboard unsupported");
+  await navigator.clipboard.writeText(t);
+  feedback.textContent=lang()==="tr"?"Metnin panoya kopyalandı. Hiçbir veri sunucuya gönderilmedi.":"Copied to clipboard. No data was sent to a server.";
+ }catch(e){feedback.textContent=lang()==="tr"?"Tarayıcı panoya kopyalamaya izin vermedi. Metni seçip Ctrl+C ile kopyalayabilirsin.":"Clipboard access was not granted. Select the text and use Ctrl+C instead.";}
+});
+clear.addEventListener("click",function(){draft.value="";feedback.textContent=lang()==="tr"?"Taslak alanı temizlendi.":"Draft cleared.";draft.focus();});
+render();
+})();</script></body></html>
