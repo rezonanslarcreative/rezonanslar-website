@@ -1,0 +1,29 @@
+/* REZONANSLAR Fan Club — Lyrics Bubble v1. Preview only.
+   Copy deterrents are scoped to approved lyric content; no browser-side technique prevents extraction. */
+.rzlb-launcher{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;background:linear-gradient(125deg,#fff8e9,#f4e6c8);border:1px solid #d8bf83;border-radius:12px;padding:14px 16px;margin:0 0 18px}
+.rzlb-launcher-copy{display:grid;gap:5px;flex:1;min-width:170px}
+.rzlb-launcher-title{color:#6b4718;font:bold 13px/1.4 Arial,sans-serif}
+.rzlb-launcher-hint{color:#796750;font:12px/1.5 Arial,sans-serif}
+.rzlb-open-button{border:1px solid #b58a39;border-radius:99px;background:#c9a227;color:#24170b;padding:10px 15px;min-height:42px;font-weight:700;font-size:12px;cursor:pointer}
+.rzlb-open-button:focus-visible,.rzlb-tool:focus-visible{outline:3px solid #9b7125;outline-offset:2px}
+.rzlb-bubble{box-sizing:border-box;display:none;position:fixed;z-index:9999;width:min(370px,calc(100vw - 24px));max-height:min(64vh,610px);border:1px solid #d1a554;border-radius:20px;background:#fffaf0;color:#3d2b16;box-shadow:0 20px 65px #25160c5c;overflow:visible;contain:layout;isolation:isolate}
+.rzlb-bubble.rzlb-visible{display:flex;flex-direction:column}
+.rzlb-bubble::after{content:"";position:absolute;left:22px;top:calc(100% - 1px);width:19px;height:19px;background:#fffaf0;border-right:1px solid #d1a554;border-bottom:1px solid #d1a554;transform:rotate(45deg);pointer-events:none;z-index:-1}
+.rzlb-bubble.rzlb-pinned{top:105px!important;right:16px!important;left:auto!important;bottom:auto!important;max-height:min(70vh,650px)}
+.rzlb-bubble.rzlb-pinned::after{left:auto;right:30px;top:calc(100% - 1px)}
+.rzlb-head{padding:14px 15px 12px;background:linear-gradient(110deg,#422d16,#77501d);border-radius:18px 18px 0 0;color:#fff7df;display:flex;flex-direction:column;gap:9px;flex:0 0 auto}
+.rzlb-overline{letter-spacing:.14em;color:#edcf8b;font-size:10px;font-weight:700;text-transform:uppercase}
+.rzlb-head-row{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}
+.rzlb-song-title{font:500 23px/1.24 Georgia,serif;color:#fff7e5;overflow-wrap:anywhere}
+.rzlb-head-buttons{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.rzlb-tool{border:1px solid #e7ca86a8;border-radius:8px;background:#ffffff1f;color:#fff3d9;cursor:pointer;font:700 11px/1.1 Arial,sans-serif;padding:7px 8px;min-height:32px}
+.rzlb-close{font-size:20px;min-width:32px}
+.rzlb-main{padding:17px 18px 13px;overflow-y:auto;overscroll-behavior:contain;min-height:0;flex:1 1 auto}
+.rzlb-lyrics{white-space:pre-wrap;font:15px/1.8 Georgia,serif;color:#503a20;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overflow-wrap:anywhere;cursor:default}
+.rzlb-lyrics.rzlb-unavailable{font:13px/1.75 Arial,sans-serif;color:#75654e;user-select:text;-webkit-user-select:text}
+.rzlb-footer{border-top:1px solid #ead5ab;padding:12px 18px 15px;flex:0 0 auto;background:#fff8e9;border-radius:0 0 19px 19px;display:grid;gap:5px}
+.rzlb-credit{color:#826225;font:700 11px/1.5 Arial,sans-serif}
+.rzlb-disclaimer{color:#88775e;font:11px/1.5 Arial,sans-serif}
+.rzlb-bubble.rzlb-pinned .rzlb-tool[data-action="pin"]{background:#ebc36e;color:#32220d}
+@media (max-width:700px),(hover:none){.rzlb-bubble.rzlb-visible,.rzlb-bubble.rzlb-pinned{width:auto;left:10px!important;right:10px!important;top:auto!important;bottom:14px!important;max-height:min(50dvh,470px);border-radius:16px}.rzlb-bubble::after{display:none}.rzlb-bubble.rzlb-pinned::after{display:none}.rzlb-tool[data-action="pin"]{display:none}.rzlb-head{border-radius:15px 15px 0 0}.rzlb-footer{border-radius:0 0 15px 15px}}
+@media(prefers-reduced-motion:reduce){.rzlb-bubble{scroll-behavior:auto}}
