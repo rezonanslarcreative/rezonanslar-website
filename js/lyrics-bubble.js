@@ -21,7 +21,12 @@
   noLyrics:["Bu şarkının eksiksiz ve doğrulanmış orijinal sözleri henüz sisteme eklenmedi. Yanlış veya eksik bir metni sözlerin tamamı gibi göstermemek için bu alan şimdilik boş tutuluyor.","The complete, verified original lyrics for this song have not yet been added. This area remains empty rather than presenting incorrect or incomplete lyrics as the full text."],
   copyright:["Sözler: Selçuk Yabar · REZONANSLAR Creative Studio","Lyrics: Selçuk Yabar · REZONANSLAR Creative Studio"],
   copyNotice:["Onaylı sözler yalnızca okumak içindir; kopyalama sınırlandırılmıştır. Tam koruma teknik olarak mümkün değildir.","Approved lyrics are for reading; copying is discouraged. Technical protection cannot be guaranteed."],
-  previewNotice:["Şarkı sözleri arşivi hazırlanıyor • Önizleme","Original lyrics archive being prepared • Preview"]
+  previewNotice:["Şarkı sözleri arşivi hazırlanıyor • Önizleme","Original lyrics archive being prepared • Preview"],
+  master:["ORİJİNAL SÖZ MASTERI","ORIGINAL LYRICS MASTER"],
+  masterBadge:["ONAYLI ORİJİNAL METİN","VERIFIED ORIGINAL TEXT"],
+  cardBadge:["KATALOG KİMLİĞİ","CATALOG RECORD"],
+  codesNote:["UPC: yayın/ürün kodu · ISRC: ses kaydı kodu. Telif tescil numarası değildir.","UPC: release/product identifier · ISRC: sound recording identifier. Neither is a lyrics copyright registration number."],
+  version:["Kaynak sürümü","Source version"]
  };
  const L=(key)=>messages[key][tr()?0:1];
  function node(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!=null)n.textContent=txt;return n;}
@@ -46,6 +51,14 @@
  pin.type="button";pin.dataset.action="pin";
  const close=node("button","rzlb-tool rzlb-close","×");close.type="button";close.setAttribute("aria-label","Kapat");
  actions.append(pin,close);headRow.append(title,actions);head.append(overline,headRow);
+ const masterLine=node("span","rzlb-master-line");
+ const identity=node("div","rzlb-identity");
+ const catalogId=node("span","rzlb-catalog-badge");
+ const ids=node("div","rzlb-code-row");
+ const upcTag=node("span","rzlb-code-item");
+ const isrcTag=node("span","rzlb-code-item");
+ ids.append(upcTag,isrcTag);
+ identity.append(catalogId,ids);head.append(masterLine,identity);
  const main=node("div","rzlb-main");
  const text=node("div","rzlb-lyrics");
  text.setAttribute("aria-label","Söz içeriği");
@@ -53,14 +66,38 @@
  const footer=node("div","rzlb-footer");
  const credit=node("span","rzlb-credit");
  const disclaimer=node("span","rzlb-disclaimer");
- footer.append(credit,disclaimer);bubble.append(head,main,footer);
+ const idExplanation=node("span","rzlb-id-explain");
+ footer.append(credit,idExplanation,disclaimer);bubble.append(head,main,footer);
  document.body.append(bubble);
  let opened=false,pinned=false,wasPinnedBeforeFocus=false,typing=false,hasPointer=false,px=0,py=0;
  const mobile=()=>window.matchMedia("(max-width:700px), (hover:none)").matches;
  const isData=(entry)=>entry&&typeof entry==="object"&&entry.status==="approved-full"&&typeof entry.text==="string"&&entry.text.trim().length>0;
+ const artistRecords=()=>window.REZONANSLAR_APPROVED_LYRICS?.[artist]||{};
+ const availableEntry=(entry)=>isData(entry)&&typeof entry.upc==="string"&&typeof entry.isrc==="string"&&typeof entry.catalog==="string";
+ function addCardIdentity(){
+  document.querySelectorAll(".hs-song-card").forEach(function(card){
+   const entry=artistRecords()[card.dataset.song];
+   const titleNode=card.querySelector(".hs-track-title");
+   if(!titleNode||!availableEntry(entry))return;
+   let wrap=card.querySelector(".rzlb-card-ident");
+   if(!wrap){
+    wrap=node("span","rzlb-card-ident");
+    const badge=node("span","rzlb-card-auth");
+    const codes=node("span","rzlb-card-code-line");
+    badge.dataset.rzlbRole="badge";
+    codes.textContent="UPC "+entry.upc+"  ·  ISRC "+entry.isrc;
+    wrap.append(badge,codes);
+    titleNode.insertAdjacentElement("afterend",wrap);
+    titleNode.classList.add("rzlb-title-verified");
+   }
+   const badge=wrap.querySelector('[data-rzlb-role="badge"]');
+   if(badge)badge.textContent=L("cardBadge")+" · "+entry.catalog;
+  });
+ }
+
  function selected(){
   const id=activeCard()?.dataset.song||"";
-  const entry=window.REZONANSLAR_APPROVED_LYRICS?.[artist]?.[id];
+  const entry=artistRecords()[id];
   return {title:songName.textContent.trim(),entry};
  }
  function redraw(){
@@ -69,12 +106,23 @@
   toggle.textContent=opened?L("close"):L("open");
   bubble.setAttribute("aria-label",tr()?"Şarkı sözleri":"Song lyrics");
   close.setAttribute("aria-label",tr()?"Kapat":"Close");
-  overline.textContent=isData(s.entry)?L("label"):L("previewNotice");
+  const verified=isData(s.entry);
+  overline.textContent=verified?L("label"):L("previewNotice");
   title.textContent=s.title;
-  text.textContent=isData(s.entry)?s.entry.text:L("noLyrics");
-  text.classList.toggle("rzlb-unavailable",!isData(s.entry));
-  credit.textContent=L("copyright");
+  text.textContent=verified?s.entry.text:L("noLyrics");
+  text.classList.toggle("rzlb-unavailable",!verified);
+  masterLine.textContent=verified?L("masterBadge"):"";
+  masterLine.hidden=!verified;
+  identity.hidden=!availableEntry(s.entry);
+  if(availableEntry(s.entry)){
+   catalogId.textContent=L("master")+" · "+s.entry.catalog+" · "+s.entry.documentId;
+   upcTag.textContent="UPC  "+s.entry.upc;
+   isrcTag.textContent="ISRC  "+s.entry.isrc;
+  }
+  credit.textContent=L("copyright")+(verified&&s.entry.version?" · "+L("version")+": "+s.entry.version:"");
+  idExplanation.textContent=availableEntry(s.entry)?L("codesNote"):"";
   disclaimer.textContent=L("copyNotice");
+  addCardIdentity();
   pin.textContent=pinned?L("follow"):L("pin");
   main.scrollTop=0;
  }
