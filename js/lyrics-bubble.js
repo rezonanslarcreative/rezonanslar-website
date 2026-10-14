@@ -100,6 +100,15 @@
   const entry=artistRecords()[id];
   return {title:songName.textContent.trim(),entry};
  }
+ function paintLyrics(target,source){
+  target.replaceChildren();
+  String(source).split("\n").forEach(function(line,index){
+   if(index)target.append(document.createTextNode("\n"));
+   if(/^\[[^\]]+\]$/.test(line)){
+    target.append(node("span","rzlb-lyric-section",line));
+   }else target.append(document.createTextNode(line));
+  });
+ }
  function redraw(){
   const s=selected();
   heading.textContent=L("prompt");sub.textContent=L("help");
@@ -109,7 +118,7 @@
   const verified=isData(s.entry);
   overline.textContent=verified?L("label"):L("previewNotice");
   title.textContent=s.title;
-  text.textContent=verified?s.entry.text:L("noLyrics");
+  if(verified)paintLyrics(text,s.entry.text);else text.textContent=L("noLyrics");
   text.classList.toggle("rzlb-unavailable",!verified);
   masterLine.textContent=verified?L("masterBadge"):"";
   masterLine.hidden=!verified;
