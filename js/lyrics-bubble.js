@@ -26,8 +26,8 @@
   masterBadge:["ONAYLI ORİJİNAL METİN","VERIFIED ORIGINAL TEXT"],
   cardBadge:["KATALOG KİMLİĞİ","CATALOG RECORD"],
   archiveBadge:["ORİJİNAL SÖZ BELGESİ","ORIGINAL LYRICS DOCUMENT"],
-  pendingCodes:["Bu söz belgesinde UPC/ISRC kodları belirtilmiyor; doğrulanmadan gösterilmiyor.","UPC/ISRC identifiers are not provided in this lyric document and are not displayed without verification."],
-  codesNote:["UPC: yayın/ürün kodu · ISRC: ses kaydı kodu. Telif tescil numarası değildir.","UPC: release/product identifier · ISRC: sound recording identifier. Neither is a lyrics copyright registration number."],
+  pendingCodes:["Bu şarkının ISRC kodu henüz doğrulanmadı.","The ISRC for this song has not yet been verified."],
+  codesNote:["ISRC, ses kaydı kimliğidir; şarkı sözlerinin telif tescil numarası değildir.","ISRC identifies a sound recording; it is not a lyrics copyright registration number."],
   version:["Kaynak sürümü","Source version"]
  };
  const L=(key)=>messages[key][tr()?0:1];
@@ -57,9 +57,8 @@
  const identity=node("div","rzlb-identity");
  const catalogId=node("span","rzlb-catalog-badge");
  const ids=node("div","rzlb-code-row");
- const upcTag=node("span","rzlb-code-item");
  const isrcTag=node("span","rzlb-code-item");
- ids.append(upcTag,isrcTag);
+ ids.append(isrcTag);
  identity.append(catalogId,ids);head.append(masterLine,identity);
  const main=node("div","rzlb-main");
  const text=node("div","rzlb-lyrics");
@@ -76,7 +75,7 @@
  const isData=(entry)=>entry&&typeof entry==="object"&&entry.status==="approved-full"&&typeof entry.text==="string"&&entry.text.trim().length>0;
  const artistRecords=()=>window.REZONANSLAR_APPROVED_LYRICS?.[artist]||{};
  const availableEntry=(entry)=>isData(entry)&&typeof entry.catalog==="string"&&typeof entry.documentId==="string";
- const hasCodes=(entry)=>availableEntry(entry)&&/^\d{12,14}$/.test(entry.upc||"")&&/^[A-Z]{2}[A-Z0-9]{3}\d{7}$/.test(entry.isrc||"");
+ const hasISRC=(entry)=>availableEntry(entry)&&/^[A-Z]{2}[A-Z0-9]{3}\d{7}$/.test(entry.isrc||"");
  function addCardIdentity(){
   document.querySelectorAll(".hs-song-card").forEach(function(card){
    const entry=artistRecords()[card.dataset.song];
@@ -88,14 +87,14 @@
     const badge=node("span","rzlb-card-auth");
     const codes=node("span","rzlb-card-code-line");
     badge.dataset.rzlbRole="badge";
-    codes.textContent=hasCodes(entry)?"UPC "+entry.upc+"  ·  ISRC "+entry.isrc:"";
-    codes.hidden=!hasCodes(entry);
+    codes.textContent=hasISRC(entry)?"ISRC "+entry.isrc:"";
+    codes.hidden=!hasISRC(entry);
     wrap.append(badge,codes);
     titleNode.insertAdjacentElement("afterend",wrap);
     titleNode.classList.add("rzlb-title-verified");
    }
    const badge=wrap.querySelector('[data-rzlb-role="badge"]');
-   if(badge)badge.textContent=(hasCodes(entry)?L("cardBadge"):L("archiveBadge"))+" · "+entry.catalog;
+   if(badge)badge.textContent=(hasISRC(entry)?L("cardBadge"):L("archiveBadge"))+" · "+entry.catalog;
   });
  }
 
@@ -140,12 +139,11 @@
   identity.hidden=!availableEntry(s.entry);
   if(availableEntry(s.entry)){
    catalogId.textContent=L("master")+" · "+s.entry.catalog+" · "+s.entry.documentId;
-   ids.hidden=!hasCodes(s.entry);
-   upcTag.textContent=hasCodes(s.entry)?"UPC  "+s.entry.upc:"";
-   isrcTag.textContent=hasCodes(s.entry)?"ISRC  "+s.entry.isrc:"";
+   ids.hidden=!hasISRC(s.entry);
+   isrcTag.textContent=hasISRC(s.entry)?"ISRC  "+s.entry.isrc:"";
   }
   credit.textContent=L("copyright")+(verified&&s.entry.version?" · "+L("version")+": "+s.entry.version:"");
-  idExplanation.textContent=hasCodes(s.entry)?L("codesNote"):(availableEntry(s.entry)?L("pendingCodes"):"");
+  idExplanation.textContent=hasISRC(s.entry)?L("codesNote"):(availableEntry(s.entry)?L("pendingCodes"):"");
   disclaimer.textContent=L("copyNotice");
   addCardIdentity();
   pin.textContent=pinned?L("follow"):L("pin");
