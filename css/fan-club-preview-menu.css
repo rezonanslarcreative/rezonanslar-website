@@ -1,0 +1,65 @@
+/* REZONANSLAR Fan Club — preview-only navigation.
+ * The live site and /fan-club/ coming-soon page do not load this file.
+ * Reuses existing .nav-artists/.nav-dropdown behavior and mobile toggle.
+ */
+header nav.main-navigation .nav-fan-club>.nav-artists-link{white-space:nowrap}
+header nav.main-navigation .nav-fan-club>.nav-drop-toggle{color:#a9801e}
+header nav.main-navigation .nav-fan-club>.nav-fan-dropdown{
+  width:min(338px,calc(100vw - 36px));
+  max-width:none;
+  right:0;left:auto;
+  border-color:#e0c68c;
+  border-top:3px solid #c9a227;
+  padding:10px;
+  background:#fffdf8;
+}
+header nav.main-navigation .nav-fan-dropdown a{
+  display:block!important;
+  padding:11px 12px!important;
+  font-size:13px;
+  line-height:1.45;
+  color:#342919!important;
+  border-radius:7px;
+  white-space:normal;
+}
+header nav.main-navigation .nav-fan-dropdown a:hover,
+header nav.main-navigation .nav-fan-dropdown a:focus-visible{
+  background:#f4e8c6;color:#79510f!important;
+}
+header .nav-fan-dropdown .nav-fan-coming{
+  display:block;
+  margin:3px 0 0;
+  padding:11px 12px;
+  border-top:1px solid #e9ddc6;
+  color:#8b7d62;
+  background:#f9f4e9;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:650;
+  cursor:not-allowed;
+}
+header .nav-fan-club .nav-drop-toggle:focus-visible,
+header .nav-fan-club .nav-artists-link:focus-visible{
+  outline:2px solid #c9a227;outline-offset:3px;
+}
+@media (max-width:1000px){
+  header nav.main-navigation .nav-fan-club>.nav-fan-dropdown{
+    position:static;
+    width:100%;
+    max-width:none;
+    right:auto;left:auto;
+    margin:0 0 8px;
+    padding:4px 8px 6px;
+    border:0;border-left:2px solid #c9a227;
+    background:#fbf6eb;
+    box-shadow:none;
+  }
+  header nav.main-navigation .nav-fan-dropdown a{
+    display:flex!important;
+    align-items:center;
+    min-height:44px;
+    padding:8px 10px!important;
+    font-size:14px;
+  }
+  header .nav-fan-dropdown .nav-fan-coming{padding:10px 12px;font-size:14px}
+}
