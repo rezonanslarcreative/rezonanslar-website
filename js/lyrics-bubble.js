@@ -25,6 +25,8 @@
   master:["ORİJİNAL SÖZ MASTERI","ORIGINAL LYRICS MASTER"],
   masterBadge:["ONAYLI ORİJİNAL METİN","VERIFIED ORIGINAL TEXT"],
   cardBadge:["KATALOG KİMLİĞİ","CATALOG RECORD"],
+  archiveBadge:["ORİJİNAL SÖZ BELGESİ","ORIGINAL LYRICS DOCUMENT"],
+  pendingCodes:["Bu söz belgesinde UPC/ISRC kodları belirtilmiyor; doğrulanmadan gösterilmiyor.","UPC/ISRC identifiers are not provided in this lyric document and are not displayed without verification."],
   codesNote:["UPC: yayın/ürün kodu · ISRC: ses kaydı kodu. Telif tescil numarası değildir.","UPC: release/product identifier · ISRC: sound recording identifier. Neither is a lyrics copyright registration number."],
   version:["Kaynak sürümü","Source version"]
  };
@@ -73,7 +75,8 @@
  const mobile=()=>window.matchMedia("(max-width:700px), (hover:none)").matches;
  const isData=(entry)=>entry&&typeof entry==="object"&&entry.status==="approved-full"&&typeof entry.text==="string"&&entry.text.trim().length>0;
  const artistRecords=()=>window.REZONANSLAR_APPROVED_LYRICS?.[artist]||{};
- const availableEntry=(entry)=>isData(entry)&&typeof entry.upc==="string"&&typeof entry.isrc==="string"&&typeof entry.catalog==="string";
+ const availableEntry=(entry)=>isData(entry)&&typeof entry.catalog==="string"&&typeof entry.documentId==="string";
+ const hasCodes=(entry)=>availableEntry(entry)&&/^\d{12,14}$/.test(entry.upc||"")&&/^[A-Z]{2}[A-Z0-9]{3}\d{7}$/.test(entry.isrc||"");
  function addCardIdentity(){
   document.querySelectorAll(".hs-song-card").forEach(function(card){
    const entry=artistRecords()[card.dataset.song];
@@ -85,13 +88,14 @@
     const badge=node("span","rzlb-card-auth");
     const codes=node("span","rzlb-card-code-line");
     badge.dataset.rzlbRole="badge";
-    codes.textContent="UPC "+entry.upc+"  ·  ISRC "+entry.isrc;
+    codes.textContent=hasCodes(entry)?"UPC "+entry.upc+"  ·  ISRC "+entry.isrc:"";
+    codes.hidden=!hasCodes(entry);
     wrap.append(badge,codes);
     titleNode.insertAdjacentElement("afterend",wrap);
     titleNode.classList.add("rzlb-title-verified");
    }
    const badge=wrap.querySelector('[data-rzlb-role="badge"]');
-   if(badge)badge.textContent=L("cardBadge")+" · "+entry.catalog;
+   if(badge)badge.textContent=(hasCodes(entry)?L("cardBadge"):L("archiveBadge"))+" · "+entry.catalog;
   });
  }
 
@@ -130,16 +134,18 @@
   title.textContent=s.title;
   if(verified)paintLyrics(text,s.entry.text);else text.textContent=L("noLyrics");
   text.classList.toggle("rzlb-unavailable",!verified);
+  text.setAttribute("dir",verified&&/^ar(?:\/|$)/.test(s.entry.language||"")?"rtl":"ltr");
   masterLine.textContent=verified?L("masterBadge"):"";
   masterLine.hidden=!verified;
   identity.hidden=!availableEntry(s.entry);
   if(availableEntry(s.entry)){
    catalogId.textContent=L("master")+" · "+s.entry.catalog+" · "+s.entry.documentId;
-   upcTag.textContent="UPC  "+s.entry.upc;
-   isrcTag.textContent="ISRC  "+s.entry.isrc;
+   ids.hidden=!hasCodes(s.entry);
+   upcTag.textContent=hasCodes(s.entry)?"UPC  "+s.entry.upc:"";
+   isrcTag.textContent=hasCodes(s.entry)?"ISRC  "+s.entry.isrc:"";
   }
   credit.textContent=L("copyright")+(verified&&s.entry.version?" · "+L("version")+": "+s.entry.version:"");
-  idExplanation.textContent=availableEntry(s.entry)?L("codesNote"):"";
+  idExplanation.textContent=hasCodes(s.entry)?L("codesNote"):(availableEntry(s.entry)?L("pendingCodes"):"");
   disclaimer.textContent=L("copyNotice");
   addCardIdentity();
   pin.textContent=pinned?L("follow"):L("pin");
