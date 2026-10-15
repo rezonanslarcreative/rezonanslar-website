@@ -21,6 +21,9 @@
 .rzlb-main{padding:17px 18px 13px;overflow-y:auto;overscroll-behavior:contain;min-height:0;flex:1 1 auto}
 .rzlb-lyrics{white-space:pre-wrap;font:15px/1.8 Georgia,serif;color:#503a20;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overflow-wrap:anywhere;cursor:default}
 .rzlb-lyric-section{color:#a47723;font:700 12px/1.8 Arial,sans-serif;letter-spacing:.035em}
+.rzlb-lyrics[dir="rtl"]{direction:rtl;text-align:right;unicode-bidi:plaintext;font-size:17px;line-height:2;font-family:"Noto Naskh Arabic","Amiri",Tahoma,serif}
+.rzlb-lyrics[dir="ltr"]{unicode-bidi:plaintext}
+.rzlb-code-row[hidden],.rzlb-card-code-line[hidden]{display:none!important}
 .rzlb-lyrics.rzlb-unavailable{font:13px/1.75 Arial,sans-serif;color:#75654e;user-select:text;-webkit-user-select:text}
 .rzlb-footer{border-top:1px solid #ead5ab;padding:12px 18px 15px;flex:0 0 auto;background:#fff8e9;border-radius:0 0 19px 19px;display:grid;gap:5px}
 .rzlb-credit{color:#826225;font:700 11px/1.5 Arial,sans-serif}
