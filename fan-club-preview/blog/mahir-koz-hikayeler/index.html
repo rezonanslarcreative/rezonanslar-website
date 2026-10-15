@@ -21,6 +21,13 @@
 .hs-hero p{color:#eadfc9;font-size:17px;line-height:1.8;max-width:580px}
 .hs-hero-cta{display:inline-flex;justify-content:center;align-items:center;min-height:47px;border-radius:999px;background:linear-gradient(135deg,#bf9128,#dfbb62);color:#23190e;font-weight:700;font-size:13px;padding:10px 24px;margin-top:23px}
 .hs-hero-cta:hover{background:#f1cf7e}
+.hs-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:23px}
+.hs-hero-actions .hs-hero-cta{margin-top:0}
+.hs-hero-back{display:inline-flex;justify-content:center;align-items:center;min-height:47px;border-radius:999px;border:1px solid #e5c88c;padding:10px 22px;color:#f5e5c8;font-weight:700;font-size:13px;background:#ffffff0d}
+.hs-hero-back:hover{color:#24170b;background:#efcc82;border-color:#efcc82}
+.hs-hero-back:focus-visible,.hs-hero-actions .hs-hero-cta:focus-visible{outline:3px solid #efcc82;outline-offset:3px}
+@media(max-width:490px){.hs-hero-actions{align-items:stretch;flex-direction:column}.hs-hero-actions a{width:100%}}
+
 .hs-photo-wrap{position:relative;max-width:415px;margin:0 auto}
 .hs-photo-wrap:before{content:"";position:absolute;inset:-20px;border:1px solid #e5b54f6a;border-radius:50%}
 .hs-photo-wrap:after{content:"";position:absolute;inset:-42px;border:1px dashed #b9924075;border-radius:50%}
@@ -149,7 +156,7 @@
 <span class="hs-kicker" data-tr="REZONANSLAR FAN CLUB • HAYRAN HİKÂYELERİ" data-en="REZONANSLAR FAN CLUB • FAN STORIES">REZONANSLAR FAN CLUB • HAYRAN HİKÂYELERİ</span>
 <h1><span data-tr="Hangi Şarkı" data-en="Which Song">Hangi Şarkı</span> <em data-tr="Senin Hikâyeni Anlatıyor?" data-en="Tells Your Story?">Senin Hikâyeni Anlatıyor?</em></h1>
 <p data-tr="Bazı şarkıları dinleriz. Bazılarında ise kendimizi buluruz. Mahir Köz'ün dokuz şarkısı arasından seni en çok anlatanı seç ve nedenini keşfet." data-en="Some songs we listen to. In others, we find ourselves. Choose the one that speaks to you most among Mahir Köz's nine songs — and explore why.">Bazı şarkıları dinleriz. Bazılarında ise kendimizi buluruz. Mahir Köz'ün dokuz şarkısı arasından seni en çok anlatanı seç ve nedenini keşfet.</p>
-<a class="hs-hero-cta" href="#sarkilar" data-tr="Şarkını Seç ↓" data-en="Choose Your Song ↓">Şarkını Seç ↓</a>
+<div class="hs-hero-actions"><a class="hs-hero-cta" href="#sarkilar" data-tr="Şarkını Seç ↓" data-en="Choose Your Song ↓">Şarkını Seç ↓</a><a class="hs-hero-back" href="../../hikayeler/" data-tr="← Sanatçılara Dön" data-en="← Back to Artists">← Sanatçılara Dön</a></div>
 </div><div class="hs-photo-wrap"><img src="../../../assets/personas/Mahir.webp" width="420" height="420" alt="Mahir Köz — REZONANSLAR sanatçı profili"><div class="hs-photo-label">Mahir Köz</div></div></div></section>
 <section class="hs-intro"><div class="hs-shell"><span class="hs-kicker" data-tr="MÜZİĞİN SENDE BIRAKTIĞI İZ" data-en="THE MARK MUSIC LEAVES">MÜZİĞİN SENDE BIRAKTIĞI İZ</span><h2 data-tr="Bir Şarkı, Bir Anı, Bir Hikâye" data-en="One Song, One Memory, One Story">Bir Şarkı, Bir Anı, Bir Hikâye</h2>
 <p data-tr="Bazen bir şarkı, kimseye anlatamadığımız bir duyguyu tarif eder. Bazen yıllar öncesinden bir yüzü, bir sokağı, bir bekleyişi hatırlatır. Sen hangi şarkıda kendinden bir parça buluyorsun?" data-en="Sometimes a song captures a feeling we could never explain. Sometimes it brings back a face, a street, or a moment of waiting from years ago. Which song holds a piece of your story?">Bazen bir şarkı, kimseye anlatamadığımız bir duyguyu tarif eder. Bazen yıllar öncesinden bir yüzü, bir sokağı, bir bekleyişi hatırlatır. Sen hangi şarkıda kendinden bir parça buluyorsun?</p>
