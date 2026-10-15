@@ -82,3 +82,87 @@
   header .lang button{padding:7px 5px;}
   header .menu{width:42px;height:42px;}
 }
+
+
+/* v8 – refined artist catalogue dropdown.
+   Match the Fan Club menu's craftsmanship without duplicating its distinctive
+   strong gold top rule. Scoped to the Artists menu so shared navigation and
+   the preview-only Fan Club personality remain intact. */
+header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-drop-toggle {
+  color:#947a4b;
+  transition:color .18s ease,transform .18s ease;
+}
+header .main-navigation .nav-artists:not(.nav-fan-club):hover > .nav-drop-toggle,
+header .main-navigation .nav-artists:not(.nav-fan-club).open > .nav-drop-toggle {
+  color:#94702a;
+}
+header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a {
+  display:flex!important;
+  align-items:center;
+  min-height:43px;
+  padding:10px 13px!important;
+  border-radius:8px;
+  color:#342a1a!important;
+  font-size:13px;
+  font-weight:500;
+  line-height:1.45;
+  transition:background-color .18s ease,color .18s ease,
+             box-shadow .18s ease,transform .18s ease;
+}
+header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a:hover,
+header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a:focus-visible {
+  background:#f5ecda;
+  color:#7a5518!important;
+  box-shadow:inset 3px 0 0 #d9c18e;
+  transform:translateX(2px);
+}
+header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a:focus-visible {
+  outline:2px solid #bd9a58;
+  outline-offset:-2px;
+}
+@media (min-width:1001px) {
+  header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown {
+    width:min(282px,calc(100vw - 32px));
+    max-height:68vh;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    padding:10px;
+    border:1px solid #e6d6b9;
+    border-top:2px solid #d6c39e;
+    border-radius:13px;
+    background:#fffdf8;
+    box-shadow:0 19px 44px rgba(43,30,11,.17);
+  }
+  /* Both menus open consistently, but the gold Fan Club heading remains unique. */
+  header .main-navigation .nav-artists > .nav-dropdown {
+    transform-origin:top center;
+    animation:rezDropdownReveal .18s ease-out both;
+  }
+}
+@keyframes rezDropdownReveal {
+  from {opacity:0;transform:translateY(-5px)}
+  to {opacity:1;transform:translateY(0)}
+}
+@media (max-width:1000px) {
+  header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown {
+    border-left-color:#d7c29a;
+    background:#fdf9f1;
+    border-radius:0 9px 9px 0;
+  }
+  header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a {
+    min-height:44px;
+    font-size:14px;
+    padding:9px 11px!important;
+  }
+  header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a:hover,
+  header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a:focus-visible {
+    transform:none;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  header .main-navigation .nav-artists > .nav-dropdown {animation:none!important}
+  header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-dropdown a,
+  header .main-navigation .nav-artists:not(.nav-fan-club) > .nav-drop-toggle {
+    transition:none!important;
+  }
+}
