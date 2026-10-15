@@ -100,14 +100,24 @@
   const entry=artistRecords()[id];
   return {title:songName.textContent.trim(),entry};
  }
+ /* Show only sung words: original master text and metadata stay untouched.
+    Any standalone [VERSE], [CHORUS], [INTRO], [OUTRO], [BRIDGE],
+    [BREAK], instrumental or production prompt becomes a stanza boundary.
+    Adjacent prompts never create extra empty stanzas. */
+ function formatReadableLyrics(source){
+  const lines=String(source).replace(/\r\n?/g,"\n").split("\n");
+  const out=[];
+  const separate=()=>{if(out.length&&out[out.length-1]!=="")out.push("");};
+  for(const raw of lines){
+   const clean=raw.trim();
+   if(!clean){separate();continue;}
+   if(/^\[[^\]\r\n]*\]$/.test(clean)){separate();continue;}
+   out.push(raw);
+  }
+  return out.join("\n").replace(/\n{3,}/g,"\n\n").trim();
+ }
  function paintLyrics(target,source){
-  target.replaceChildren();
-  String(source).split("\n").forEach(function(line,index){
-   if(index)target.append(document.createTextNode("\n"));
-   if(/^\[[^\]]+\]$/.test(line)){
-    target.append(node("span","rzlb-lyric-section",line));
-   }else target.append(document.createTextNode(line));
-  });
+  target.textContent=formatReadableLyrics(source);
  }
  function redraw(){
   const s=selected();
