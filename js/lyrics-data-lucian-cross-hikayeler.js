@@ -1,7 +1,6 @@
-/* REZONANSLAR Creative Studio — source-faithful Lucian Cross lyrics.
- * Extracted from approved original DOCX masters, not formatted PDF previews.
- * Stage/musical directions omitted; stanza and original words preserved.
- * Missing UPC/ISRC never invented; codes shown only when verified in DOCX.
+/* REZONANSLAR Creative Studio — source-faithful Lucian Cross original lyrics.
+ * Sourced directly from approved DOCX masters. Stage prompts excluded.
+ * UPC and ISRC omitted when not verified in the source documents.
  */
 window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
   "Lucian Cross": {
