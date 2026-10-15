@@ -10,3 +10,12 @@
   .artist-page .artist-hero > *{min-width:0;max-width:100%}
   .artist-page .artist-hero p{overflow-wrap:anywhere}
 }
+
+
+/* Repertoire recording identifiers: ISRC-only public presentation.
+   Release/album and single UPCs are not printed in artist profiles. */
+.artist-page .artist-tracks li{display:flex;flex-direction:column;align-items:flex-start;gap:11px;min-width:0}
+.artist-page .artist-track-name{font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+.artist-page .artist-track-isrc{display:inline-flex;flex-wrap:wrap;align-items:center;gap:7px;max-width:100%;font:600 11px/1.45 Arial,sans-serif;color:#6a542c}
+.artist-page .artist-track-isrc b{display:inline-flex;align-items:center;border-radius:5px;padding:4px 6px;letter-spacing:.06em;font-size:10px;color:#765413;background:#f5e6bc;border:1px solid #ddc788}
+.artist-page .artist-track-isrc code{font:600 11px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.015em;color:#3f3422;overflow-wrap:anywhere}
