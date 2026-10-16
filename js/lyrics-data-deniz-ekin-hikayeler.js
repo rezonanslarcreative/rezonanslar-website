@@ -1,7 +1,7 @@
 /* REZONANSLAR Creative Studio — source-faithful Deniz & Ekin lyrics.
  * Extracted from approved original DOCX masters, not formatted PDF previews.
  * Stage/musical directions omitted; stanza and original words preserved.
- * Missing UPC/ISRC never invented; codes shown only when verified in DOCX.
+ * Missing ISRC never invented; codes shown only when verified in DOCX.
  */
 window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
   "Deniz & Ekin": {
@@ -13,14 +13,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Eski bir iskelede, martı sesleri arasında\nBir ömür sakladım seni, kalbimin en kuytusunda\nZeytin gözlerinde saklı, o masmavi sabahlar\nDolaştım durdum sanki, bir sevda haritasında.\n\nDantel gibi işlenmiş, kıyıdaki kumlar bize\nSanki dünya dar gelmiş, sığmışız bu denize\nPuslu bir sabah vakti, meltem fısıldar adını\nAşkın o eşsiz tadı, takılmış dilimize.\n\nAkdeniz havasında senin esintin var\nGülüşünde güneşin, bitmeyen bir rengi var\nBu sessiz koylarda, yankılanır şarkımız\nRuhumuzda sönmeyen, bir yaz ateşi var.\n\nYalınayak koşalım, bu uçsuz kumsallarda\n\nYıldızlar rehber olsun, bu derin masallarda\n\nVazgeçmek mümkün mü hiç, bu eşsiz kokundan?\nKurtulup geldik işte, o yorgun duraklardan.\n\nAkdeniz havasında senin esintin var\nGülüşünde güneşin, bitmeyen bir rengi var\nBu sessiz koylarda, yankılanır şarkımız\nRuhumuzda sönmeyen, bir yaz ateşi var.\n\nSenin esintin var...\nAkdeniz kadar...",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "upc": "700891612787",
-      "upcType": "album",
       "isrc": "QT6E92640839",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "askin-dili": {
@@ -31,14 +27,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr/el",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Taş sokaktan bir ezgi vurdu geceye\nDöndüm, gözlerin değdi gözlerime\n\nΚάτι σου είπα, δεν κατάλαβες ίσως\nΜα το χαμόγελό μου τα είπε όλα στην καρδιά σου\n\nBir şey söyledin, anlamadım belki\nAma gülüşün anlattı her şeyi kalbime\n\nΚοίτα με στα μάτια, μη ρωτάς τι θα πω\nΗ καρδιά σου νιώθει τον κρυφό μου παλμό\nΈλα λίγο πιο κοντά, άσε τη νύχτα να μιλά\nΗ αγάπη, όπου κι αν μας πάει\n\nBir adım sen, bir adım ben\n\nΈλα κοντά μου, μη φοβάσαι\n\nDiller başka, hisler aynı\n\nΜια καρδιά, bir tek sevda\n\nAşkın dili bir, sen de duyuyor musun?\n\nΗ καρδιά μου σου μιλά\n\nΣ’ αγαπώ...\n\nDe bana...\n\nİki ayrı dilde, aşk yine bir demek\n\nGece dönerken bizimle, sustu bütün cümleler\nElin elimde olunca, ne söylesin kelimeler\n\nBir ezgi geçti içimden, sen duydun gözlerimden\nAynı ritimde çarpınca, yakın olur mesafeler\n\nΚι αν η νύχτα φύγει, μείνε λίγο εδώ\nΚράτα με κοντά σου, πριν χαθεί το φως\nΌ,τι γράφει η καρδιά δεν θέλει εξήγηση\nΘα θυμάμαι αυτή τη νύχτα σαν γλυκό φιλί\n\nAşkın dili bir, sen de duyuyor musun?\n\nΗ καρδιά μου σου μιλά\n\nΣ’ αγαπώ...\n\nDe bana...\n\nİki ayrı dilde, aşk yine bir demek\n\nAşkın dili bir, şimdi duyuyorum seni\n\nΗ καρδιά μου σε ζητά\n\nΣ’ αγαπώ...\n\nSeviyorum...\n\nDiller başka, hisler aynı\nΜια καρδιά, bir tek sevda\n\nΣ’ αγαπώ...\n\nSeni seviyorum...\n\nΜια καρδιά...\n\nBir tek sevda...\n\nAşkın dili... bir.\n\nARCHIVE NOTE / ARŞİV NOTU\nThe Turkish section preserves the original semantic lyric master. The performance section preserves the exact bilingual production form. / Türkçe bölüm eserin özgün anlamsal söz masterını; performans bölümü ise iki dilli üretim formunu korur.",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "upc": "700891612787",
-      "upcType": "album",
       "isrc": "QT9XK2604658",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "deniz-kokulu-evimiz": {
@@ -49,15 +41,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Sabah güneşi vurdu penceremize\nKahvenin kokusu karıştı denize\n\nBegonviller sarmış bizim sokağı\nSeninle doluyor, seninle coşuyor hayat\n\nTaş sokaklar iner küçük meydana\nGünaydın der herkes geçerken bana\n\nBalıkçılar dönmüş, tekneler kıyıda\nElin elimdeyken dünya burada\n\nNe eksik ne fazla, bize yeter bu\n\nBir açık pencere, bir mavi gökyüzü\n\nRüzgâr perdelerde, tuz tenimizde\n\nAşk böyle güzel, deniz kokulu evimizde\n\nDeniz kokulu evimiz\nSen varsın ya, başka ne isteriz\n\nBiraz güneş, biraz mavi\nBir ömür böyle güzel sanki\n\nAçık kalsın penceremiz\nRüzgâr getirsin şarkımızı\nSen, ben, bir de sevgimiz\nDeniz kokulu evimiz\n\nDenizden dönerken tuz saçlarımızda\nGüneşten bir parça kalmış omuzlarında\n\nKapının önünde küçük masamız\nİki tabak, iki kadeh, bütün dünyamız\n\nRadyoda eski bir yaz şarkısı çalar\nGün iner denize, ışıklar yanar\n\nElini uzat da dans edelim yine\nBırak gece karışsın kahkahamıza\n\nYarın güneş yine vursun penceremize\n\nKahvenin kokusu karışsın denize\n\nHer sabah yeniden başlasın hikâyemiz\nDeniz kokulu evimizde...",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "singleUPC": "700904601425",
-      "upc": "700904601425",
-      "upcType": "single",
       "isrc": "QT9XH2634334",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed single release UPC; album UPC separately recorded"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "gece-bize-kalsin": {
@@ -68,14 +55,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Akşam çökerken çıktık yine sokaklara\nKucak açmıştı, deniz yine şarkısıyla\nNe bir planımız vardı, ne de saati sorduk\nGülümsemende başladı gecenin hikâyesi\n\nKıyı boyunca ışıklar düşerken suya\nBir melodi çağırdı bizi uzaklardan\nAniden belimi saran elinle duraksadın\nBenimle dans et gözlerinle dercesine\n\nBırak bu gece yollar bizi çağırsın\nBırak dalgalar kıyılara anlatsın\nSabah uzakta, daha vaktimiz var\nBu gece kalbimiz nereye isterse aksın\n\nGece bize kalsın, yıldızlar şahidimiz\nDeniz duysun yalnız, ne kadar mutluyuz biz\nSokaklar uyusa da biz daha uyanığız\nSen yanımda oldukça sabaha uzağız\n\nGece bize kalsın, hiç bitmesin bu dans\nBir sen, bir ben, bir de kıyıda bu yaz\nNe yarını düşünelim, ne zamanı soralım\nGece bize kalsın, aşka bırakalım\n\nAyakkabılar elimizde indik kıyıya\nAy vurmuştu usulca gece yarısı suya\nSaçların rüzgârda, gözlerin denizde\nDünya durmuş gibiydi o an bizimle\n\nBir dalga geldi, kaç dedim gülerek\nSen inadına koştun üstüme ıslanarak\nKahkahamız karıştı köpüklü dalgalara\nKim dönmek ister şimdi uyuyan sokaklara\n\nBırak bu gece yollar bizi çağırsın\nBırak dalgalar kıyılara anlatsın\nSabah uzakta, daha vaktimiz var\nBu gece kalbimiz nereye isterse aksın\n\nGece bize kalsın, yıldızlar şahidimiz\nDeniz duysun yalnız, ne kadar mutluyuz biz\nSokaklar uyusa da biz daha uyanığız\nSen yanımda oldukça sabaha uzağız\n\nGece bize kalsın, hiç bitmesin bu dans\nBir sen, bir ben, bir de kıyıda bu yaz\nNe yarını düşünelim, ne zamanı soralım\nGece bize kalsın, aşka bırakalım\n\nGece bize kalsın...\nGece bize kalsın...\n\nSabah oluyor...\nBırak olsun...\nBu gece bizimdi...",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "upc": "700891612787",
-      "upcType": "album",
       "isrc": "QT9XK2604659",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "ayni-iskele": {
@@ -86,14 +69,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Yıllar sonra yine aynı kıyıdayım\nSanki hiç ayrılmamışım gibi\nRüzgârında eski bir yazı arıyorum\nTekrar buraya gelecekmişsin gibi\n\nTahta iskele hâlâ denize uzanmış\nÖnceden geleceğini bilirmiş gibi\nDalgalar kıyıya aynı sözü bırakmış\nBir gün yeniden buluşacakmışız gibi\n\nUzakta gördüm seni, tutamadım kendimi\nBir anda sustu içimdeki serzeniş\nDeğişmiş yüzün, ama bakışın hâlâ aynı\nÇağırıyor yine deniz kokulu evimiz\n\nYaklaştıkça yıllar çekildi aradan\nSanki dün ayrılmışız gibi o yerden\nNe söyleyeceğimi unuttum bir anda\nAdını duyunca kendi kalbimden\n\nSöylesem mi, sustursam mı kalbimi?\nGit desem de dinlemez ayaklarım beni\nBunca zaman geçti, ne kaldı geriye?\nİki ayrı yol dönmüş yine aynı iskeleye\n\nAynı iskele, aynı deniz\nBir sen değişmişsin, bir de biz\nYıllar araya yollar koymuş\nKalbimiz yerinde kalmış sessiz\n\nAynı iskele, aynı rüzgâr\nSöylenmemiş ne çok sözümüz var\nBelki geç kaldık, belki de değil\nDeniz bizi yeniden çağırır\n\nBir yabancı gibi durduk karşı karşıya\nOysa ezberimde hâlâ bütün hâllerin\nBir yanım dönüp gitmek istedi usulca\nBir yanımda saklıydı eski hayallerin\n\nSormadım sensiz geçen yılları sana\nGözlerin anlattı söylemediklerini\nBen de sakladım içimde bunca zaman\nYarım kalan o son yaz gecesini\n\nSöylesem mi, sustursam mı kalbimi?\nGit desem de dinlemez ayaklarım beni\nBunca zaman geçti, ne kaldı geriye?\nİki ayrı yol dönmüş yine aynı iskeleye\n\nAynı iskele, aynı deniz\nBir sen değişmişsin, bir de biz\nYıllar araya yollar koymuş\nKalbimiz yerinde kalmış sessiz\n\nAynı iskele, aynı rüzgâr\nSöylenmemiş ne çok sözümüz var\nBelki geç kaldık, belki de değil\nDeniz bizi yeniden çağırır\n\nBelki yollar bizi boşuna ayırmadı\nBelki kalbimiz vedaya hiç inanmadı\nBir adım atsam, geçmiş diner mi?\nSen elimi tut, gerisi denizin işi\n\nAynı iskele, aynı deniz\nYeniden sen, yeniden biz\nYıllar geçse de değişmeyen\nİçimizdeki o eski yazmış meğer\n\nYine geldin…\nHiç gitmemişim gibi…\nAynı iskeleye…",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "upc": "700891612787",
-      "upcType": "album",
       "isrc": "QT9XK2604660",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "seninle-kaybolmak": {
@@ -104,15 +83,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Yine yanlış döndün, farkındasın değil mi?\n\nBelki de doğru yol tam olarak bu şimdi.\n\nHarita da öyle demiyor ama...\n\nKapat şu haritayı, bakalım yol ne diyor.\n\nSabah erkenden düştük yine yollara\nBir çanta, iki kahve koyduk yanımıza\nNereye gittiğimizi biliyorduk güya\nSen birden dönünce o daracık yola\n\n“Yanlış döndün” dedin, güldüm yüzüne\nBir tabela kaldı çoktan gerimizde\nDönmek kolaydı, ama içimden gelmedi\nBelki güzel bir şey vardır ilerisinde\n\nHaritada burası yok\n\nOlmasın, ne çıkar?\n\nYa akşama kalırsak?\n\nBiraz geç kalırız\n\nYa yolu bulamazsak?\n\nYanımda sen varsın ya...\n\nSeninle kaybolmak\nSensiz varmaktan güzel\nYol nereye giderse gitsin\nSen yanımdaysan yeter\n\nBırak dünya acele etsin\nBiz biraz yavaşlayalım\nGideceğimiz yeri unut\nBu yolu beraber yaşayalım\n\nSeninle kaybolmak\nBazen bulmaktır kendini\nBelki yanlış döndük ama\nDoğru yerde bulduk birbirimizi\n\nBir köy çıktı karşımıza zeytinlerin ardından\nYaşlı bir amca el salladı kahvenin önünden\nDurduk, iki sandalye çektik gölgeye\n“Burası neresi?” dedim, güldün yine\n\nBir ekmek, biraz peynir aldık yanımıza\nDomates kokusu karıştı kahkahamıza\nSaat kaç olmuş diye baktın bir ara\nSonra vazgeçip telefonu koydun masaya\n\nAslında çoktan orada olmamız gerekiyordu.\n\nNerede?\n\n...Unuttum.\n\nİşte şimdi doğru yoldayız.\n\nGüneş biraz alçaldı\n\nYol hâlâ bitmedi\n\nDönsek mi artık?\n\nSen gerçekten istiyor musun?\n\nHayır...\n\nO zaman devam edelim.\n\nSeninle kaybolmak\nSensiz varmaktan güzel\nYol nereye giderse gitsin\nSen yanımdaysan yeter\n\nBırak dünya acele etsin\nBiz biraz yavaşlayalım\nGideceğimiz yeri unut\nBu yolu beraber yaşayalım\n\nSeninle kaybolmak\nBazen bulmaktır kendini\nBelki yanlış döndük ama\nDoğru yerde bulduk birbirimizi\n\nHerkes bir yere yetişirken\nBiz biraz geç kalalım\n\nÖnümüze yollar çizseler de\nBazen dışına çıkalım\n\nYa hayat da böyleyse?\n\nNasıl yani?\n\nDoğru sandığımız yollar\nBizi yanlış yere götürürse?\n\nO zaman yine kayboluruz.\n\nBirlikte mi?\n\nHep birlikte.\n\nSeninle kaybolmak\nSensiz varmaktan güzel\nYol nereye giderse gitsin\nSen yanımdaysan yeter\n\nBırak dünya acele etsin\nBiz biraz yavaşlayalım\nVaracağımız yerden önce\nBirbirimize varalım\n\nSeninle kaybolmak\nBazen bulmaktır kendini\nMeğer yanlış yol dediğimiz\nBizim en güzel yolumuzmuş şimdi\n\nPeki şimdi neredeyiz?\n\nHiçbir fikrim yok.\n\nEve nasıl döneceğiz?\n\nOnu yarın düşünürüz.\n\nBugün biraz kaybolalım...",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "singleUPC": "700904601432",
-      "upc": "700904601432",
-      "upcType": "single",
       "isrc": "QT9XH2634574",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed single release UPC; album UPC separately recorded"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "bu-gece-gokyuzu-bizim": {
@@ -123,14 +97,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Haritayı kapat demiştin...\n\nİyi ki kapatmışız.\n\nGüneş kızıl bir iz bıraktı dağlara\nAkşam serinliği doldu yollarımıza\nBir çadır kurduk çamların arasında\nKaybolduk ama keyfimiz tam yerinde\n\nUzak bir köyün ışıkları yanıyor\nRüzgâr dalların arasından geçiyor\nBugün yol bizi nereye götürdüyse\nBu gece yıldızlar bize eşlik ediyor\n\nŞuna bak, gökyüzü ışık içinde\n\nŞehirde görmedik hiçbirini böyle\n\nSabaha kadar saysak?\n\nYetmez yine de\n\nBırak gece bizimle kalsın\n\nBu gece gökyüzü bizim\nYıldızlar dökülsün üstümüze\nBir sen varsın yanımda\nBaşka ne gerek bu gece?\nBu gece gökyüzü bizim\nYolumuzu bulmasak ne olur?\nSabah bizi bekleyebilir\nBırak bu gece uzun sürsün\n\nTermostan iki kahve koydum önümüze\nBattaniyeyi çektin ikimizin üstüne\nÇadırın ışığı vururken yüzümüze\nGece kahkahamız karıştı rüzgâra\n\nNe bir korna sesi ne de kalabalık\nBiraz ekmek, biraz peynir, yeter artık\nNereye varacaktık, inan unuttum\nBu gece bulduğumuz her şeyden güzel\n\nYarın yolu ararız\n\nBu gece acelemiz yok\n\nYa yine kaybolursak?\n\nSen varsın, korkumuz yok\n\nBırak gece bizimle kalsın\n\nBir yıldız kaydı...\n\nDilek tuttun mu?\n\nTuttum.\n\nSöylemeyecek misin?\n\nSen de aynısını tuttuysan gerek yok.\n\nTuttum.\n\nBu gece gökyüzü bizim\nYıldızlar dökülsün üstümüze\nBir sen varsın yanımda\nBaşka ne gerek bu gece?\nBu gece gökyüzü bizim\nYolumuzu bulmasak ne olur?\nSabah bizi bekleyebilir\nBırak bu gece uzun sürsün\nBu gece gökyüzü bizim\nRüzgâr dans etsin çadırımızda\nKaybolduğumuz bu yol\nDönüştü en güzel hatıraya\n\nYarın eve döner miyiz?\n\nYıldızlar izin verirse.",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "upc": "700891612787",
-      "upcType": "album",
       "isrc": "QT9XK2604662",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "kus-kalma-bana": {
@@ -141,15 +111,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "İki kahve yaptım yine dalgınlıkla\nSeninkini bıraktım masanın ucuna\nSoğudu belki, ben de biraz soğudum\nAma hâlâ sesini bekliyorum odada\n\nTelevizyon açık, ne oynuyor bilmiyorum\nAynı sayfayı kaç kez çevirdim bilmiyorum\nBir “gel” desen kalkıp geleceğim yanına\nAma şu inat var ya, oturmuş aramıza\n\nNe diye kızmıştık?\n\nHatırlamıyorum.\n\nO zaman niye konuşmuyoruz?\n\nOnu da bilmiyorum.\n\nGaliba biraz fazla uzattık...\n\nKüs kalma bana, gece uzun\nBir odada sen, bir odada ben\nKüs kalma bana, değmez inan\nİki kelime yeter yeniden\n\nGel yanıma, hiçbir şey söyleme\nBaşını koy yine omzuma\nKim haklıydı, boş ver bu gece\nKüs kalma bana... küs kalma\n\nBattaniyeyi bıraktım koltuğun ucuna\nÜşürsün diyemedim, gururdan herhalde\nYanından geçerken göz göze geldik yine\nGülmemek için baktın başka bir yere\n\nMutfaktan kurabiye getirdim masaya\nSenin için değildi, öyle denk geldi güya\nBir tane aldın, sonra bir tane daha\nDemek barışmak böyle başlarmış aslında\n\nKahveden kaldı mı?\n\nSoğudu.\n\nYine de içerim.\n\nBiliyorum.\n\nKüs kalma bana, gece uzun\nBir odada sen, bir odada ben\nKüs kalma bana, değmez inan\nİki kelime yeter yeniden\n\nGel yanıma, hiçbir şey söyleme\nBaşını koy yine omzuma\nKim haklıydı, boş ver bu gece\nKüs kalma bana... küs kalma\n\nHâlâ kızgın mısın?\n\nBiraz.\n\nNe kadar biraz?\n\nYanıma oturacak kadar az.\n\nO zaman kayar mısın biraz?\n\n...Belki.\n\nKüs kalma bana, gece uzun\nBir odada sen, bir odada ben\nKüs kalma bana, değmez inan\nİki kelime yeter yeniden\n\nGel yanıma, hiçbir şey söyleme\nBaşını koy yine omzuma\nKim haklıydı, boş ver bu gece\nKüs kalma bana... küs kalma\n\nKahven soğudu bu arada.\n\nYenisini yapar mısın?\n\nAbartma.\n\nTamam... barıştık o zaman.\n\nKim söyledi?",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "singleUPC": "700904604389",
-      "upc": "700904604389",
-      "upcType": "single",
       "isrc": "QT9XJ2611483",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed single release UPC; album UPC separately recorded"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "gozlerine-her-bakista": {
@@ -160,14 +125,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "tr",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Büyük bir hikâye istemedim hayattan...\nDönüp baktığımda, iyi ki sen vardın.\n\nAçık pencereden bir yaz rüzgârı\nPerdeleri alıp götürür dışarı\nMasada iki kahve, biraz da telaş\nSen gülünce başlıyor yine bu hayat\n\nBegonviller taşmış eski duvarlardan\nBir tekne geçip gider uzak kıyılardan\nYan yana yürürken şu sahil boyunca\nBaşka bir yer aramam sen varsa yanımda\n\nNereye gidiyoruz?\n\nBilmem.\n\nYine mi?\n\nBu defa kaybolmadık.\n\nSadece acelemiz yok.\n\nGözlerine her bakışta\nBir yaz başlar içimde\nDeniz kokar akşamlar\nSen yürürken benimle\n\nGözlerine her bakışta\nBaşaklar düşer aklıma\nYaz rüzgârı gibi gel de\nSavrul biraz yanıma\n\nSeninle yaz, seninle bahar\nBiz neredeysek Akdeniz var\n\nGün ağır ağır iner mavi sulara\nGüneş altın bırakır bütün kıyılara\nBir şarkı duyulur açık bir pencereden\nDönüp bana gülersin, yeter bana yeniden\n\nZeytin dallarında akşamın sesi\nSofrada ekmek var, bir de deniz esintisi\nNe eksik ne fazla, tam böyle güzel\nHayat dediğin biraz sen, biraz ben\n\nBir şey eksik mi?\n\nYok.\n\nEmin misin?\n\nSen buradaysan tamam.\n\nGözlerine her bakışta\nBir yaz başlar içimde\nDeniz kokar akşamlar\nSen yürürken benimle\n\nGözlerine her bakışta\nBaşaklar düşer aklıma\nYaz rüzgârı gibi gel de\nSavrul biraz yanıma\n\nSeninle yaz, seninle bahar\nBiz neredeysek Akdeniz var\n\nNe yollar geçti önümüzden\nNe akşamlar kaldı geride\nBir ömür büyük söz istemez\nYan yana yürüyünce\nBiraz güneş, biraz rüzgâr\nBiraz kahkaha yeter\nDünya nereye dönerse dönsün\nBizim yazımız devam eder\n\nGözlerine her bakışta\nBir yaz başlar içimizde\nDeniz kokar akşamlar\nBiz yürürken birlikte\nGözlerine her bakışta\nBaşaklar döner rüzgârla\nSen yanımda olduktan sonra\nHer mevsimde Akdeniz var\n\nSeninle yaz, seninle bahar\nBiz neredeysek Akdeniz var",
-      "albumUPC": "700891612787",
       "albumTitle": "Akdeniz’in Hikâyeleri",
-      "upc": "700891612787",
-      "upcType": "album",
       "isrc": "QT9XK2604664",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     }
   }

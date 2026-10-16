@@ -3,8 +3,8 @@
    Display-only wording is faithfully preserved; standalone performance directions
    ([INTRO], [VERSE], [CHORUS], instrumental prompts, etc.) are excluded here.
    Blank lines distinguish sung stanzas as approved by Selçuk Yabar, 15 Oct 2026.
-   UPC identifies a release/product; ISRC identifies a sound recording.
-   Neither code by itself proves separate copyright registration for the lyrics.
+   ISRC identifies a sound recording.
+   The ISRC by itself does not prove separate copyright registration for the lyrics.
    Warning: publicly delivered lyrics cannot be fully protected from copying.
 */
 window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
@@ -13,8 +13,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Derin Hisler",
       "catalog": "HZ-001",
       "documentId": "RZ-LYR-HAZ-001",
-      "upc": "882518804738",
-      "isrc": "QT6E92640263",
+      "isrc": "QT3FB2669608",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -25,8 +24,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "İçimdeki Telaş",
       "catalog": "HZ-002",
       "documentId": "RZ-LYR-HAZ-002",
-      "upc": "882518810974",
-      "isrc": "QT6E92640261",
+      "isrc": "QT6E92641439",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -37,8 +35,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Hazan Mevsiminde Aşklar",
       "catalog": "HZ-003",
       "documentId": "RZ-LYR-HAZ-003",
-      "upc": "882518830603",
-      "isrc": "QT6E92640269",
+      "isrc": "QT6EA2641531",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -49,8 +46,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Can Özüm",
       "catalog": "HZ-004",
       "documentId": "RZ-LYR-HAZ-004",
-      "upc": "882518823773",
-      "isrc": "QT6E92640267",
+      "isrc": "QT6EA2647276",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -61,8 +57,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Mühür",
       "catalog": "HZ-005",
       "documentId": "RZ-LYR-HAZ-005",
-      "upc": "882518826405",
-      "isrc": "QT6E92640280",
+      "isrc": "QT6EA2647280",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -73,8 +68,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Yalan Yıllar",
       "catalog": "HZ-006",
       "documentId": "RZ-LYR-HAZ-006",
-      "upc": "882518819595",
-      "isrc": "QT6E92640265",
+      "isrc": "QT6ED2636095",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -85,8 +79,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Günahı Bana Sevabı Sana",
       "catalog": "HZ-007",
       "documentId": "RZ-LYR-HAZ-007",
-      "upc": "882518833950",
-      "isrc": "QT6E92640273",
+      "isrc": "QT6EC2699697",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -97,8 +90,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Sabret Ey Yâr",
       "catalog": "HZ-008",
       "documentId": "RZ-LYR-HAZ-008",
-      "upc": "882518831407",
-      "isrc": "QT6E92640277",
+      "isrc": "QT6ED2685122",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",
@@ -109,8 +101,7 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "title": "Dünya Bir Yana",
       "catalog": "HZ-009",
       "documentId": "RZ-LYR-HAZ-009",
-      "upc": "882518814802",
-      "isrc": "QT6E92640250",
+      "isrc": "QT6ED2689852",
       "version": "v1.0",
       "status": "approved-full",
       "language": "tr",

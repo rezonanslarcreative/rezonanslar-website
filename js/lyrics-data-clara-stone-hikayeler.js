@@ -1,7 +1,7 @@
 /* REZONANSLAR Creative Studio — source-faithful Clara Stone lyrics.
  * Extracted from approved original DOCX masters, not formatted PDF previews.
  * Stage/musical directions omitted; stanza and original words preserved.
- * Missing UPC/ISRC never invented; codes shown only when verified in DOCX.
+ * Missing ISRC never invented; codes shown only when verified in DOCX.
  */
 window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
   "Clara Stone": {
@@ -13,14 +13,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Yeah! Clara Stone... Let’s light it up tonight!\nOh-oh, watch me now!\n\nCan you feel the friction in the dark?!\nEvery single touch is like a spark!\nIn this crowded room, it’s just us two\nYeah, the rhythm is pulling me to you!\nOh-woah, there's nothing we can't do!\n\nMidnight shadows flashing on the wall\nHear the bassline rise, it’s time to risk it all\nNo more waiting, no more keeping space\nWe are burning in this neon-lighted chase\nWe don't need to speak, we share the fire\nTake it up, take it higher!\n\nStep by step, the tension’s breaking through\nEverything I want is right here next to you\nHear my heartbeat racing with the sound\nWe are never, ever coming down!\nOne, two, three, let's go!\n\nCan you feel the friction in the dark?!\nEvery single touch is like a spark!\nIn this crowded room, it’s just us two\nYeah, the rhythm is pulling me to you!\nOh-woah, there's nothing we can't do!\n\nNeon magic in the air!\nWe are flying, we don't care!\nHold on tight, let the fireworks ignite...\nWe own the night! Yeah-eah!\n\nCan you feel the friction in the dark?!\nEvery single touch is like a spark!\nIn this crowded room, it’s just us two\nYeah, the rhythm is pulling me to you!\n\nPulling me to you!\nYeah, we own the night!\nNeon magic... Oh-woah!",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "upc": "700813945627",
-      "upcType": "album",
       "isrc": "QT6E82663545",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "the-sin-is-mine-the-grace-is-yours": {
@@ -31,14 +27,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "I shelved the worn-out sorrows this morning\nA bougainvillea at my window, a deep breath of relief within\nYour smile is like a gospel sprinkled upon my life\nThe storms have calmed, the long \"alas\" is over\nAs if the world is reborn, spring is everywhere\nIn you, I found my all; my inner flight has ended\n\nThis is love, without trick or deceit, it struck my heart\nIt carved its most delicate, most restless state upon my brow\nSuch a joy that fits neither words nor the mystic strains\nIf the sin is written for me, the grace is all for you\nJust smile and let flowers bloom in my bleakest corners\nWith you, I found that lost fairytale, that very soul\n\nI was incomplete before, now I am whole in you\nThere was a longing of exile, I bid farewell in every cell\nYour gaze is like a prayer, your touch is made of silk\nAs if I’ve slept for a thousand years, I awoke to the truth\nNo calculations, no books; so plain and so free\nEvery breath spent with you, believe me, is worth a thousand lives\n\nThe blind knot of fate, unraveled in your hands\nThere is a feast of joy now, in the chords of your voice\nNeither storm nor gale, you are my sanctuary now\nLet the dusty road of my heart be brightened by you\nI fear love no more, let this heart burn if it must\nHappiness, it turns out, is simply to love and be loved",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "upc": "700813945627",
-      "upcType": "album",
       "isrc": "QT6E82663551",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "no-permission": {
@@ -49,15 +41,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Hey!\nOne, two — move!\nClara Stone...\nI don't need permission.\n\nWalk in, everybody turns around\nHigh heels talking but I make no sound\nHeartbeat locked to the kick and bass\nI don't chase — I set the pace\nHands up, let the whole room know\nI came alive when the lights went low\nNo hesitation, no looking back\nFeel that rhythm hit like that\n\nLeft, right, moving with intention\nNo rules, no second guessing\nYou can watch, but understand —\nTonight I move on my command\n\nI don't need permission\nTo move the way I do\nBody making decisions\nBefore my mind can choose\nI don't need permission\nTurn it up, let it loose\nIf you feel the rhythm\nThen show me what you do\n\nMove! Move!\nNo permission!\nMove! Move!\nNo permission!\nOne, two, three, four —\nGive me more!\n\nBassline rolling underneath my skin\nEvery little step pulls you right in\nNo conversation, read the signs\nYour eyes are trying to follow mine\nDrop low, bring it back again\nSweat and motion, count to ten\nEvery beat is calling my name\nI came to move, not play your game\n\nLeft, right, moving with intention\nNo rules, no second guessing\nYou can watch, but understand —\nTonight I move on my command\n\nI don't need permission\nTo move the way I do\nBody making decisions\nBefore my mind can choose\nI don't need permission\nTurn it up, let it loose\nIf you feel the rhythm\nThen show me what you do\n\nStep!\nTurn!\nDrop!\nRise!\nHands up!\nSide to side!\nFour — three — two — one!\nNow let me see you come alive!\n\nNo one owns the way I move\nNo one tells me what to prove\nEvery step belongs to me\nThis is what it means to be free\n\nI don't need permission\nTo move the way I do\nBody making decisions\nAnd now you're moving too\nI don't need permission\nTurn it up, break it loose\nEverybody feel it —\nNow show me what you do!\n\nMove! Move!\nNo permission!\nOne more time!\nNo permission!\nClara Stone...\nYeah — that's how we move.",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "singleUPC": "700891529184",
-      "upc": "700891529184",
-      "upcType": "single",
       "isrc": "QT9XK2616706",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed single release UPC; album UPC separately recorded"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "move-like-trouble": {
@@ -68,15 +55,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Oh!\nCome on...\nClara Stone!\nOne step...\nTwo steps...\nWatch me move like trouble.\n\nWalk through the door and the temperature climbs\nEvery little motion is falling in time\nBass in my body, fire in my feet\nI don't need words when I'm talking in beats\nYou keep watching every turn I make\nOne more second and the room might shake\nI feel the rhythm underneath my skin\nIf you're gonna follow, better jump right in\n\nLeft to the right, now bring it closer\nFeel that heat across your shoulder\nNo slowing down, no standing still\nI move because I know I will\n\nI move like trouble\nHot like summer in the middle of the night\nMove like trouble\nEvery step is setting something alight\nI move like trouble\nYou can feel it when I'm crossing the room\nMove like trouble\nBetter catch me if you're ready to move\n\nAy-ay!\nMove it!\nAy-ay!\nDon't stop!\nOne, two -\nBring it back!\nThree, four -\nJust like that!\n\nHips keep talking to the drum and bass\nConfidence written all over my face\nNo invitation, no need to pretend\nI make the rhythm start and never end\nSpin me once, let the whole beat breathe\nDrop it low, then come back to me\nEvery heartbeat falling into line\nYour body knows the answer before your mind\n\nLeft to the right, now bring it closer\nFeel that heat across your shoulder\nNo slowing down, no standing still\nI move because I know I will\n\nI move like trouble\nHot like summer in the middle of the night\nMove like trouble\nEvery step is setting something alight\nI move like trouble\nYou can feel it when I'm crossing the room\nMove like trouble\nBetter catch me if you're ready to move\n\nRight!\nLeft!\nTurn around!\nDrop!\nRise!\nTouch the ground!\nFour, three, two -\nCome alive!\nMove that body\nSide to side!\n\nI don't need a spotlight\nI become the light\nI don't chase the rhythm\nThe rhythm follows mine\nEvery step gets louder\nEvery breath gets wild\nCome a little closer\nIf you can keep up tonight\n\nI move like trouble\nHot like summer in the middle of the night\nMove like trouble\nEvery step is setting something alight\nI move like trouble\nYou can feel it when I'm crossing the room\nMove like trouble\nEverybody now -\nLet me see you move!\n\nMove like trouble!\nMove like trouble!\nOne, two -\nBring it back!\nMove like trouble!\n\nYeah...\nThat's how I move.\nClara Stone.",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "singleUPC": "700891533372",
-      "upc": "700891533372",
-      "upcType": "single",
       "isrc": "QT9XK2615926",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed single release UPC; album UPC separately recorded"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "wild-frequency": {
@@ -87,14 +69,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Turn it up...\nCan you feel that?\n\nClara Stone.\nWild frequency.\n\nSomething in the air is pulling me close\nNo one says a word but everybody knows\nYour eyes hit mine across the crowded floor\nOne little signal and I'm wanting more\n\nHeartbeat jumping underneath the sound\nEvery time you move, the room spins around\nNo explanation, no need to speak\nYou're coming through on my frequency\n\nCloser, closer\nFeel the tension rise\nHigher, higher\nThere's no place to hide\n\nI hear your body\nCalling out to me\nWe're locked into\nThe same frequency\n\nWild frequency\nRunning through my body\nWild frequency\nYou got the whole room watching\n\nFeel it underneath\nEvery beat is talking\nWild frequency\nAnd I can't stop moving\n\nOh-oh!\nTune into me\n\nOh-oh!\nWild frequency\n\nOne, two\nLet it roll\nThree, four\nLose control\n\nBassline slipping like a secret touch\nMaybe just a little is already too much\nYou move closer and the pressure climbs\nEvery little step falling right in time\n\nNo promises written in the air tonight\nJust electricity moving left to right\nYou don't have to tell me what you mean\nI already know what your body is saying\n\nCloser, closer\nFeel the tension rise\nHigher, higher\nThere's no place to hide\n\nI hear your body\nCalling out to me\nWe're locked into\nThe same frequency\n\nWild frequency\nRunning through my body\nWild frequency\nYou got the whole room watching\n\nFeel it underneath\nEvery beat is talking\nWild frequency\nAnd I can't stop moving\n\nPush!\nPull!\nSide to side!\n\nTurn!\nFreeze!\nCome alive!\n\nFive, six\nSeven, eight\n\nLet the rhythm\nSet the pace!\n\nNo wires\nNo warning\nNo reason why\n\nOne look\nOne rhythm\nAnd we synchronize\n\nNo words\nNo questions\nJust energy\n\nYou found me\nI found you\nOn the same frequency\n\nWild frequency\nRunning through my body\nWild frequency\nEverybody's watching\n\nFeel it underneath\nEvery beat is talking\nWild frequency\nAnd we won't stop moving\n\nWild!\nWild!\nFrequency!\n\nWild!\nWild!\nCome with me!\n\nOne, two\nLet it roll\n\nWild frequency!\n\nStill coming through...\n\nLoud and clear.\n\nClara Stone.",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "upc": "700813945627",
-      "upcType": "album",
       "isrc": "QT9XL2619556",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "run-the-room": {
@@ -105,14 +83,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Lights up!\nHeart up!\nClara Stone...\n\nI don't enter the room —\nI run it.\n\nBoots hit the floor like a starting gun\nEyes on me and the night's begun\nEvery heartbeat falling into line\nI take the moment and I make it mine\n\nNo hesitation, no second chance\nI turn pressure into confidence\nFeel that current running through the crowd\nIf you came to move, then move it loud\n\nHands up\nHold that fire\nOne step\nTake it higher\n\nNo fear\nNo excuse\nWhen the beat drops\nCut it loose\n\nI run the room\nWhen I move, everybody moves\nI run the room\nFeel the rhythm breaking through\n\nTurn it up\nLet the whole place shake\nOne more step\nMake the whole floor wake\n\nI run the room\nYeah, I run the room\n\nGo!\nGo!\nGo!\n\nTake it high\nBring it low\n\nGo!\nGo!\nGo!\n\nLet me see you lose control\n\nSweat on my skin, but I never slow\nEvery little beat tells me where to go\nPower in my legs, fire in my chest\nI don't compete — I bring my best\n\nWatch that line when I cross the floor\nGive me one beat and I'll ask for more\nNo looking back when the lights turn red\nI let the rhythm speak instead\n\nHands up\nHold that fire\nOne step\nTake it higher\n\nNo fear\nNo excuse\nWhen the beat drops\nCut it loose\n\nI run the room\nWhen I move, everybody moves\nI run the room\nFeel the rhythm breaking through\n\nTurn it up\nLet the whole place shake\nOne more step\nMake the whole floor wake\n\nI run the room\nYeah, I run the room\n\nFour!\nThree!\nTwo!\nOne!\n\nJump!\nTurn!\nHit!\nRun!\n\nRight!\nLeft!\nHold!\nGo!\n\nBring it back\nAnd steal the show!\n\nPressure makes diamonds\nHeat makes fire\nEvery time they push me\nI go higher\n\nNo crown\nNo throne\nNo permission due\n\nI don't follow energy\nI make it move\n\nI run the room\nWhen I move, everybody moves\nI run the room\nFeel the rhythm breaking through\n\nTurn it up\nLet the whole place shake\nOne more step\nMake the whole floor wake\n\nI run the room\nEverybody move!\n\nRun it!\nRun it!\nRun the room!\n\nRun it!\nRun it!\nFeel that boom!\n\nFive, six\nSeven, eight\n\nClara Stone —\nSet the pace!\n\nLights down...\n\nHeartbeat still running.\n\nI run the room.",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "upc": "700813945627",
-      "upcType": "album",
       "isrc": "QT9XL2619557",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "pulse-control": {
@@ -123,14 +97,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Easy...\nFeel it first.\n\nClara Stone.\n\nPulse control.\n\nSlow burn moving underneath the floor\nOne little rhythm makes me want it more\nNo need to rush it, let the pressure grow\nMy body knows exactly where to go\n\nEyes on me but I don't break the flow\nEvery little step is moving low\nBreathing in time with the bass below\nI don't lose control\nI don't lose control, no\n\nHold it\nWait\nLet it breathe\n\nOne beat\nTwo beats\nMove with me\n\nDon't fight\nWhat you already know\n\nLet your body\nFollow the pulse\n\nPulse control\nFeel it running through you\nPulse control\nLet the rhythm move you\n\nDown low\nThen bring it back\nHeartbeat\nRight on track\n\nPulse control\nLet your body take control\n\nOh-ah\nSlow it down\n\nOh-ah\nTurn around\n\nOne, two\nFeel that roll\n\nThree, four\nPulse control\n\nBassline rolling heavy through the night\nEvery little motion feels just right\nShoulders loose and hips begin to talk\nConfidence is written in my walk\n\nYou don't have to prove a single thing\nJust let the rhythm tell you when to swing\nNothing forced and nothing overdone\nThe night gets better when we move as one\n\nHold it\nWait\nLet it breathe\n\nOne beat\nTwo beats\nMove with me\n\nDon't fight\nWhat you already know\n\nLet your body\nFollow the pulse\n\nPulse control\nFeel it running through you\nPulse control\nLet the rhythm move you\n\nDown low\nThen bring it back\nHeartbeat\nRight on track\n\nPulse control\nLet your body take control\n\nStep\nRoll\nHold\n\nStep\nRoll\nGo\n\nRight side\nLeft side\nTake it low\n\nFour, three\nTwo, one\n\nBring that heartbeat\nBack!\n\nI don't need to race\nTo own the night\n\nI don't need the noise\nTo feel alive\n\nPower isn't always\nSomething loud\n\nSometimes one slow rhythm\nMoves the whole crowd\n\nPulse control\nFeel it running through you\nPulse control\nEverybody moving\n\nDown low\nThen bring it back\nHeartbeat\nRight on track\n\nPulse control\nLet your body take control\n\nPulse\nPulse\nPulse control\n\nFeel it\nFeel it\nLet it roll\n\nFive, six\nSeven, eight\n\nMove your body\nSet the pace\n\nStill moving...\n\nStill breathing...\n\nPulse control.\n\nClara Stone.",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "upc": "700813945627",
-      "upcType": "album",
       "isrc": "QT9XL2619558",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "edge-of-the-beat": {
@@ -141,14 +111,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "Listen...\n\nDon't chase it.\nCatch it.\n\nClara Stone.\n\nRight on the edge of the beat.\n\nQuick step, heartbeat, flashing light\nYou blink once and I'm out of sight\nI feel the rhythm before it lands\nEvery little break is in my hands\n\nNo straight lines when I cross the floor\nOne sharp turn and I'm back for more\nYou try to read every move I make\nBut I change the pattern before you can\n\nWait for it\nHold that sound\n\nOne step up\nTwo steps down\n\nDon't rush in\nLet it breathe\n\nMeet me\nOn the edge of the beat\n\nOn the edge of the beat\nWhere the rhythm gets dangerous\nEdge of the beat\nCome a little closer if you're fast enough\n\nMove when it breaks\nStop when it speaks\nFeel that tension\nUnder your feet\n\nMeet me\nOn the edge of the beat\n\nCut!\nMove!\nSwitch that side!\n\nCut!\nMove!\nDon't lose time!\n\nOne, two\nThree, repeat\n\nRight on the edge\nOf the beat\n\nBass drops low then disappears\nComes back harder when you think it's clear\nEvery silence pulls you into me\nThen the drums come back unexpectedly\n\nShoulders sharp and my steps stay light\nMoving through the spaces left and right\nYou don't need to know what's coming next\nJust trust your body and forget the rest\n\nWait for it\nHold that sound\n\nOne step up\nTwo steps down\n\nDon't rush in\nLet it breathe\n\nMeet me\nOn the edge of the beat\n\nOn the edge of the beat\nWhere the rhythm gets dangerous\nEdge of the beat\nCome a little closer if you're fast enough\n\nMove when it breaks\nStop when it speaks\nFeel that tension\nUnder your feet\n\nMeet me\nOn the edge of the beat\n\nFive, six\nSeven, eight\n\nSwitch!\nTurn!\nAccelerate!\n\nRight foot\nLeft foot\nFreeze!\n\nNow come back\nRight on the beat!\n\nMaybe the silence\nIs part of the sound\n\nMaybe the moment\nIs lost when you slow it down\n\nI don't need forever\nI just need tonight\n\nOne perfect second\nWhen the timing feels right\n\nOn the edge of the beat\nWhere the rhythm gets dangerous\nEdge of the beat\nEverybody moving fast enough\n\nMove when it breaks\nStop when it speaks\nFeel that power\nUnder your feet\n\nMeet me\nOn the edge of the beat\n\nEdge!\nEdge!\nOf the beat!\n\nCatch it\nBefore it leaves\n\nFive, six\nSeven, eight\n\nClara Stone\nDon't be late!\n\nOne step...\n\nOne breath...\n\nRight on the edge\nOf the beat.",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "upc": "700813945627",
-      "upcType": "album",
       "isrc": "QT9XL2619559",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     },
     "after-the-applause": {
@@ -159,14 +125,10 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
       "language": "en",
       "source": "REZONANSLAR Creative Studio — original DOCX lyrics master",
       "text": "The room is quiet now...\n\nNo lights.\nNo crowd.\n\nJust me.\n\nGlitter on the floor, shoes beside the door\nMakeup on the mirror like a face I wore\nEverybody loved the woman in the light\nNobody stayed to meet me after midnight\n\nMusic used to cover every little crack\nI could lose myself and never look back\nBut silence has a way of saying what is true\nTonight it sounds a little bit like you\n\nWhen the last light fades\nAnd the echoes disappear\nThere is nowhere left to hide\nFrom what I really feel\n\nAfter the applause\nAfter everybody leaves\nAfter all the flashing lights\nStop pretending I don't bleed\n\nAfter the applause\nWhen there's nothing left to prove\nI can hear my own heart asking\nWhy it still remembers you\n\nI know how to smile when the camera turns\nI know how to dance while the whole room burns\nI can wear my confidence like diamond skin\nBut some nights even diamonds let the darkness in\n\nYour memory doesn't shout, it doesn't make a scene\nIt waits inside the spaces where the noise has been\nAnd every time I think I've finally let you go\nThe quiet brings back everything I know\n\nWhen the last light fades\nAnd the echoes disappear\nThere is nowhere left to hide\nFrom what I really feel\n\nAfter the applause\nAfter everybody leaves\nAfter all the flashing lights\nStop pretending I don't bleed\n\nAfter the applause\nWhen there's nothing left to prove\nI can hear my own heart asking\nWhy it still remembers you\n\nMaybe strength is not\nNever falling apart\n\nMaybe strength is letting silence\nReach the places in your heart\n\nI don't want you back\nI don't need another lie\n\nBut I won't call it nothing\nJust because we said goodbye\n\nNo crowd...\nNo sound...\n\nNo one watching me now.\n\nJust one heartbeat\nIn an empty room...\n\nAnd I finally hear it.\n\nAfter the applause\nAfter everybody leaves\nI don't need the flashing lights\nTo decide what I believe\n\nAfter the applause\nI have nothing left to prove\nI can miss the way you loved me\nWithout coming back to you\n\nAfter the applause\nI can finally tell the truth\n\nI was hurt\nI was changed\n\nBut I didn't lose myself\nWith you\n\nThe room is quiet now...\n\nAnd for the first time...\n\nSo am I.",
-      "albumUPC": "700813945627",
       "albumTitle": "No Permission",
-      "upc": "700813945627",
-      "upcType": "album",
       "isrc": "QT9XL2619560",
       "codeSource": {
-        "isrc": "DistroKid track-list screenshot shared by rights holder",
-        "upc": "User-confirmed album UPC"
+        "isrc": "DistroKid track-list screenshot shared by rights holder"
       }
     }
   }

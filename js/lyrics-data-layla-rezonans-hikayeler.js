@@ -2,14 +2,13 @@
  * Derived directly from nine approved DOCX masters (not PDF text extraction).
  * Turkish meaning masters and romanizations are not substituted for originals.
  * Arabic and Spanish words in Baila Baila Ya Layla are intentionally retained.
- * Stage directions omitted; UPC/ISRC copied exactly from the master metadata.
+ * Stage directions omitted; ISRC copied exactly from the master metadata.
  */
 window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
   "Layla Rezonans": {
     "wham-es-sinin": {
       "catalog": "LY-001",
       "documentId": "RZ-LYR-LAY-001",
-      "upc": "882518837978",
       "isrc": "QT6E92640285",
       "version": "v1.0",
       "status": "approved-full",
@@ -20,7 +19,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "beshara": {
       "catalog": "LY-002",
       "documentId": "RZ-LYR-LAY-002",
-      "upc": "882518844334",
       "isrc": "QT6E92640271",
       "version": "v1.0",
       "status": "approved-full",
@@ -31,7 +29,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "al-muhur": {
       "catalog": "LY-003",
       "documentId": "RZ-LYR-LAY-003",
-      "upc": "882518840961",
       "isrc": "QT6E92640279",
       "version": "v1.0",
       "status": "approved-full",
@@ -42,7 +39,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "el-alam-el-amikah": {
       "catalog": "LY-004",
       "documentId": "RZ-LYR-LAY-004",
-      "upc": "882321802521",
       "isrc": "QT6FJ2679783",
       "version": "v1.0",
       "status": "approved-full",
@@ -53,7 +49,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "ghaset-haki": {
       "catalog": "LY-005",
       "documentId": "RZ-LYR-LAY-005",
-      "upc": "882321798084",
       "isrc": "QT6FJ2684443",
       "version": "v1.0",
       "status": "approved-full",
@@ -64,7 +59,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "khallaytini-min-jadeed": {
       "catalog": "LY-006",
       "documentId": "RZ-LYR-LAY-006",
-      "upc": "882321767233",
       "isrc": "QT6FJ2684990",
       "version": "v1.0",
       "status": "approved-full",
@@ -75,7 +69,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "baila-baila-ya-layla": {
       "catalog": "LY-007",
       "documentId": "RZ-LYR-LAY-007",
-      "upc": "882321673183",
       "isrc": "QT6FJ2699918",
       "version": "v1.0",
       "status": "approved-full",
@@ -86,7 +79,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "haza-huva-menbeti": {
       "catalog": "LY-008",
       "documentId": "RZ-LYR-LAY-008",
-      "upc": "882321775900",
       "isrc": "QT6FJ2684475",
       "version": "v1.1",
       "status": "approved-full",
@@ -97,7 +89,6 @@ window.REZONANSLAR_APPROVED_LYRICS = Object.freeze({
     "samihini": {
       "catalog": "LY-009",
       "documentId": "RZ-LYR-LAY-009",
-      "upc": "882321657350",
       "isrc": "QT6FK2604965",
       "version": "v1.0",
       "status": "approved-full",
