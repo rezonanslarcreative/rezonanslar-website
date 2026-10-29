@@ -1,0 +1,7 @@
+.hs-draft-notice{font-size:13px;line-height:1.75;color:#695536;background:#fff7e6;border-left:3px solid #b58b32;padding:14px 16px;border-radius:0 10px 10px 0}
+.hs-draft-state{display:flex;justify-content:space-between;gap:14px;font-size:12px!important;color:#765c28!important;line-height:1.6}
+#hs-draft-count{white-space:nowrap}
+.hs-actions{flex-wrap:wrap}
+.hs-action{min-height:44px;cursor:pointer}
+.hs-action:focus-visible,.hs-song-card:focus-visible{outline:3px solid #ae7c16;outline-offset:4px}
+@media(max-width:490px){.hs-actions .hs-action{flex:1 1 100%}.hs-draft-state{flex-wrap:wrap}}

@@ -1,2 +1,32 @@
-<?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/about/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/aras-demir/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/aurelia-nox/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/clara-stone/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/deniz-ekin/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/hazan/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/layla-rezonans/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/lucian-cross/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/mahir-koz/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/seren-vega/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/vivian-hale/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/songwriters/</loc></url><url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/work-with-us/</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/about/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/aras-demir/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/aurelia-nox/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/clara-stone/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/deniz-ekin/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/hazan/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/layla-rezonans/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/lucian-cross/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/mahir-koz/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/seren-vega/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/artists/vivian-hale/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/aras-demir-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/aurelia-nox-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/clara-stone-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/deniz-ekin-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/hangi-sarki-senin-hikayeni-anlatiyor/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/layla-rezonans-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/lucian-cross-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/mahir-koz-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/on-farkli-ses-tek-muzik-evreni/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/seren-vega-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/blog/vivian-hale-hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/hikayeler/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/topluluk-kurallari/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/songwriters/</loc></url>
+  <url><loc>https://rezonanslarcreative.github.io/rezonanslar-website/work-with-us/</loc></url>
+</urlset>

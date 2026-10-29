@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="REZONANSLAR Fan Club: sanatçı hikâyeleri, 10 sanatçı ve 90 şarkıyla kendi müzik hikâyeni keşfet.">
+<title>Hangi Şarkı Senin Hikâyeni Anlatıyor? · 10 Sanatçı | REZONANSLAR Fan Club</title>
+<link href="../../assets/rezonanslar-logo.png" rel="icon" type="image/png">
+<link href="../../css/style.css" rel="stylesheet"><link href="../../css/navigation.css?v=20261015-menu-v8" rel="stylesheet"><link href="../../css/about-contact.css" rel="stylesheet">
+<style>
+:root{--st-gold:#c9a227;--st-text:#3b2a17}
+.st-preview-banner{background:#302318;color:#eed9ae;text-align:center;padding:11px 18px;font-size:11px;letter-spacing:.05em;font-weight:700}
+.story-page{background:#fffdf9}
+.story-hero{position:relative;isolation:isolate;background:linear-gradient(116deg,#201710,#503719);overflow:hidden;color:#fff7e9}
+.story-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 83% 22%,#d5a74667,transparent 42%),repeating-linear-gradient(115deg,transparent 0 105px,#e3b85a14 107px 108px,transparent 109px 200px)}
+.story-shell{width:min(1190px,calc(100% - 38px));margin:auto}
+.story-hero-body{padding:70px 0 83px;display:grid;grid-template-columns:1fr .52fr;gap:50px;align-items:center}
+.story-kicker{display:block;font-size:11px;letter-spacing:.2em;color:#c99b43;font-weight:700;text-transform:uppercase}
+.story-hero .story-kicker{color:#f1d18a}
+.story-hero h1{font:500 clamp(45px,5.6vw,75px)/1.09 Georgia,serif;color:#fffbec;margin:19px 0 25px;letter-spacing:-.03em}
+.story-hero h1 em{font-style:normal;color:#f0ca7d}
+.story-hero p{font-size:17px;line-height:1.85;color:#eee1cd;max-width:690px}
+.story-hero-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.story-hero-links a{border-radius:99px;padding:12px 20px;min-height:44px;font-size:12px;font-weight:700;border:1px solid #d8b56d;color:#f7dfb0;display:inline-flex;align-items:center}
+.story-hero-links a:first-child{background:#c9a227;color:#231709}
+.story-hero-links a:hover{background:#e2c27e;color:#30220d}
+.story-emblem{width:min(290px,70%);aspect-ratio:1;border:1px solid #dfbb7080;background:linear-gradient(135deg,#fff8e7,#e9cd8a);border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 20px #d9ad4f23,0 23px 66px #12090094;justify-self:center}
+.story-emblem img{width:72%;height:72%;object-fit:contain}
+.story-intro{padding:70px 0 25px;text-align:center}
+.story-intro h2{font:500 clamp(32px,4.4vw,51px)/1.18 Georgia,serif;color:#3e2d19;margin:14px 0}
+.story-intro p{max-width:800px;color:#76664f;font-size:15px;line-height:1.8;margin:0 auto}
+.story-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:17px;padding:40px 0 80px}
+.story-artist{min-width:0;background:#fffbf4;border:1px solid #e4d5b7;border-radius:17px;overflow:hidden;box-shadow:0 12px 38px #4d32120e;transition:transform .2s ease,box-shadow .2s ease}
+.story-artist:hover{transform:translateY(-4px);box-shadow:0 22px 42px #49300e21}
+.story-card-link{height:100%;display:flex;flex-direction:column;color:inherit}
+.story-card-link:focus-visible{outline:4px solid #bf943b;outline-offset:-4px}
+.story-card-image{position:relative;overflow:hidden;background:#d6c5a6}
+.story-card-image img{width:100%;aspect-ratio:1 / 1.12;object-fit:cover;object-position:center 20%;display:block}
+.story-card-index{position:absolute;top:13px;left:13px;border:1px solid #e9d090a8;border-radius:8px;background:#24180fc4;color:#f5d895;font:700 12px Arial,sans-serif;padding:6px 8px}
+.story-card-copy{padding:19px 16px;display:flex;flex:1;flex-direction:column}
+.story-card-genre{color:#9b7428;letter-spacing:.13em;font-size:9px;font-weight:800;min-height:28px}
+.story-card-copy h2{font:500 23px/1.16 Georgia,serif;color:#473118;margin:4px 0 10px}
+.story-card-copy p{font-size:12px;line-height:1.75;color:#746851;margin:0 0 18px;flex:1}
+.story-card-bottom{border-top:1px solid #e6d8bd;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:13px;color:#916b24;font-weight:700;font-size:10px;letter-spacing:.05em}
+.story-card-bottom strong{font-size:18px}
+.story-explainer{padding:55px 0;background:#f7eeda;border-top:1px solid #e8d6ac}
+.story-explainer-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.story-explainer h2{font:500 clamp(29px,3.5vw,44px)/1.25 Georgia,serif;color:#4b3319;margin:11px 0 20px}
+.story-explainer p{color:#6d5d47;line-height:1.85}
+.story-points{display:grid;gap:12px}
+.story-point{background:#fffcf6;border:1px solid #e3cf9f;padding:18px;border-radius:12px;color:#5a4730;font-size:13px;line-height:1.5}
+.story-point b{color:#977027;font-size:16px;margin-right:12px}
+.story-disclaimer{text-align:center;font-size:12px;color:#85744d;padding:30px 16px 45px;line-height:1.7}
+@media(max-width:1170px){.story-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:920px){.story-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.story-hero-body{grid-template-columns:1fr .55fr;gap:22px}}
+@media(max-width:670px){.story-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.story-hero-body,.story-explainer-grid{grid-template-columns:1fr}.story-hero-body{padding:60px 0}.story-emblem{width:200px;margin-top:26px}.story-intro{padding:56px 0 12px}.story-card-copy{padding:16px 12px}.story-card-copy h2{font-size:20px}.story-card-genre{font-size:8px;min-height:25px}.story-grid{padding:30px 0 60px}}
+@media(max-width:370px){.story-grid{grid-template-columns:1fr}.story-card-image img{aspect-ratio:1.5/1}.story-hero-links a{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.story-artist{transition:none}}
+</style><link rel="stylesheet" href="../../css/fan-club-menu.css?v=20261029">
+<link rel="canonical" href="https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/hikayeler/"><meta property="og:title" content="Hangi Şarkı Senin Hikâyeni Anlatıyor? · 10 Sanatçı | REZONANSLAR Fan Club"><meta property="og:description" content="REZONANSLAR Fan Club: sanatçı hikâyeleri, 10 sanatçı ve 90 şarkıyla kendi müzik hikâyeni keşfet."><meta property="og:url" content="https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/hikayeler/"><meta property="og:type" content="website"><meta property="og:image" content="https://rezonanslarcreative.github.io/rezonanslar-website/assets/rezonanslar-logo.png"></head><body>
+
+<header><div class="wrap header-inner">
+<a class="brand" href="../../"><img class="logo" src="../../assets/rezonanslar-logo.png" alt="REZONANSLAR logo"><span><strong>REZONANSLAR</strong><small>Creative Studio</small></span></a>
+<button class="menu" aria-label="Menü" aria-expanded="false">☰</button>
+<nav aria-label="Ana menü" class="main-navigation">
+<a href="../../" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+<div class="nav-artists"><a class="nav-artists-link" href="../../artists/" data-tr="Sanatçılar" data-en="Artists">Sanatçılar</a><button class="nav-drop-toggle" type="button" aria-label="Sanatçı listesini aç" aria-expanded="false" aria-controls="artist-dropdown">▾</button><div class="nav-dropdown" id="artist-dropdown" role="menu" aria-label="Sanatçı profilleri"><a role="menuitem" href="../../artists/hazan/">Hazan</a><a role="menuitem" href="../../artists/lucian-cross/">Lucian Cross</a><a role="menuitem" href="../../artists/layla-rezonans/">Layla Rezonans</a><a role="menuitem" href="../../artists/aurelia-nox/">Aurelia Nox</a><a role="menuitem" href="../../artists/vivian-hale/">Vivian Hale</a><a role="menuitem" href="../../artists/clara-stone/">Clara Stone</a><a role="menuitem" href="../../artists/deniz-ekin/">Deniz &amp; Ekin</a><a role="menuitem" href="../../artists/aras-demir/">Aras Demir</a><a role="menuitem" href="../../artists/seren-vega/">Seren Vega</a><a role="menuitem" href="../../artists/mahir-koz/">Mahir Köz</a></div></div>
+<a href="../../about/" data-tr="Hakkımızda" data-en="About">Hakkımızda</a>
+<a href="../../work-with-us/" data-tr="Bizimle Çalışın" data-en="Work With Us">Bizimle Çalışın</a>
+<a href="../../songwriters/" data-tr="Söz Yazarları" data-en="Songwriters">Söz Yazarları</a>
+<div class="nav-artists nav-fan-club"><a class="nav-artists-link" href="../" data-tr="Fan Club" data-en="Fan Club">Fan Club</a><button class="nav-drop-toggle" type="button" aria-label="Fan Club menüsünü aç veya kapat" aria-expanded="false" aria-controls="fan-club-dropdown">▾</button><div class="nav-dropdown nav-fan-dropdown" id="fan-club-dropdown" role="menu" aria-label="Fan Club sayfaları"><a role="menuitem" href="../" data-tr="Fan Club Ana Sayfa" data-en="Fan Club Home">Fan Club Ana Sayfa</a><a role="menuitem" href="../hikayeler/" data-tr="Hangi Şarkı Senin Hikâyeni Anlatıyor?" data-en="Which Song Tells Your Story?">Hangi Şarkı Senin Hikâyeni Anlatıyor?</a><a role="menuitem" href="../#yazilar" data-tr="Blog ve Sanatçı Hikâyeleri" data-en="Blog &amp; Artist Stories">Blog ve Sanatçı Hikâyeleri</a><a role="menuitem" href="../topluluk-kurallari/" data-tr="Yazım Rehberi ve Gizlilik" data-en="Story Guide &amp; Privacy">Yazım Rehberi ve Gizlilik</a></div></div>
+<a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
+</nav>
+<div class="lang"><button data-lang="tr" class="active">TR</button><button data-lang="en">EN</button></div>
+</div></header>
+<main class="story-page">
+<section class="story-hero"><div class="story-shell story-hero-body"><div>
+<span class="story-kicker" data-tr="REZONANSLAR FAN CLUB · HAYRAN HİKÂYELERİ" data-en="REZONANSLAR FAN CLUB · FAN STORIES">REZONANSLAR FAN CLUB · HAYRAN HİKÂYELERİ</span>
+<h1><span data-tr="Hangi Şarkı" data-en="Which Song">Hangi Şarkı</span> <em data-tr="Senin Hikâyeni Anlatıyor?" data-en="Tells Your Story?">Senin Hikâyeni Anlatıyor?</em></h1>
+<p data-tr="On farklı müzikal kimlik, doksan ayrı şarkı. Bazen bir melodi, bazen bir tek kelime bizi en eski hatıramıza götürür. Sende karşılığı olan şarkıyı seç." data-en="Ten distinct musical identities and ninety songs. Sometimes a melody or a single word takes us back to an old memory. Find the song that resonates with you.">On farklı müzikal kimlik, doksan ayrı şarkı. Bazen bir melodi, bazen bir tek kelime bizi en eski hatıramıza götürür. Sende karşılığı olan şarkıyı seç.</p>
+<div class="story-hero-links"><a href="#sanatcilar" data-tr="Sanatçını Seç ↓" data-en="Choose an Artist ↓">Sanatçını Seç ↓</a><a href="../" data-tr="← Fan Club" data-en="← Fan Club">← Fan Club</a></div>
+</div><div class="story-emblem"><img src="../../assets/rezonanslar-logo.png" alt="REZONANSLAR Creative Studio altın R logosu" width="205" height="205"></div></div></section>
+<div class="story-shell"><div class="story-intro"><span class="story-kicker" data-tr="10 SANATÇI · 90 ŞARKI" data-en="10 ARTISTS · 90 SONGS">10 SANATÇI · 90 ŞARKI</span>
+<h2 data-tr="Senin Hikâyen Hangisinde Gizli?" data-en="Which Song Holds Your Story?">Senin Hikâyen Hangisinde Gizli?</h2>
+<p data-tr="Her sanatçının dokuz şarkısı ve sana özel dokuz sorusu var. Bir sanatçıya dokun; şarkıları seç, soruları keşfet ve kendi anlatımını taslak olarak yaz." data-en="Every artist has nine songs and nine story prompts. Choose an artist, browse the songs, explore the questions, and try writing your own story draft.">Her sanatçının dokuz şarkısı ve sana özel dokuz sorusu var. Bir sanatçıya dokun; şarkıları seç, soruları keşfet ve kendi anlatımını taslak olarak yaz.</p></div>
+<div class="story-grid" id="sanatcilar"><article class="story-artist">
+<a href="../blog/hangi-sarki-senin-hikayeni-anlatiyor/" class="story-card-link" aria-label="Hazan • Hangi Şarkı Senin Hikâyeni Anlatıyor?">
+<div class="story-card-image"><img src="../../assets/personas/hazan-profile-card.webp" loading="lazy" decoding="async" width="400" height="410" alt="Hazan REZONANSLAR sanatçı görseli"><span class="story-card-index">01</span></div>
+<div class="story-card-copy"><span class="story-card-genre">SLOW / ARABESK</span><h2>Hazan</h2>
+<p data-tr="Aşk, özlem ve hatıraların derin sesi." data-en="A voice for love, longing and memories.">Aşk, özlem ve hatıraların derin sesi.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/lucian-cross-hikayeler/" class="story-card-link" aria-label="Lucian Cross • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/Lucian.webp" loading="lazy" decoding="async" width="400" height="410" alt="Lucian Cross REZONANSLAR sanatçı görseli"><span class="story-card-index">02</span></div>
+<div class="story-card-copy"><span class="story-card-genre">CINEMATIC ROCK</span><h2>Lucian Cross</h2>
+<p data-tr="Mücadele, kayıp ve yeniden ayağa kalkış." data-en="Struggle, loss and rising again.">Mücadele, kayıp ve yeniden ayağa kalkış.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/vivian-hale-hikayeler/" class="story-card-link" aria-label="Vivian Hale • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/Vivian.webp" loading="lazy" decoding="async" width="400" height="410" alt="Vivian Hale REZONANSLAR sanatçı görseli"><span class="story-card-index">03</span></div>
+<div class="story-card-copy"><span class="story-card-genre">SOUL / CINEMATIC POP</span><h2>Vivian Hale</h2>
+<p data-tr="Aşk, kırılganlık ve içsel dönüşüm." data-en="Love, vulnerability and transformation.">Aşk, kırılganlık ve içsel dönüşüm.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/aurelia-nox-hikayeler/" class="story-card-link" aria-label="Aurelia Nox • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/aurelia-nox.webp" loading="lazy" decoding="async" width="400" height="410" alt="Aurelia Nox REZONANSLAR sanatçı görseli"><span class="story-card-index">04</span></div>
+<div class="story-card-copy"><span class="story-card-genre">FRENCH CINEMATIC</span><h2>Aurelia Nox</h2>
+<p data-tr="Fransızca şiirsellik ve sinematik anılar." data-en="French poetry and cinematic memories.">Fransızca şiirsellik ve sinematik anılar.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/layla-rezonans-hikayeler/" class="story-card-link" aria-label="Layla Rezonans • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/layla-rezonans.webp" loading="lazy" decoding="async" width="400" height="410" alt="Layla Rezonans REZONANSLAR sanatçı görseli"><span class="story-card-index">05</span></div>
+<div class="story-card-copy"><span class="story-card-genre">ARABIC / TURKISH POP</span><h2>Layla Rezonans</h2>
+<p data-tr="Dillerin ötesinde ritim ve duygular." data-en="Rhythm and emotion beyond languages.">Dillerin ötesinde ritim ve duygular.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/clara-stone-hikayeler/" class="story-card-link" aria-label="Clara Stone • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/clara-stone.webp" loading="lazy" decoding="async" width="400" height="410" alt="Clara Stone REZONANSLAR sanatçı görseli"><span class="story-card-index">06</span></div>
+<div class="story-card-copy"><span class="story-card-genre">INDIE / DARK POP</span><h2>Clara Stone</h2>
+<p data-tr="Özgürlük, cesaret ve karanlık ışıklar." data-en="Freedom, courage and lights in the dark.">Özgürlük, cesaret ve karanlık ışıklar.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/deniz-ekin-hikayeler/" class="story-card-link" aria-label="Deniz &amp; Ekin • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/deniz-ekin.webp" loading="lazy" decoding="async" width="400" height="410" alt="Deniz &amp; Ekin REZONANSLAR sanatçı görseli"><span class="story-card-index">07</span></div>
+<div class="story-card-copy"><span class="story-card-genre">MEDITERRANEAN POP</span><h2>Deniz &amp; Ekin</h2>
+<p data-tr="Akdeniz'den sıcak anılar ve aşk." data-en="Warm Mediterranean memories and love.">Akdeniz'den sıcak anılar ve aşk.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/aras-demir-hikayeler/" class="story-card-link" aria-label="Aras Demir • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/Aras.webp" loading="lazy" decoding="async" width="400" height="410" alt="Aras Demir REZONANSLAR sanatçı görseli"><span class="story-card-index">08</span></div>
+<div class="story-card-copy"><span class="story-card-genre">MODERN TURKISH POP</span><h2>Aras Demir</h2>
+<p data-tr="Enerji, umut ve yeniden başlangıçlar." data-en="Energy, hope and new beginnings.">Enerji, umut ve yeniden başlangıçlar.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/seren-vega-hikayeler/" class="story-card-link" aria-label="Seren Vega • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/Seren.webp" loading="lazy" decoding="async" width="400" height="410" alt="Seren Vega REZONANSLAR sanatçı görseli"><span class="story-card-index">09</span></div>
+<div class="story-card-copy"><span class="story-card-genre">ALTERNATIVE ROCK</span><h2>Seren Vega</h2>
+<p data-tr="Başkaldırı, özgürlük ve kendi sesin." data-en="Defiance, freedom and finding your voice.">Başkaldırı, özgürlük ve kendi sesin.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article>
+<article class="story-artist">
+<a href="../blog/mahir-koz-hikayeler/" class="story-card-link" aria-label="Mahir Köz • Şarkı hikâyeleri">
+<div class="story-card-image"><img src="../../assets/personas/Mahir.webp" loading="lazy" decoding="async" width="400" height="410" alt="Mahir Köz REZONANSLAR sanatçı görseli"><span class="story-card-index">10</span></div>
+<div class="story-card-copy"><span class="story-card-genre">ANATOLIAN FOLK ROCK</span><h2>Mahir Köz</h2>
+<p data-tr="Anadolu, emek, dostluk ve kökler." data-en="Anatolia, resilience, friendship and roots.">Anadolu, emek, dostluk ve kökler.</p>
+<div class="story-card-bottom"><span data-tr="9 ŞARKI · 9 SORU" data-en="9 SONGS · 9 PROMPTS">9 ŞARKI · 9 SORU</span><strong aria-hidden="true">↗</strong></div>
+</div></a></article></div></div>
+<section class="story-explainer"><div class="story-shell story-explainer-grid"><div><span class="story-kicker" data-tr="NASIL ÇALIŞIYOR?" data-en="HOW DOES IT WORK?">NASIL ÇALIŞIYOR?</span>
+<h2 data-tr="Bir Şarkı Seç, Kendi Hikâyeni Keşfet" data-en="Choose a Song, Discover Your Story">Bir Şarkı Seç, Kendi Hikâyeni Keşfet</h2>
+<p data-tr="Sanatçını ve şarkını seç, sorunun sende çağrıştırdıklarını yaz. Her şarkının taslağı bu tarayıcıda ayrı saklanır. Metnini kopyalayabilir veya dosya olarak indirebilirsin. Hikâyeler herkese açık paylaşılmaz." data-en="Choose an artist and a song, then write what the question brings to mind. Each song has a separate draft in this browser. Copy your text or download it as a file. Stories are not shared publicly.">Sanatçını ve şarkını seç, sorunun sende çağrıştırdıklarını yaz. Her şarkının taslağı bu tarayıcıda ayrı saklanır. Metnini kopyalayabilir veya dosya olarak indirebilirsin. Hikâyeler herkese açık paylaşılmaz.</p>
+</div><div class="story-points"><div class="story-point"><b>01</b><span data-tr="Kendi duyguna yakın sanatçıyı seç" data-en="Choose the artist that speaks to you">Kendi duyguna yakın sanatçıyı seç</span></div>
+<div class="story-point"><b>02</b><span data-tr="Dokuz şarkıdan birine dokun" data-en="Pick one of nine songs">Dokuz şarkıdan birine dokun</span></div>
+<div class="story-point"><b>03</b><span data-tr="Soruyu oku ve hikâyeni taslak olarak yaz" data-en="Read the prompt and draft your story">Soruyu oku ve hikâyeni taslak olarak yaz</span></div>
+<div class="story-point"><b>04</b><span data-tr="Taslağını kopyala veya indir" data-en="Copy or download your draft">Taslağını kopyala veya indir</span></div></div></div></section>
+<p class="story-disclaimer" data-tr="Bu sayfalarda sanatçı repertuvarlarını keşfedebilir ve kendi taslağını yazabilirsin. Şarkıların platformlardaki yayımlanma durumu değişebilir. Taslaklar herkese açık yayımlanmaz." data-en="Explore the artist repertoires and write your own draft. Release availability varies by platform. Drafts are not published publicly.">Bu sayfalarda sanatçı repertuvarlarını keşfedebilir ve kendi taslağını yazabilirsin. Şarkıların platformlardaki yayımlanma durumu değişebilir. Taslaklar herkese açık yayımlanmaz.</p>
+</main><footer><div class="wrap footer-inner"><span>© 2026 REZONANSLAR Creative Studio</span><span data-tr="Her Rezonans Bir Hikâye Anlatır." data-en="Every Resonance Tells a Story.">Her Rezonans Bir Hikâye Anlatır.</span></div></footer>
+<script src="../../js/site.js?v=20261029-storage-safe"></script><script src="../../js/navigation.js"></script><script src="../../js/shared-contact.js" data-root="../../"></script></body></html>

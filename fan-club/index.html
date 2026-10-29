@@ -1,64 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#fffdf8">
+<title>REZONANSLAR FAN CLUB | Müziğin Arkasındaki Hikâyeler</title>
+<meta name="description" content="REZONANSLAR Fan Club: sanatçı hikâyeleri, 10 sanatçı ve 90 şarkıyla kendi müzik hikâyeni keşfet.">
 <link rel="icon" type="image/png" href="../assets/rezonanslar-logo.png">
-<title>REZONANSLAR Fan Club | Yakında</title>
-<meta name="description" content="REZONANSLAR Fan Club çok yakında! 10 müzik kimliğinin dinleyicilerini bir araya getirecek topluluk alanımızın açılış tarihi açıklanacak.">
-<meta name="robots" content="noindex,follow">
-<link rel="canonical" href="https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/">
-<meta property="og:type" content="website"><meta property="og:locale" content="tr_TR">
-<meta property="og:site_name" content="REZONANSLAR Creative Studio">
-<meta property="og:title" content="REZONANSLAR Fan Club | Yakında">
-<meta property="og:description" content="10 sanatçı, tek müzik evreni, tek topluluk. REZONANSLAR Fan Club yakında.">
-<meta property="og:url" content="https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/">
-<meta property="og:image" content="https://rezonanslarcreative.github.io/rezonanslar-website/assets/rezonanslar-logo.png">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="REZONANSLAR Fan Club | Yakında">
-<meta name="twitter:description" content="10 sanatçı, tek müzik evreni, tek topluluk. REZONANSLAR Fan Club yakında.">
-<meta name="twitter:image" content="https://rezonanslarcreative.github.io/rezonanslar-website/assets/rezonanslar-logo.png">
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/navigation.css?v=20261011-mobile-v7">
+<link rel="stylesheet" href="../css/navigation.css?v=20261015-menu-v8">
 <link rel="stylesheet" href="../css/about-contact.css">
 <style>
-.club-hero{position:relative;isolation:isolate;overflow:hidden;display:grid;place-items:center;min-height:650px;background:radial-gradient(ellipse at 52% 38%,rgba(201,162,39,.2),transparent 52%),linear-gradient(135deg,#fffdf8,#f5ecda)}
-.club-hero::before,.club-hero::after{content:"";position:absolute;z-index:-1;left:50%;top:45%;width:min(88vw,670px);aspect-ratio:1;border:1px solid rgba(201,162,39,.19);border-radius:50%;transform:translate(-50%,-50%)}
-.club-hero::after{width:min(71vw,540px);border-style:dashed;animation:fc-rotate 65s linear infinite}
-.fc-intro{padding:70px 0 90px;text-align:center;max-width:860px;margin:0 auto}
-.fc-eyebrow{font-size:11px;letter-spacing:.24em;font-weight:700;color:#9c782a}
-.fc-emblem{position:relative;display:grid;place-items:center;margin:25px auto 30px;width:110px;height:110px;border-radius:50%;border:1px solid rgba(201,162,39,.35);background:#fffdf8b3;box-shadow:0 15px 35px rgba(77,48,11,.08)}
-.fc-emblem::after{content:"";position:absolute;inset:-13px;border:1px solid #c9a2276b;border-radius:50%;animation:fc-breathe 4s ease-in-out infinite}
-.fc-emblem img{width:88px;height:auto}
-.fc-title{font:500 clamp(35px,6.5vw,71px)/1.12 Georgia,"Times New Roman",serif;letter-spacing:.01em;margin:0}
-.fc-title span{color:#b68b2d}
-.fc-tagline{font-size:clamp(13px,1.8vw,17px);color:#786c58;margin:15px 0 27px}
-.fc-soon{position:relative;display:inline-block;padding:0 12px 20px;font:600 clamp(53px,12vw,130px)/1.12 Georgia,"Times New Roman",serif;letter-spacing:.09em;color:#9f7628;background:linear-gradient(105deg,#946b22 0%,#d7ae52 30%,#fff4d0 48%,#b98c31 68%,#946b22 100%);background-size:240% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:fc-shine 5.5s ease-in-out infinite}
-.fc-soon::after{content:"";position:absolute;left:18%;right:18%;bottom:7px;height:2px;background:linear-gradient(90deg,transparent,#c9a227,transparent);animation:fc-pulse 4s ease-in-out infinite}
-.fc-wave{display:flex;justify-content:center;align-items:center;gap:6px;height:32px;margin:0 auto 18px}
-.fc-wave i{width:3px;height:8px;background:#c9a227;border-radius:3px;animation:fc-wave 1.5s ease-in-out infinite}
-.fc-wave i:nth-child(2),.fc-wave i:nth-child(6){animation-delay:.15s}.fc-wave i:nth-child(3),.fc-wave i:nth-child(5){animation-delay:.3s}.fc-wave i:nth-child(4){animation-delay:.45s}
-.fc-description{max-width:650px;margin:0 auto 25px;color:#635848;font-size:clamp(16px,1.8vw,19px);line-height:1.8}
-.fc-launch{display:inline-flex;padding:9px 23px;border:1px solid #c9a22773;border-radius:99px;color:#856627;background:#fffdf8af;font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.fc-link{display:inline-flex;margin-top:31px;min-height:46px;align-items:center;justify-content:center;padding:10px 25px;border:1px solid #c9a227;border-radius:11px;background:#fffdf8;color:#77591f;font-weight:700;font-size:14px}
-.fc-link:hover,.fc-link:focus-visible{background:#f5e6bd}
-.fc-info{padding:74px 0;border-top:1px solid #c9a22735;background:#fffdf8}
-.fc-info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
-.fc-info h2{font-size:clamp(32px,4vw,46px);margin:12px 0 18px}
-.fc-info p{max-width:680px;color:#716758;line-height:1.8}
-.fc-quote{padding:33px;background:#faf3e5;border:1px solid #c9a22755;border-radius:18px;text-align:center}
-.fc-quote strong{display:block;font:500 clamp(21px,2.6vw,29px)/1.4 Georgia,serif;color:#7b5f29}
-.fc-quote span{display:block;margin-top:14px;font-size:11px;font-weight:700;letter-spacing:.12em;color:#987529}
-@keyframes fc-shine{0%,100%{background-position:100% 0}50%{background-position:0 0}}
-@keyframes fc-rotate{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-@keyframes fc-breathe{0%,100%{opacity:.45;transform:scale(.97)}50%{opacity:.95;transform:scale(1.07)}}
-@keyframes fc-pulse{0%,100%{opacity:.4;transform:scaleX(.8)}50%{opacity:1;transform:scaleX(1)}}
-@keyframes fc-wave{0%,100%{height:7px;opacity:.5}50%{height:29px;opacity:1}}
+/* REZONANSLAR Fan Club v1 — isolated, no sitewide stylesheet changes */
+:root{--fc-gold:#c9a227;--fc-dark:#19140e;--fc-cream:#faf4e7;--fc-sand:#ede0c2}
+.fc-preview-note{position:relative;z-index:2;padding:9px 18px;text-align:center;background:#292014;color:#f8e7bc;font-size:11px;font-weight:700;letter-spacing:.075em}
+.fc-preview-note strong{color:#ffdd7a}
+.fc-v1{overflow:hidden}
+.fc-v1 h1,.fc-v1 h2,.fc-v1 h3{font-family:Georgia,"Times New Roman",serif}
+.fc-v1 a:focus-visible{outline:3px solid #dfb84b;outline-offset:3px}
+.fc-v1 [id]{scroll-margin-top:118px}
+.fc-shell{width:min(1260px,calc(100% - 52px));margin:auto}
+.fc-eyebrow{display:inline-flex;align-items:center;gap:12px;color:#bb8e31;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase}
+.fc-eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.fc-main-heading{font-weight:500;font-size:clamp(38px,4.5vw,62px);line-height:1.1;color:#20180f}
+.fc-section-sub{font-size:15px;color:#746a5b;line-height:1.8;margin:14px 0 0;max-width:780px}
+.fc-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:45px;padding:10px 21px;border-radius:999px;border:1px solid #c9a227;font-size:13px;font-weight:700;transition:background .2s,transform .2s,color .2s}
+.fc-link:hover{transform:translateY(-2px)}
+.fc-primary{background:linear-gradient(120deg,#bb871a,#d6ad43);color:#fff;border-color:#c69a2a;box-shadow:0 10px 30px rgba(180,124,24,.18)}
+.fc-primary:hover{background:#9f741e}
+.fc-outline{color:#f6dfab;border-color:#d0b36c70;background:#fff2}
+.fc-outline:hover{background:#fff3}
+.fc-text-link{display:inline-flex;align-items:center;gap:9px;color:#9a6e19;font-size:13px;font-weight:700}
+.fc-text-link:hover{text-decoration:underline}
+.fc-hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:#14100b;min-height:590px;display:flex;align-items:center}
+.fc-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 72% -10%,#efa92b6b,transparent 45%),radial-gradient(ellipse at 38% 85%,#c98c1e39,transparent 49%),linear-gradient(115deg,#080706 0%,#17110b 49%,#2d1c0b 100%)}
+.fc-hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.29;pointer-events:none;background:repeating-linear-gradient(108deg,transparent 0 140px,#e0a03515 142px 144px,transparent 148px 230px)}
+.fc-hero-grid{display:grid;grid-template-columns:.91fr 1.09fr;gap:55px;align-items:center;padding:85px 0 93px}
+.fc-hero h1{font-size:clamp(53px,6.4vw,92px);font-weight:500;line-height:.99;letter-spacing:-.034em;margin:25px 0 23px;color:#fff7e9}
+.fc-hero h1 em{display:block;font-style:normal;color:#f0cf89}
+.fc-hero .fc-eyebrow{color:#eac47a}
+.fc-hero-desc{color:#e1d5c0;line-height:1.85;font-size:16px;max-width:540px}
+.fc-hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.fc-hero-side{position:relative;min-height:412px;display:grid;align-items:center}
+.fc-halo{position:absolute;left:44%;top:50%;width:min(550px,45vw);aspect-ratio:1;border-radius:50%;border:1px solid #dbaf4d3e;transform:translate(-50%,-50%);box-shadow:0 0 0 48px #c59a2310,0 0 0 102px #d6a52a08}
+.fc-brand-seal{position:absolute;z-index:3;left:1%;top:6%;width:140px;aspect-ratio:1;display:grid;place-items:center;background:#fffaf2e8;backdrop-filter:blur(9px);border:1px solid #f0dcae;border-radius:50%;box-shadow:0 15px 45px #0b08085e}
+.fc-brand-seal img{width:91px;max-height:96px;object-fit:contain}
+.fc-collage{position:relative;z-index:1;display:grid;grid-template-columns:1.03fr .95fr;gap:12px;height:390px;margin-left:70px;max-width:525px}
+.fc-collage-main,.fc-collage-mini{position:relative;overflow:hidden;border:1px solid #e5b65075;border-radius:14px;background:#1b1713;box-shadow:0 22px 45px #0009}
+.fc-collage-main img,.fc-collage-mini img{width:100%;height:100%;object-fit:cover}
+.fc-collage-main::after,.fc-collage-mini::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#08070594 0%,transparent 52%);pointer-events:none}
+.fc-collage-main img{object-position:center top}
+.fc-collage-right{display:grid;grid-template-rows:1fr 1fr;gap:12px;min-height:0}
+.fc-collage-mini img{object-position:center 28%}
+.fc-collage-main strong,.fc-collage-mini strong{position:absolute;z-index:2;bottom:13px;left:14px;font-size:12px;color:#fff9ec;letter-spacing:.04em}
+.fc-collage-mini strong{font-size:11px}
+.fc-hero-mark{position:absolute;z-index:3;right:-15px;bottom:-25px;max-width:215px;padding:18px 22px;background:linear-gradient(145deg,#faf0d8,#d5b975);color:#38250a;border:1px solid #ffeed4;border-radius:15px;box-shadow:0 16px 35px #0008;text-align:center}
+.fc-hero-mark strong{display:block;font:500 19px/1.25 Georgia,serif}
+.fc-hero-mark span{display:block;font-size:10px;letter-spacing:.14em;margin-top:7px;font-weight:700}
+.fc-quick-wrap{position:relative;z-index:3;margin-top:-35px}
+.fc-quick{display:grid;grid-template-columns:repeat(4,1fr);background:#fffdf8;border:1px solid #ebdec5;border-radius:18px;box-shadow:0 17px 42px #31220f1d;overflow:hidden}
+.fc-quick a{min-height:115px;display:flex;align-items:center;gap:14px;padding:18px;transition:background .2s}
+.fc-quick a:not(:last-child){border-right:1px solid #eee2c8}
+.fc-quick a:hover{background:#f9f0db}
+.fc-quick-icon{display:grid;place-items:center;flex:0 0 56px;height:56px;border:1px solid #ecd4a0;border-radius:50%;background:#f8f0df;color:#956812;font-size:27px;font-family:Georgia,serif}
+.fc-quick b{display:block;font-size:13px;color:#281e13}
+.fc-quick small{display:block;line-height:1.45;font-size:11px;color:#766a58;margin-top:3px}
+.fc-about{padding:96px 0 50px}
+.fc-about-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center}
+.fc-about p{max-width:670px;color:#695f50;line-height:1.9}
+.fc-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fc-stat{background:linear-gradient(145deg,#fffdf7,#f3e6cb);border:1px solid #e9d5aa;border-radius:17px;min-height:130px;padding:22px;display:flex;flex-direction:column;justify-content:center}
+.fc-stat strong{font:500 40px/1 Georgia,serif;color:#ad822c}
+.fc-stat span{font-size:12px;font-weight:700;letter-spacing:.08em;color:#695232;margin-top:10px}
+.fc-section{padding:62px 0}
+.fc-heading-row{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:29px}
+.fc-heading-row h2{font-size:clamp(32px,3.3vw,45px);font-weight:500}
+.fc-category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.fc-category{padding:24px;min-height:175px;display:flex;flex-direction:column;background:#fff;border:1px solid #eadfc9;border-radius:17px;box-shadow:0 10px 25px #3628180a}
+.fc-category .fc-category-icon{font-size:25px;line-height:1;margin-bottom:23px;color:#b48229}
+.fc-category h3{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;margin-bottom:7px}
+.fc-category p{font-size:12px;line-height:1.6;color:#73685a;margin:0}
+.fc-editorial{background:linear-gradient(#fffdf8,#fbf7ef)}
+.fc-article-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.fc-article{overflow:hidden;border-radius:14px;border:1px solid #e9dfca;background:#fff;box-shadow:0 13px 28px #291d100f}
+.fc-article-cover{height:172px;position:relative;overflow:hidden;background:#2d2214}
+.fc-article-cover img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.fc-article:hover img{transform:scale(1.035)}
+.fc-article-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0005,transparent 65%)}
+.fc-article-cover.fc-article-brand{display:grid;place-items:center;background:radial-gradient(circle at 50% 0,#c49a3266,transparent 52%),linear-gradient(130deg,#1b1510,#4c300f)}
+.fc-article-cover.fc-article-brand img{width:92px;height:92px;object-fit:contain;filter:drop-shadow(0 4px 17px #0008);transition:none;position:relative;z-index:1}
+.fc-article-category{position:absolute;left:13px;bottom:12px;z-index:1;background:#fff5df;border-radius:8px;padding:5px 9px;color:#8e6117;font-size:10px;font-weight:700}
+.fc-article-body{padding:18px 17px 19px}
+.fc-article h3{font:600 18px/1.28 Arial,Helvetica,sans-serif;min-height:72px}
+.fc-article-full{display:block;height:100%;color:inherit}
+.fc-article-full:focus-visible{outline:3px solid #c9a227;outline-offset:3px;border-radius:14px}
+.fc-article p{font-size:12px;color:#7b7061;line-height:1.65;margin:10px 0}
+.fc-article-status{display:inline-flex;align-items:center;border:1px solid #e5d3ac;border-radius:99px;padding:5px 11px;font-size:10px;letter-spacing:.02em;color:#966c22;background:#fbf7ef;font-weight:700}
+.fc-note{font-size:12px;color:#827567;margin:24px 0 0}
+.fc-membership{padding:50px 0 60px}
+.fc-membership-panel{position:relative;overflow:hidden;isolation:isolate;display:grid;grid-template-columns:1fr .65fr;gap:20px;min-height:310px;border-radius:22px;background:#17120b;color:#fff;padding:55px 60px;align-items:center}
+.fc-membership-panel::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 85% 25%,#e3ad3252,transparent 51%),linear-gradient(120deg,#161009,#30200d)}
+.fc-membership-panel::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.15;background:repeating-linear-gradient(90deg,transparent 0 43px,#ba8d28 44px 46px,transparent 47px 54px)}
+.fc-membership h2{font-size:clamp(32px,4vw,50px);font-weight:500;color:#ffedca;margin:14px 0}
+.fc-membership p{max-width:650px;color:#ded2b8;line-height:1.85}
+.fc-membership .fc-link{margin-top:12px}
+.fc-membership-badge{justify-self:end;display:grid;place-items:center;width:min(260px,100%);aspect-ratio:1;border:1px solid #d9ae4d7a;border-radius:50%;background:#fff1;box-shadow:0 0 0 23px #bb8f1b15,0 0 0 48px #bb8f1b12;text-align:center;color:#f9e4aa;padding:24px}
+.fc-membership-badge span{font:500 clamp(26px,3vw,36px)/1.2 Georgia,serif}
+.fc-membership-badge small{display:block;font-size:11px;line-height:1.5;letter-spacing:.13em;margin-top:12px}
+.fc-artists{padding:60px 0 90px}
+.fc-artist-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:15px;margin-top:36px}
+.fc-artist{display:flex;align-items:center;flex-direction:column;gap:11px;text-align:center;min-width:0;color:#2e271d}
+.fc-artist img{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center 24%;border:3px solid #f8f1e3;box-shadow:0 0 0 1px #dcbf7e,0 10px 23px #39270d24;transition:transform .25s,border-color .25s}
+.fc-artist:hover img{transform:translateY(-5px);border-color:#dfbc62}
+.fc-artist b{font-size:11px;line-height:1.4}
+.fc-artist .fc-artist-tip{font-size:10px;color:#97712f}
+.fc-closing{position:relative;text-align:center;padding:95px 0;background:radial-gradient(ellipse at 12% 20%,#e5c78569,transparent 45%),radial-gradient(ellipse at 96% 82%,#bc8e3150,transparent 43%),linear-gradient(120deg,#faf1df,#fdf9f0);border-top:1px solid #e8d6af}
+.fc-closing h2{font:italic 500 clamp(31px,4.1vw,55px)/1.25 Georgia,serif;color:#5e451d;max-width:950px;margin:15px auto 0}
+.fc-closing p{max-width:700px;margin:20px auto;color:#72604a}
+.fc-closing-brand{font-size:11px;font-weight:700;letter-spacing:.16em;color:#a97a20;margin-top:30px}
 @media(min-width:1001px) and (max-width:1190px){header .main-navigation{gap:6px;font-size:12px}}
-@media(max-width:850px){.fc-info-grid{grid-template-columns:1fr}}
-@media(max-width:620px){.club-hero{min-height:630px}.fc-intro{padding:65px 0 73px}.fc-emblem{width:94px;height:94px}.fc-emblem img{width:74px}.fc-soon{letter-spacing:.035em;font-size:clamp(48px,14vw,80px)}.fc-info{padding:55px 0}}
-@media(prefers-reduced-motion:reduce){.club-hero::after,.fc-emblem::after,.fc-soon,.fc-soon::after,.fc-wave i{animation:none!important}}
+@media(max-width:1060px){.fc-quick{grid-template-columns:repeat(2,1fr)}.fc-quick a:nth-child(2){border-right:0}.fc-quick a:nth-child(-n+2){border-bottom:1px solid #eee2c8}.fc-article-grid{grid-template-columns:repeat(2,1fr)}.fc-artist-grid{grid-template-columns:repeat(5,1fr)}.fc-hero-grid{gap:20px}.fc-collage{margin-left:42px}}
+@media(max-width:760px){.fc-hero-grid,.fc-about-layout,.fc-membership-panel{grid-template-columns:1fr}.fc-hero-grid{padding:65px 0 75px}.fc-hero-side{min-height:370px}.fc-halo{width:min(470px,88vw)}.fc-collage{height:340px;margin:0 30px 0 45px}.fc-brand-seal{width:105px;left:0;top:0}.fc-brand-seal img{width:72px}.fc-hero-mark{right:0;bottom:0}.fc-about{padding:70px 0 30px}.fc-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fc-membership-panel{padding:40px 35px}.fc-membership-badge{justify-self:center;width:180px}.fc-shell{width:min(1260px,calc(100% - 34px))}}
+@media(max-width:480px){.fc-hero h1{font-size:clamp(48px,11vw,65px)}.fc-hero-desc{font-size:14px}.fc-quick a{min-height:90px;padding:12px;gap:10px}.fc-quick-icon{flex-basis:42px;height:42px;font-size:22px}.fc-quick b{font-size:12px}.fc-quick small{font-size:10px}.fc-article-grid{grid-template-columns:1fr}.fc-article-cover{height:220px}.fc-category{padding:19px 16px;min-height:170px}.fc-artist-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;max-width:460px;margin:25px auto}.fc-artist img{max-width:115px}.fc-collage{height:290px;margin:0 8px 0 22px;gap:7px}.fc-collage-right{gap:7px}.fc-brand-seal{width:82px}.fc-brand-seal img{width:57px}.fc-hero-mark{max-width:150px;padding:11px 13px}.fc-hero-mark strong{font-size:14px}.fc-hero-mark span{font-size:8px}.fc-stat{min-height:115px;padding:15px}.fc-stat strong{font-size:34px}.fc-membership-panel{padding:35px 25px}}
+@media(prefers-reduced-motion:reduce){.fc-v1 *, .fc-v1 *::before,.fc-v1 *::after{transition:none!important;animation:none!important}}
+
+/* RFC-ETK-001 — interactive Hazan story series preview callout */
+.fc-series-callout{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:27px 32px;margin-top:28px;background:linear-gradient(115deg,#211912,#4a3214);border:1px solid #c29c4d;border-radius:16px;color:#fff7e5;box-shadow:0 14px 35px #3b25151a}
+.fc-series-callout h3{font:500 clamp(22px,2.8vw,31px)/1.23 Georgia,serif;color:#fff0ca;margin:9px 0}
+.fc-series-callout p{font-size:13px;color:#e2d2b7;line-height:1.7;margin:0;max-width:650px}
+.fc-series-callout .fc-series-kicker{font-size:10px;letter-spacing:.18em;font-weight:700;color:#eac57d}
+.fc-series-callout .fc-series-cta{display:inline-flex;justify-content:center;align-items:center;min-height:44px;padding:10px 20px;background:#d9b151;color:#2c210e;border-radius:99px;font-size:12px;font-weight:700;white-space:nowrap;flex-shrink:0}
+.fc-series-callout .fc-series-cta:hover{background:#f1d18b}
+@media(max-width:650px){.fc-series-callout{flex-direction:column;align-items:flex-start;padding:24px}.fc-series-callout .fc-series-cta{white-space:normal}}
+
 </style>
-</head>
+<link rel="stylesheet" href="../css/fan-club-menu.css?v=20261029">
+<link rel="canonical" href="https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/"><meta property="og:title" content="REZONANSLAR FAN CLUB | Müziğin Arkasındaki Hikâyeler"><meta property="og:description" content="REZONANSLAR Fan Club: sanatçı hikâyeleri, 10 sanatçı ve 90 şarkıyla kendi müzik hikâyeni keşfet."><meta property="og:url" content="https://rezonanslarcreative.github.io/rezonanslar-website/fan-club/"><meta property="og:type" content="website"><meta property="og:image" content="https://rezonanslarcreative.github.io/rezonanslar-website/assets/rezonanslar-logo.png"></head>
 <body>
+
 <header><div class="wrap header-inner">
 <a class="brand" href="../"><img class="logo" src="../assets/rezonanslar-logo.png" alt="REZONANSLAR logo"><span><strong>REZONANSLAR</strong><small>Creative Studio</small></span></a>
 <button class="menu" aria-label="Menü" aria-expanded="false">☰</button>
@@ -68,31 +148,83 @@
 <a href="../about/" data-tr="Hakkımızda" data-en="About">Hakkımızda</a>
 <a href="../work-with-us/" data-tr="Bizimle Çalışın" data-en="Work With Us">Bizimle Çalışın</a>
 <a href="../songwriters/" data-tr="Söz Yazarları" data-en="Songwriters">Söz Yazarları</a>
-<a href="../fan-club/" data-tr="Fan Club" data-en="Fan Club">Fan Club</a>
+<div class="nav-artists nav-fan-club"><a class="nav-artists-link" href="./" data-tr="Fan Club" data-en="Fan Club">Fan Club</a><button class="nav-drop-toggle" type="button" aria-label="Fan Club menüsünü aç veya kapat" aria-expanded="false" aria-controls="fan-club-dropdown">▾</button><div class="nav-dropdown nav-fan-dropdown" id="fan-club-dropdown" role="menu" aria-label="Fan Club sayfaları"><a role="menuitem" href="./" data-tr="Fan Club Ana Sayfa" data-en="Fan Club Home">Fan Club Ana Sayfa</a><a role="menuitem" href="./hikayeler/" data-tr="Hangi Şarkı Senin Hikâyeni Anlatıyor?" data-en="Which Song Tells Your Story?">Hangi Şarkı Senin Hikâyeni Anlatıyor?</a><a role="menuitem" href="./#yazilar" data-tr="Blog ve Sanatçı Hikâyeleri" data-en="Blog &amp; Artist Stories">Blog ve Sanatçı Hikâyeleri</a><a role="menuitem" href="./topluluk-kurallari/" data-tr="Yazım Rehberi ve Gizlilik" data-en="Story Guide &amp; Privacy">Yazım Rehberi ve Gizlilik</a></div></div>
 <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
 </nav>
 <div class="lang"><button data-lang="tr" class="active">TR</button><button data-lang="en">EN</button></div>
 </div></header>
-<main>
-<section class="club-hero" aria-labelledby="fanclub-title"><div class="wrap fc-intro">
-<div class="fc-eyebrow" data-tr="REZONANSLAR TOPLULUĞU" data-en="THE REZONANSLAR COMMUNITY">REZONANSLAR TOPLULUĞU</div>
-<div class="fc-emblem"><img src="../assets/rezonanslar-logo.png" alt="REZONANSLAR Creative Studio logosu" width="88" height="88"></div>
-<h1 class="fc-title" id="fanclub-title">REZONANSLAR <span>FAN CLUB</span></h1>
-<p class="fc-tagline" data-tr="10 sanatçı • Tek müzik evreni • Tek topluluk" data-en="10 artists • One music universe • One community">10 sanatçı • Tek müzik evreni • Tek topluluk</p>
-<div class="fc-soon" data-tr="YAKINDA" data-en="COMING SOON">YAKINDA</div>
-<div class="fc-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-<p class="fc-description" data-tr="Her Rezonans Bir Hikâye Anlatır. Sen de bu hikâyenin bir parçasısın. Müziğin etrafında buluşacağımız yeni topluluk alanımızı hazırlıyoruz." data-en="Every Resonance Tells a Story. You're part of that story. We're creating a new home for everyone brought together by music.">Her Rezonans Bir Hikâye Anlatır. Sen de bu hikâyenin bir parçasısın. Müziğin etrafında buluşacağımız yeni topluluk alanımızı hazırlıyoruz.</p>
-<span class="fc-launch" data-tr="Açılış tarihi açıklanacak" data-en="Launch date to be announced">Açılış tarihi açıklanacak</span>
-<div><a class="fc-link" href="../artists/" data-tr="Sanatçıları Keşfet →" data-en="Discover the Artists →">Sanatçıları Keşfet →</a></div>
+<main class="fc-v1">
+<section class="fc-hero" aria-labelledby="fc-main-title"><div class="fc-shell fc-hero-grid">
+<div>
+<span class="fc-eyebrow">REZONANSLAR FAN CLUB</span>
+<h1 id="fc-main-title"><span data-tr="Aynı Müziğin" data-en="United by">Aynı Müziğin</span> <em data-tr="İnsanları" data-en="Music">İnsanları</em></h1>
+<p class="fc-hero-desc" data-tr="Her şarkı bir duygu, her ses başka bir dünya. On sanatçımızın hikâyelerini, müziğin perde arkasını ve yeni projelerimizin yolculuğunu keşfet." data-en="Every song carries an emotion; every voice opens a different world. Discover our ten artists, the stories behind the music, and the journey of our new projects.">Her şarkı bir duygu, her ses başka bir dünya. On sanatçımızın hikâyelerini, müziğin perde arkasını ve yeni projelerimizin yolculuğunu keşfet.</p>
+<div class="fc-hero-buttons"><a class="fc-link fc-primary" href="#yazilar" data-tr="Yazıları Keşfet ↗" data-en="Explore Stories ↗">Yazıları Keşfet ↗</a><a class="fc-link fc-outline" href="#sanatcilar" data-tr="Sanatçıları Tanı →" data-en="Meet the Artists →">Sanatçıları Tanı →</a></div>
+</div>
+<div class="fc-hero-side" aria-label="REZONANSLAR sanatçıları">
+<div class="fc-halo" aria-hidden="true"></div>
+<div class="fc-brand-seal"><img src="../assets/rezonanslar-logo.png" alt="REZONANSLAR" width="91" height="91"></div>
+<div class="fc-collage">
+<div class="fc-collage-main"><img src="../assets/personas/Seren.webp" alt="Seren Vega" width="300" height="380"><strong>Seren Vega</strong></div>
+<div class="fc-collage-right"><div class="fc-collage-mini"><img src="../assets/personas/hazan-profile-card.webp" alt="Hazan" width="240" height="200"><strong>Hazan</strong></div><div class="fc-collage-mini"><img src="../assets/personas/Lucian.webp" alt="Lucian Cross" width="240" height="200"><strong>Lucian Cross</strong></div></div>
+</div>
+<div class="fc-hero-mark"><strong data-tr="Her Rezonans Bir Hikâye Anlatır." data-en="Every Resonance Tells a Story.">Her Rezonans Bir Hikâye Anlatır.</strong><span>REZONANSLAR</span></div>
+</div>
 </div></section>
-<section class="fc-info"><div class="wrap fc-info-grid"><div>
-<div class="kicker" data-tr="BİRLİKTE DAHA GÜÇLÜ" data-en="BETTER TOGETHER">BİRLİKTE DAHA GÜÇLÜ</div>
-<h2 data-tr="Bir topluluktan daha fazlası" data-en="More than a community">Bir topluluktan daha fazlası</h2>
-<p data-tr="Hazan’dan Layla Rezonans’a, Seren Vega’dan Mahir Köz’e uzanan müzik evrenimizde yeni bir buluşma alanı hazırlıyoruz. Fan Club henüz üyeliğe açılmadı; gelişmeleri sitemizden takip edebilirsiniz." data-en="From Hazan and Layla Rezonans to Seren Vega and Mahir Köz, a new meeting place is taking shape. Fan Club membership is not open yet; follow updates on our website.">Hazan’dan Layla Rezonans’a, Seren Vega’dan Mahir Köz’e uzanan müzik evrenimizde yeni bir buluşma alanı hazırlıyoruz. Fan Club henüz üyeliğe açılmadı; gelişmeleri sitemizden takip edebilirsiniz.</p>
-</div><div class="fc-quote"><strong data-tr="Her Rezonans Bir Hikâye Anlatır." data-en="Every Resonance Tells a Story.">Her Rezonans Bir Hikâye Anlatır.</strong><span data-tr="SEN DE BU HİKÂYENİN BİR PARÇASISIN" data-en="YOU'RE PART OF THE STORY">SEN DE BU HİKÂYENİN BİR PARÇASISIN</span></div>
+<div class="fc-shell fc-quick-wrap"><div class="fc-quick" aria-label="Fan Club bölümleri">
+<a href="#yazilar"><span class="fc-quick-icon" aria-hidden="true">✎</span><span><b data-tr="Son Yazılar" data-en="Latest Stories">Son Yazılar</b><small data-tr="Yeni içerikleri keşfet." data-en="Explore upcoming content.">Yeni içerikleri keşfet.</small></span></a>
+<a href="#kategoriler"><span class="fc-quick-icon" aria-hidden="true">♫</span><span><b data-tr="Sanatçı Hikâyeleri" data-en="Artist Stories">Sanatçı Hikâyeleri</b><small data-tr="Müziğin ardındaki dünya." data-en="Behind the music.">Müziğin ardındaki dünya.</small></span></a>
+<a href="#kategoriler"><span class="fc-quick-icon" aria-hidden="true">♬</span><span><b data-tr="Stüdyodan" data-en="From the Studio">Stüdyodan</b><small data-tr="Yaratıcı süreçlere yakından bak." data-en="Inside the creative process.">Yaratıcı süreçlere yakından bak.</small></span></a>
+<a href="#kategoriler"><span class="fc-quick-icon" aria-hidden="true">✧</span><span><b data-tr="Özel Duyurular" data-en="Announcements">Özel Duyurular</b><small data-tr="Yaklaşan projeler ve haberler." data-en="Projects and updates.">Yaklaşan projeler ve haberler.</small></span></a>
+</div></div>
+<section class="fc-about" id="fan-club-nedir"><div class="fc-shell fc-about-layout">
+<div><span class="fc-eyebrow" data-tr="FAN CLUB NEDİR?" data-en="WHAT IS THE FAN CLUB?">FAN CLUB NEDİR?</span><h2 class="fc-main-heading" data-tr="Müziğin Ötesinde Bir Buluşma Noktası" data-en="A Meeting Place Beyond Music">Müziğin Ötesinde Bir Buluşma Noktası</h2>
+<p data-tr="REZONANSLAR yalnızca şarkılardan oluşan bir müzik evreni değil; farklı kültürleri, duyguları ve hikâyeleri aynı çatı altında buluşturan yaratıcı bir dünyadır. Fan Club, bu dünyanın kapılarını dinleyicilere biraz daha açıyor." data-en="REZONANSLAR is more than a collection of songs. It is a creative universe bringing together cultures, emotions and stories. The Fan Club opens the door to the world behind our music.">REZONANSLAR yalnızca şarkılardan oluşan bir müzik evreni değil; farklı kültürleri, duyguları ve hikâyeleri aynı çatı altında buluşturan yaratıcı bir dünyadır. Fan Club, bu dünyanın kapılarını dinleyicilere biraz daha açıyor.</p>
+<p data-tr="Sanatçılarımızın hikâyelerini, şarkılarımızın doğuşunu, stüdyo çalışmalarımızı ve yeni projelerimizin gelişimini burada paylaşacağız." data-en="We'll share artist stories, songwriting journeys, studio moments and news about upcoming projects.">Sanatçılarımızın hikâyelerini, şarkılarımızın doğuşunu, stüdyo çalışmalarımızı ve yeni projelerimizin gelişimini burada paylaşacağız.</p></div>
+<div class="fc-stat-grid"><div class="fc-stat"><strong>10</strong><span data-tr="SANATÇI" data-en="ARTISTS">SANATÇI</span></div><div class="fc-stat"><strong>1</strong><span data-tr="TOPLULUK" data-en="COMMUNITY">TOPLULUK</span></div><div class="fc-stat"><strong>TR/EN</strong><span data-tr="İKİ DİLLİ YAYIN" data-en="BILINGUAL CONTENT">İKİ DİLLİ YAYIN</span></div><div class="fc-stat"><strong>∞</strong><span data-tr="ANLATILACAK HİKÂYE" data-en="STORIES TO TELL">ANLATILACAK HİKÂYE</span></div></div>
 </div></section>
+<section class="fc-section" id="kategoriler"><div class="fc-shell"><div class="fc-heading-row"><div><span class="fc-eyebrow" data-tr="İÇERİK DÜNYAMIZ" data-en="OUR CONTENT">İÇERİK DÜNYAMIZ</span><h2 class="fc-main-heading" data-tr="Birlikte Keşfedeceklerimiz" data-en="What We'll Discover Together">Birlikte Keşfedeceklerimiz</h2></div></div>
+<div class="fc-category-grid">
+<div class="fc-category"><span class="fc-category-icon" aria-hidden="true">✎</span><h3 data-tr="Son Yazılar" data-en="Latest Stories">Son Yazılar</h3><p data-tr="Müziğe ve yaratıcı dünyamıza dair yepyeni yazılar." data-en="New stories about music and our creative universe.">Müziğe ve yaratıcı dünyamıza dair yepyeni yazılar.</p></div>
+<div class="fc-category"><span class="fc-category-icon" aria-hidden="true">♫</span><h3 data-tr="Sanatçı Hikâyeleri" data-en="Artist Stories">Sanatçı Hikâyeleri</h3><p data-tr="On farklı müzikal kimliğin ardındaki duygular." data-en="The emotions behind our ten musical identities.">On farklı müzikal kimliğin ardındaki duygular.</p></div>
+<div class="fc-category"><span class="fc-category-icon" aria-hidden="true">♬</span><h3 data-tr="Stüdyodan" data-en="From the Studio">Stüdyodan</h3><p data-tr="Şarkıların doğuşu, yaratım süreci ve stüdyo notları." data-en="How songs come to life, creative journeys and studio notes.">Şarkıların doğuşu, yaratım süreci ve stüdyo notları.</p></div>
+<div class="fc-category"><span class="fc-category-icon" aria-hidden="true">✧</span><h3 data-tr="Özel Duyurular" data-en="Announcements">Özel Duyurular</h3><p data-tr="Yaklaşan yayınlar, özel projeler ve gelişmeler." data-en="Upcoming releases, special projects and updates.">Yaklaşan yayınlar, özel projeler ve gelişmeler.</p></div>
+</div></div></section>
+<section class="fc-section fc-editorial" id="yazilar"><div class="fc-shell">
+<div class="fc-heading-row"><div><span class="fc-eyebrow" data-tr="FAN CLUB YAZILARI" data-en="FAN CLUB STORIES">FAN CLUB YAZILARI</span><h2 class="fc-main-heading" data-tr="Şarkıların Arkasındaki Dünya" data-en="The World Behind the Songs">Şarkıların Arkasındaki Dünya</h2><p class="fc-section-sub" data-tr="Marka hikâyemizi oku, sanatçıları keşfet ve kendi şarkı hikâyeni yaz." data-en="Read our story, discover the artists, and write your own song story.">Marka hikâyemizi oku, sanatçıları keşfet ve kendi şarkı hikâyeni yaz.</p></div></div>
+<div class="fc-article-grid"><article class="fc-article"><a class="fc-article-full" href="./blog/on-farkli-ses-tek-muzik-evreni/"><div class="fc-article-cover"><img src="../assets/rezonanslar-logo.png" loading="lazy" decoding="async" width="350" height="220" alt="REZONANSLAR: On Farklı Ses, Tek Müzik Evreni"></div><div class="fc-article-body"><h3 data-tr="REZONANSLAR: On Farklı Ses, Tek Müzik Evreni" data-en="REZONANSLAR: Ten Voices, One Music Universe">REZONANSLAR: On Farklı Ses, Tek Müzik Evreni</h3><p data-tr="Bir müzik evreninin doğuşu ve yaratıcı kimliği." data-en="The beginnings and creative identity of a musical universe.">Bir müzik evreninin doğuşu ve yaratıcı kimliği.</p><span class="fc-article-status" data-tr="KEŞFET ↗" data-en="EXPLORE ↗">KEŞFET ↗</span></div></a></article><article class="fc-article"><a class="fc-article-full" href="./blog/hangi-sarki-senin-hikayeni-anlatiyor/"><div class="fc-article-cover"><img src="../assets/personas/hazan-profile-card.webp" loading="lazy" decoding="async" width="350" height="220" alt="Hazan: Kalbinde İz Bırakan Şarkı"></div><div class="fc-article-body"><h3 data-tr="Hazan: Kalbinde İz Bırakan Şarkı" data-en="Hazan: The Song That Stays With You">Hazan: Kalbinde İz Bırakan Şarkı</h3><p data-tr="Dokuz şarkı, dokuz duygu. Sana en yakın olanı seç." data-en="Nine songs, nine emotions. Choose the one that speaks to you.">Dokuz şarkı, dokuz duygu. Sana en yakın olanı seç.</p><span class="fc-article-status" data-tr="KEŞFET ↗" data-en="EXPLORE ↗">KEŞFET ↗</span></div></a></article><article class="fc-article"><a class="fc-article-full" href="./blog/seren-vega-hikayeler/"><div class="fc-article-cover"><img src="../assets/personas/Seren.webp" loading="lazy" decoding="async" width="350" height="220" alt="Seren Vega: Kendi Sesini Bul"></div><div class="fc-article-body"><h3 data-tr="Seren Vega: Kendi Sesini Bul" data-en="Seren Vega: Find Your Own Voice">Seren Vega: Kendi Sesini Bul</h3><p data-tr="Rock enerjisinin içinde kendi hikâyene yer aç." data-en="Make room for your own story in the energy of rock.">Rock enerjisinin içinde kendi hikâyene yer aç.</p><span class="fc-article-status" data-tr="KEŞFET ↗" data-en="EXPLORE ↗">KEŞFET ↗</span></div></a></article><article class="fc-article"><a class="fc-article-full" href="./blog/layla-rezonans-hikayeler/"><div class="fc-article-cover"><img src="../assets/personas/layla-rezonans.webp" loading="lazy" decoding="async" width="350" height="220" alt="Layla Rezonans: Bir Şarkı, Bir Anı"></div><div class="fc-article-body"><h3 data-tr="Layla Rezonans: Bir Şarkı, Bir Anı" data-en="Layla Rezonans: One Song, One Memory">Layla Rezonans: Bir Şarkı, Bir Anı</h3><p data-tr="Şarkıların çağrıştırdığı anıları kelimelere dök." data-en="Put the memories that music brings into words.">Şarkıların çağrıştırdığı anıları kelimelere dök.</p><span class="fc-article-status" data-tr="KEŞFET ↗" data-en="EXPLORE ↗">KEŞFET ↗</span></div></a></article></div><div class="fc-series-callout">
+  <div>
+    <span class="fc-series-kicker" data-tr="ETKİLEŞİMLİ BLOG SERİSİ • 10 SANATÇI / 90 ŞARKI" data-en="INTERACTIVE BLOG SERIES • 10 ARTISTS / 90 SONGS">ETKİLEŞİMLİ BLOG SERİSİ • 10 SANATÇI / 90 ŞARKI</span>
+    <h3 data-tr="Hangi Şarkı Senin Hikâyeni Anlatıyor?" data-en="Which Song Tells Your Story?">Hangi Şarkı Senin Hikâyeni Anlatıyor?</h3>
+    <p data-tr="On farklı sanatçının 90 şarkısını keşfet; sana seslenen soruyu oku ve kendi hikâyeni yaz. Taslağını bu tarayıcıda sakla, kopyala veya indir." data-en="Explore ninety songs across ten artists, find the prompt that speaks to you, and write your story. Save your draft in this browser, copy it, or download it.">On farklı sanatçının 90 şarkısını keşfet; sana seslenen soruyu oku ve kendi hikâyeni yaz. Taslağını bu tarayıcıda sakla, kopyala veya indir.</p>
+  </div>
+  <a class="fc-series-cta" href="./hikayeler/" data-tr="10 Sanatçıyı Keşfet ↗" data-en="Explore All 10 Artists ↗">10 Sanatçıyı Keşfet ↗</a>
+</div>
+
+</div></section>
+<section class="fc-membership" id="topluluk"><div class="fc-shell"><div class="fc-membership-panel"><div>
+<span class="fc-eyebrow" data-tr="TOPLULUĞUMUZ BÜYÜYOR" data-en="OUR COMMUNITY IS GROWING">TOPLULUĞUMUZ BÜYÜYOR</span>
+<h2 data-tr="Bu Hikâyede Senin de Bir Yerin Var" data-en="There's a Place for You in This Story">Bu Hikâyede Senin de Bir Yerin Var</h2>
+<p data-tr="Bir şarkı seç, sana hatırlattıklarını yaz. Taslağın bu tarayıcıda sana özel kalır; dilersen kopyalayabilir veya dosya olarak indirebilirsin. Üyelik gerekmez." data-en="Choose a song and write what it brings to mind. Your draft stays in this browser; copy it or download it as a file. No account is needed.">Bir şarkı seç, sana hatırlattıklarını yaz. Taslağın bu tarayıcıda sana özel kalır; dilersen kopyalayabilir veya dosya olarak indirebilirsin. Üyelik gerekmez.</p>
+<a class="fc-link fc-primary" href="../#haberler" data-tr="Gelişmeleri Takip Et →" data-en="Follow Updates →">Gelişmeleri Takip Et →</a>
+<a class="fc-link" href="./hikayeler/" data-tr="Hikâyeni Yaz ↗" data-en="Write Your Story ↗">Hikâyeni Yaz ↗</a></div><div class="fc-membership-badge"><div><span data-tr="Senin Şarkın, Senin Hikâyen" data-en="Your Song, Your Story">Senin Şarkın, Senin Hikâyen</span><small>REZONANSLAR FAN CLUB</small></div></div></div></div></section>
+<section class="fc-artists" id="sanatcilar"><div class="fc-shell">
+<div class="fc-heading-row"><div><span class="fc-eyebrow" data-tr="MÜZİK EVRENİMİZ" data-en="OUR MUSIC UNIVERSE">MÜZİK EVRENİMİZ</span><h2 class="fc-main-heading" data-tr="10 Sanatçı, 10 Farklı Dünya" data-en="10 Artists, 10 Musical Worlds">10 Sanatçı, 10 Farklı Dünya</h2><p class="fc-section-sub" data-tr="Derin duygulardan güçlü rock enerjisine, Anadolu ezgilerinden sinematik melodilere... Sana seslenen sanatçıyı keşfet." data-en="From heartfelt ballads to powerful rock, Anatolian sounds to cinematic melodies... Discover the artist who speaks to you.">Derin duygulardan güçlü rock enerjisine, Anadolu ezgilerinden sinematik melodilere... Sana seslenen sanatçıyı keşfet.</p></div><a class="fc-text-link" href="../artists/" data-tr="Tüm Sanatçıları Gör →" data-en="Explore All Artists →">Tüm Sanatçıları Gör →</a></div>
+<div class="fc-artist-grid">
+<a class="fc-artist" href="../artists/hazan/"><img src="../assets/personas/hazan-profile-card.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Hazan</b></a>
+<a class="fc-artist" href="../artists/lucian-cross/"><img src="../assets/personas/Lucian.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Lucian Cross</b></a>
+<a class="fc-artist" href="../artists/vivian-hale/"><img src="../assets/personas/Vivian.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Vivian Hale</b></a>
+<a class="fc-artist" href="../artists/aurelia-nox/"><img src="../assets/personas/aurelia-nox.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Aurelia Nox</b></a>
+<a class="fc-artist" href="../artists/layla-rezonans/"><img src="../assets/personas/layla-rezonans.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Layla Rezonans</b></a>
+<a class="fc-artist" href="../artists/clara-stone/"><img src="../assets/personas/clara-stone.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Clara Stone</b></a>
+<a class="fc-artist" href="../artists/deniz-ekin/"><img src="../assets/personas/deniz-ekin.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Deniz &amp; Ekin</b></a>
+<a class="fc-artist" href="../artists/aras-demir/"><img src="../assets/personas/Aras.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Aras Demir</b></a>
+<a class="fc-artist" href="../artists/seren-vega/"><img src="../assets/personas/Seren.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Seren Vega</b></a>
+<a class="fc-artist" href="../artists/mahir-koz/"><img src="../assets/personas/Mahir.webp" loading="lazy" decoding="async" alt="" width="135" height="135"><b>Mahir Köz</b></a>
+</div></div></section>
+<section class="fc-closing"><div class="fc-shell"><span class="fc-eyebrow">REZONANSLAR FAN CLUB</span><h2 data-tr="Müziğin Arkasındaki Hikâyeleri Birlikte Yazalım." data-en="Let's Write the Stories Behind the Music Together.">Müziğin Arkasındaki Hikâyeleri Birlikte Yazalım.</h2><p data-tr="Bazen tek bir şarkı, binlerce kelimenin anlatamadığını söyler. Bu hikâyelerin dünyasına hoş geldin." data-en="Sometimes a single song expresses what a thousand words cannot. Welcome to the world behind these stories.">Bazen tek bir şarkı, binlerce kelimenin anlatamadığını söyler. Bu hikâyelerin dünyasına hoş geldin.</p><div class="fc-closing-brand">REZONANSLAR CREATIVE STUDIO</div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><span>© 2026 REZONANSLAR Creative Studio</span><span data-tr="Her Rezonans Bir Hikâye Anlatır." data-en="Every Resonance Tells a Story.">Her Rezonans Bir Hikâye Anlatır.</span></div></footer>
-<script src="../js/site.js?v=20261011-mobile-v7"></script><script src="../js/navigation.js"></script><script src="../js/shared-contact.js" data-root="../"></script>
+<script src="../js/site.js?v=20261029-storage-safe"></script><script src="../js/navigation.js"></script><script src="../js/shared-contact.js" data-root="../"></script>
 </body>
 </html>
