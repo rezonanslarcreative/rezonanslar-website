@@ -9,7 +9,7 @@
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let allowMotion=read('rezCompanionMotionAllowed')==='true';
   const canMove=()=>!paused&&(!reduced.matches||allowMotion);
-  const css=document.createElement('link');css.rel='stylesheet';css.href=url('css/companion.css?v=5');document.head.append(css);
+  const css=document.createElement('link');css.rel='stylesheet';css.href=url('css/companion.css?v=6');document.head.append(css);
   const pet=document.createElement('aside');pet.id='rez-companion';
   pet.innerHTML='<button type="button" class="pet-body" aria-haspopup="dialog"><span class="pet-art"></span></button><div class="pet-bubble" hidden><a></a><button type="button" aria-label="Kapat / Close">×</button></div>';
   const body=pet.querySelector('.pet-body'),art=pet.querySelector('.pet-art'),bubble=pet.querySelector('.pet-bubble');
@@ -17,8 +17,11 @@
   const menu=document.createElement('section');menu.id='rez-pet-menu';menu.hidden=true;menu.setAttribute('role','dialog');menu.setAttribute('aria-label','Pati dostu / Pet companion');
   menu.innerHTML='<header><strong>Pati dostu</strong><button type="button" data-action="close" aria-label="Kapat / Close">×</button></header><button type="button" data-action="pin"></button><button type="button" data-action="pause"></button><button type="button" data-action="change"></button><div class="pet-choices" hidden></div><button type="button" data-action="hide"></button>';
   document.body.append(pet,paw,menu);
+  const petNote=document.createElement('p');petNote.className='pet-kindness-note';
+  const footer=document.querySelector('footer');if(footer)footer.append(petNote);
+
   let x=innerWidth-125,y=innerHeight-150,target=null,drag=null,longTimer,suppress=false,action='idle',phase=0,frame=0,last=0,nextAction=0,menuOpen=false;
-  const sizes=()=>({w:innerWidth<=700?90:100,h:innerWidth<=700?112.5:120});
+  const sizes=()=>({w:innerWidth<=700?126:100,h:innerWidth<=700?157.5:120});
   function clamp(){const s=sizes();x=Math.max(4,Math.min(innerWidth-s.w-4,x));y=Math.max(4,Math.min(innerHeight-s.h-4,y));pet.style.transform=`translate3d(${x}px,${y}px,0)`;bubble.style.left=x<220?'0':'auto';bubble.style.right=x<220?'auto':'0';bubble.classList.toggle('below',y<150);}
 
   // Articulated vector character: continuous joint motion, no frame replacement.
@@ -50,7 +53,7 @@
     joints['ear-left'].setAttribute('transform','rotate('+(active?Math.sin(t*2.1)*2:0)+' -30 -30)');joints['ear-right'].setAttribute('transform','rotate('+(active?Math.sin(t*2.1+.8)*2:0)+' 30 -30)');
     art.style.transform=active&&action==='spin'?'rotate('+Math.sin(t*4)*10+'deg)':'';
   }
-  function render(){pet.hidden=hidden;paw.hidden=!hidden;body.setAttribute('aria-label',tr('Pati dostunla oyna; sağ tık veya uzun bas ile menü','Play with your pet; right-click or long-press for menu'));body.title=tr('Menü: sağ tık veya uzun bas','Menu: right-click or long-press');paw.setAttribute('aria-label',tr('Pati dostunu göster','Show your pet'));menu.querySelector('strong').textContent=tr('Pati dostu','Pet companion');menu.querySelector('[data-action=pin]').textContent=pinned?tr('Serbest bırak','Let roam'):tr('Burada sabitle','Stay here');menu.querySelector('[data-action=pause]').textContent=canMove()?tr('Hareketi durdur','Pause motion'):tr('Hareketi başlat','Resume motion');menu.querySelector('[data-action=change]').textContent=tr('Sürpriz arkadaşını değiştir','Change surprise companion');menu.querySelector('[data-action=hide]').textContent=tr('Gizle','Hide');}
+  function render(){petNote.textContent=tr('🐾 Burada her sese, her patiye yer var.','🐾 Every voice and every paw belongs here.');paw.title=tr('REZONANSLAR’ın Pati Dostları','REZONANSLAR’s Pet Friends');pet.hidden=hidden;paw.hidden=!hidden;body.setAttribute('aria-label',tr('Pati dostunla oyna; sağ tık veya uzun bas ile menü','Play with your pet; right-click or long-press for menu'));body.title=tr('Menü: sağ tık veya uzun bas','Menu: right-click or long-press');paw.setAttribute('aria-label',tr('Pati dostunu göster','Show your pet'));menu.querySelector('strong').textContent=tr('REZONANSLAR’ın Pati Dostları','REZONANSLAR’s Pet Friends');menu.querySelector('[data-action=pin]').textContent=pinned?tr('Serbest bırak','Let roam'):tr('Burada sabitle','Stay here');menu.querySelector('[data-action=pause]').textContent=canMove()?tr('Pati dostunu dinlendir','Let your pet rest'):tr('Hareketi başlat','Resume motion');menu.querySelector('[data-action=change]').textContent=tr('Pati dostunu değiştir','Change your pet friend');menu.querySelector('[data-action=hide]').textContent=tr('Gizle','Hide');}
   function closeMenu(focus=false){menu.hidden=true;menuOpen=false;nextAction=performance.now()+1500;if(focus&&!hidden)body.focus();}
   function openMenu(){clearTimeout(longTimer);target=null;bubble.hidden=true;menu.hidden=false;menuOpen=true;render();menu.style.left=Math.max(4,Math.min(innerWidth-menu.offsetWidth-4,x))+'px';menu.style.top=Math.max(4,Math.min(innerHeight-menu.offsetHeight-4,y-menu.offsetHeight))+'px';menu.querySelector('[data-action=pin]').focus();}
   pets.forEach((id,i)=>{const b=document.createElement('button');b.type='button';b.textContent='✦ '+(i+1);b.setAttribute('aria-label','Sürpriz / Surprise '+(i+1));b.onclick=()=>{selected=id;skin();closeMenu();action='wag';phase=performance.now();nextAction=phase+2200;};menu.querySelector('.pet-choices').append(b);});
@@ -75,7 +78,7 @@
   window.addEventListener('resize',()=>{target=null;clamp();if(menuOpen)openMenu();});
   let promptIndex=0;
   bubble.querySelector('button').onclick=()=>bubble.hidden=true;
-  setInterval(()=>{if(hidden||menuOpen||drag||!canMove()||document.hidden)return;const prompts=[[tr('Yeni şarkılara bakalım mı?','Explore new songs?'),'#haberler'],[tr('Müzik dünyamı keşfet!','Explore my music world!'),'artists/'+selected+'/'],[tr('Hikâyeni paylaşmak ister misin?','Want to share your story?'),'fan-club/']];const p=prompts[promptIndex++%prompts.length];bubble.querySelector('a').textContent=p[0];bubble.querySelector('a').href=url(p[1]);bubble.hidden=false;setTimeout(()=>{if(!bubble.contains(document.activeElement))bubble.hidden=true;},10000);},75000);
+  setInterval(()=>{if(hidden||menuOpen||drag||!canMove()||document.hidden)return;const prompts=[[tr('Müziği keşfet, pati dostlarımızla tanış.','Discover the music, meet our pet friends.'),'#haberler'],[tr('Müzik dünyamı keşfet!','Explore my music world!'),'artists/'+selected+'/'],[tr('Hikâyeni paylaşmak ister misin?','Want to share your story?'),'fan-club/']];const p=prompts[promptIndex++%prompts.length];bubble.querySelector('a').textContent=p[0];bubble.querySelector('a').href=url(p[1]);bubble.hidden=false;setTimeout(()=>{if(!bubble.contains(document.activeElement))bubble.hidden=true;},10000);},75000);
   function tick(now){const dt=Math.min((now-last)/1000,.05);last=now;
     const active=!hidden&&!document.hidden&&!menuOpen&&!drag&&!pet.matches(':hover')&&canMove();
     if(active){
