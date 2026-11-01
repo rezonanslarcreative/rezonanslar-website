@@ -11,7 +11,7 @@
   let dancing = false;
   const text = (tr,en) => document.documentElement.lang === 'en' ? en : tr;
   const css = document.createElement('link');
-  css.rel = 'stylesheet'; css.href = url('css/companion.css?v=1'); document.head.append(css);
+  css.rel = 'stylesheet'; css.href = url('css/companion.css?v=2'); document.head.append(css);
   const mascot = document.createElement('aside');
   mascot.id = 'rez-companion'; mascot.setAttribute('aria-label','Hazan');
   mascot.innerHTML = `<div class="companion-bubble" hidden><a></a><button type="button" class="bubble-close" aria-label="Kapat / Close">×</button></div><button type="button" class="companion-character" aria-label="Hazan ile dans et / Dance with Hazan"><img alt="Hazan" width="100" height="120"></button><button type="button" class="companion-hide" aria-label="Avatarı gizle / Hide avatar">×</button>`;
@@ -29,7 +29,7 @@
     mascot.hidden = hidden;
     mascot.classList.toggle('motion-paused',paused || reduced.matches);
     panel.querySelector('h2').textContent = text('Yol arkadaşını seç','Choose your companion');
-    panel.querySelector('p').textContent = text('Hazan sana eşlik etsin. Küçük bir dans için ona dokun!','Let Hazan keep you company. Tap her for a little dance!');
+    panel.querySelector('p').textContent = text('Hazan sana eşlik etsin. Dans için dokun, taşımak için sürükle!','Let Hazan keep you company. Tap to dance, drag to move!');
     panel.querySelector('.companion-toggle').textContent = hidden ? text('Göster','Show') : text('Gizle','Hide');
     panel.querySelector('.companion-pause').textContent = paused ? text('Hareketi başlat','Resume motion') : text('Hareketi durdur','Pause motion');
     panel.querySelector('.companion-pause').setAttribute('aria-pressed',String(paused));
@@ -42,10 +42,53 @@
   mascot.querySelector('.companion-hide').onclick = () => visibility(true);
   panel.querySelector('.companion-pause').onclick = () => { paused=!paused; save('rezCompanionPaused',String(paused)); render(); };
   bubble.querySelector('button').onclick = () => { bubble.hidden=true; };
-  mascot.querySelector('.companion-character').onclick = () => {
-    if (paused || reduced.matches || dancing) return;
+  const character = mascot.querySelector('.companion-character');
+  character.querySelector('img').draggable = false;
+  let drag = null, placed = false, suppressClick = false, danceTimer;
+  function place(x,y) {
+    const rect=mascot.getBoundingClientRect();
+    const left=Math.max(0,Math.min(innerWidth-rect.width,x));
+    const top=Math.max(0,Math.min(innerHeight-rect.height,y));
+    mascot.style.left=left+'px'; mascot.style.top=top+'px';
+    mascot.style.right='auto'; mascot.style.bottom='auto';
+    mascot.classList.toggle('bubble-below',top<160);
+    mascot.classList.toggle('bubble-left-edge',left<230);
+  }
+  character.addEventListener('pointerdown',e => {
+    if (!e.isPrimary || e.button!==0) return;
+    const rect=mascot.getBoundingClientRect();
+    drag={id:e.pointerId,x:e.clientX,y:e.clientY,left:rect.left,top:rect.top,moved:false};
+    suppressClick=false;
+    character.setPointerCapture(e.pointerId);
+  });
+  character.addEventListener('pointermove',e => {
+    if (!drag || e.pointerId!==drag.id) return;
+    const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+    if (!drag.moved && Math.hypot(dx,dy)<6) return;
+    drag.moved=true; placed=true; bubble.hidden=true;
+    mascot.classList.add('dragging');
+    place(drag.left+dx,drag.top+dy);
+  });
+  function finishDrag(e) {
+    if (!drag || e.pointerId!==drag.id) return;
+    suppressClick=drag.moved;
+    drag=null; mascot.classList.remove('dragging');
+    if(character.hasPointerCapture(e.pointerId)) character.releasePointerCapture(e.pointerId);
+  }
+  character.addEventListener('pointerup',finishDrag);
+  character.addEventListener('pointercancel',finishDrag);
+  character.addEventListener('lostpointercapture',finishDrag);
+  window.addEventListener('resize',() => {
+    if(placed) { const rect=mascot.getBoundingClientRect(); place(rect.left,rect.top); }
+  });
+  character.onclick = e => {
+    if(suppressClick && e.detail!==0) { suppressClick=false; return; }
+    // Pausing automatic motion must not disable an explicitly requested dance.
+    clearTimeout(danceTimer);
+    mascot.classList.remove('dancing');
+    void character.offsetWidth;
     dancing=true; mascot.classList.add('dancing');
-    setTimeout(() => { mascot.classList.remove('dancing'); dancing=false; },1800);
+    danceTimer=setTimeout(() => { mascot.classList.remove('dancing'); dancing=false; },1800);
   };
   const prompts = [
     ['Yeni şarkılara bakalım mı?','Shall we discover new songs?','#haberler'],
@@ -61,7 +104,7 @@
     bubbleTimer=setTimeout(() => { if (!bubble.contains(document.activeElement)) bubble.hidden=true; },12000);
   }
   function move() {
-    if (hidden || paused || reduced.matches || document.hidden || dancing || mascot.matches(':hover') || mascot.contains(document.activeElement)) return;
+    if (placed || drag || hidden || paused || reduced.matches || document.hidden || dancing || mascot.matches(':hover') || mascot.contains(document.activeElement)) return;
     // Remain in the edge rail, leaving the central page content available.
     const mobile=innerWidth < 700;
     mascot.style.bottom=(mobile ? 12 : 16 + Math.random()*Math.min(180,innerHeight*0.22))+'px';
