@@ -50,3 +50,45 @@ if(menu && nav){
   });
 }
 applyLang(lang);
+
+/* Shared site-wide page-view counter. One badge request per production page load.
+   All pages use the same key; local previews never increment the live counter. */
+(() => {
+  const footer = document.querySelector('footer .footer-inner');
+  if (!footer || document.querySelector('.visit-counter')) return;
+  const counter = document.createElement('span');
+  counter.className = 'visit-counter';
+  counter.style.cssText = 'display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:20px';
+  counter.title = '1 Kasım 2026 tarihinden itibaren sayfa görüntülemeleri / Page views since November 1, 2026';
+  const label = document.createElement('span');
+  label.dataset.tr = 'Toplam ziyaret';
+  label.dataset.en = 'Total visits';
+  label.textContent = label.dataset[lang];
+  counter.appendChild(label);
+  const badge = document.createElement('img');
+  badge.alt = 'Toplam sayfa görüntüleme sayısı / Total page views';
+  badge.height = 20;
+  badge.style.cssText = 'height:20px;width:auto;max-width:100%;vertical-align:middle';
+  badge.referrerPolicy = 'no-referrer';
+  badge.addEventListener('error', () => {
+    badge.remove();
+    const unavailable = document.createElement('span');
+    unavailable.dataset.tr = 'Şu anda kullanılamıyor';
+    unavailable.dataset.en = 'Currently unavailable';
+    unavailable.textContent = unavailable.dataset[lang];
+    counter.appendChild(unavailable);
+  }, { once: true });
+  footer.appendChild(counter);
+  if (location.hostname === 'rezonanslarcreative.github.io' &&
+      location.pathname.startsWith('/rezonanslar-website/') &&
+      !location.pathname.includes('/fan-club-preview/')) {
+    badge.src = 'https://hits.sh/rezonanslarcreative.github.io/rezonanslar-website.svg?style=flat-square&label=REZ&color=c9a227&labelColor=161411';
+    counter.appendChild(badge);
+  } else {
+    const preview = document.createElement('span');
+    preview.dataset.tr = 'Önizleme';
+    preview.dataset.en = 'Preview';
+    preview.textContent = preview.dataset[lang];
+    counter.appendChild(preview);
+  }
+})();
