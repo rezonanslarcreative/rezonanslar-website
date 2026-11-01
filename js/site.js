@@ -92,3 +92,12 @@ applyLang(lang);
     counter.appendChild(preview);
   }
 })();
+
+// Load the shared companion relative to this script on every public page.
+(() => {
+ const base = new URL('../', document.currentScript.src);
+ if (location.pathname.includes('/fan-club-preview/')) return;
+ const companion = document.createElement('script');
+ companion.src = new URL('js/companion.js?v=1',base).href;
+ document.body.appendChild(companion);
+})();
