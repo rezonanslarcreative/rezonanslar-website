@@ -82,7 +82,7 @@ applyLang(lang);
   if (location.hostname === 'rezonanslarcreative.github.io' &&
       location.pathname.startsWith('/rezonanslar-website/') &&
       !location.pathname.includes('/fan-club-preview/')) {
-    badge.src = 'https://hits.sh/rezonanslarcreative.github.io/rezonanslar-website.svg?style=flat-square&label=REZ&color=c9a227&labelColor=161411';
+    badge.src = 'https://hits.sh/rezonanslarcreative.github.io/rezonanslar-website.svg?style=flat-square&label=REZ&color=c9a227&labelColor=161411&extraCount=275280';
     counter.appendChild(badge);
   } else {
     const preview = document.createElement('span');
