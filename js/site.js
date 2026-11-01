@@ -98,6 +98,6 @@ applyLang(lang);
  const base = new URL('../', document.currentScript.src);
  if (location.pathname.includes('/fan-club-preview/')) return;
  const companion = document.createElement('script');
- companion.src = new URL('js/companion.js?v=3',base).href;
+ companion.src = new URL('js/companion.js?v=4',base).href;
  document.body.appendChild(companion);
 })();
