@@ -8,3 +8,14 @@
 #rez-companion.bubble-left-edge .companion-bubble{right:auto;left:0}
 @media(max-width:700px){#rez-companion.bubble-below .companion-bubble{top:102px}}
 @media(prefers-reduced-motion:reduce){#rez-companion.dancing .companion-character{animation:none!important;filter:brightness(1.2);outline:2px solid #c9a227;outline-offset:2px;border-radius:20px}}
+
+.surprise-choices{display:flex;flex-wrap:wrap;gap:10px;width:100%}.surprise-choices .companion-select{min-width:66px;min-height:65px;justify-content:center;background:linear-gradient(135deg,#17141f,#493b27);color:#f3d783;letter-spacing:.1em}.surprise-choices .companion-select[aria-pressed="true"]{outline:2px solid #c9a227;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){#rez-companion.motion-enabled{transition:bottom 5s ease-in-out!important}#rez-companion.motion-enabled:not(.motion-paused) .companion-character{animation:companion-bob 4s ease-in-out infinite!important}#rez-companion.motion-enabled.dancing .companion-character{animation:companion-dance .3s ease-in-out 6!important;filter:none;outline:none}}
+#rez-companion.dragging,#rez-companion.motion-enabled.dragging{transition:none!important}#rez-companion.dragging .companion-character{animation:none!important}
+
+#rez-companion.dancing:not(.reduced-feedback) .companion-character{animation:var(--companion-trick,companion-dance) .9s ease-in-out 2!important;transform-origin:50% 85%}
+@keyframes companion-hop{0%,100%{transform:translateY(0) scale(1)}20%{transform:scale(1.12,.86)}50%{transform:translateY(-34px) rotate(-7deg) scale(.95,1.06)}75%{transform:translateY(0) scale(1.1,.9)}}
+@keyframes companion-spin{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(.8)}100%{transform:rotate(360deg) scale(1)}}
+@keyframes companion-wiggle{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-16deg) translateX(-5px)}40%,80%{transform:rotate(16deg) translateX(5px)}}
+@keyframes companion-walk{0%,100%{transform:translateX(0) rotate(0)}25%{transform:translateX(-9px) translateY(-5px) rotate(-9deg)}50%{transform:translateX(0) translateY(0)}75%{transform:translateX(9px) translateY(-5px) rotate(9deg)}}
+#rez-companion.dragging .companion-character{animation:none!important}

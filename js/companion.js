@@ -9,42 +9,71 @@
   let hidden = read('rezCompanionHidden') === 'true';
   let paused = read('rezCompanionPaused') === 'true';
   let dancing = false;
+  let motionAllowed = read('rezCompanionMotionAllowed') === 'true';
+  const motionReduced = () => reduced.matches && !motionAllowed;
+  const pets = ['hazan','lucian-cross','vivian-hale','seren-vega','layla-rezonans','aurelia-nox','clara-stone','deniz-ekin','aras-demir','mahir-koz'];
+  const storedPet = read('rezSurprisePet');
+  let selected = pets.includes(storedPet) ? storedPet : pets[Math.floor(Math.random()*pets.length)];
+  save('rezSurprisePet',selected);
   const text = (tr,en) => document.documentElement.lang === 'en' ? en : tr;
   const css = document.createElement('link');
-  css.rel = 'stylesheet'; css.href = url('css/companion.css?v=2'); document.head.append(css);
+  css.rel = 'stylesheet'; css.href = url('css/companion.css?v=3'); document.head.append(css);
   const mascot = document.createElement('aside');
-  mascot.id = 'rez-companion'; mascot.setAttribute('aria-label','Hazan');
-  mascot.innerHTML = `<div class="companion-bubble" hidden><a></a><button type="button" class="bubble-close" aria-label="Kapat / Close">×</button></div><button type="button" class="companion-character" aria-label="Hazan ile dans et / Dance with Hazan"><img alt="Hazan" width="100" height="120"></button><button type="button" class="companion-hide" aria-label="Avatarı gizle / Hide avatar">×</button>`;
-  mascot.querySelector('img').src = url('assets/avatars/hazan.png');
+  mascot.id = 'rez-companion'; mascot.setAttribute('aria-label','Sürpriz arkadaş / Surprise companion');
+  mascot.innerHTML = `<div class="companion-bubble" hidden><a></a><button type="button" class="bubble-close" aria-label="Kapat / Close">×</button></div><button type="button" class="companion-character" aria-label="Arkadaşınla oyna / Play with your companion"><img alt="Sürpriz arkadaş / Surprise companion" width="100" height="120"></button><button type="button" class="companion-hide" aria-label="Avatarı gizle / Hide avatar">×</button>`;
+  mascot.querySelector('img').src = url('assets/avatars/pets/'+selected+'.png');
   document.body.append(mascot);
   const bubble = mascot.querySelector('.companion-bubble');
   const link = bubble.querySelector('a');
   const panel = document.createElement('section');
   panel.className = 'companion-picker wrap';
-  panel.innerHTML = `<h2></h2><p></p><div class="companion-options"><button type="button" class="companion-select" aria-pressed="true"><img alt="" width="48" height="58"><span>Hazan</span></button><button type="button" class="companion-toggle"></button><button type="button" class="companion-pause"></button></div>`;
-  panel.querySelector('img').src = url('assets/avatars/hazan.png');
+  panel.innerHTML = `<h2></h2><p></p><div class="companion-options"><div class="surprise-choices"></div><button type="button" class="companion-toggle"></button><button type="button" class="companion-pause"></button></div>`;
+  const choiceButtons = pets.map((id,index) => {
+    const button=document.createElement('button');
+    button.type='button'; button.className='companion-select';
+    button.textContent='✦ '+String(index+1).padStart(2,'0');
+    button.onclick=() => {
+      selected=id; save('rezSurprisePet',id);
+      mascot.querySelector('img').src=url('assets/avatars/pets/'+id+'.png');
+      visibility(false); bubble.hidden=true; character.click();
+    };
+    panel.querySelector('.surprise-choices').append(button);
+    return button;
+  });
   const footer = document.querySelector('footer');
   if (footer) footer.before(panel); else document.body.append(panel);
   function render() {
     mascot.hidden = hidden;
-    mascot.classList.toggle('motion-paused',paused || reduced.matches);
-    panel.querySelector('h2').textContent = text('Yol arkadaşını seç','Choose your companion');
-    panel.querySelector('p').textContent = text('Hazan sana eşlik etsin. Dans için dokun, taşımak için sürükle!','Let Hazan keep you company. Tap to dance, drag to move!');
+    mascot.classList.toggle('motion-paused',paused || motionReduced());
+    mascot.classList.toggle('motion-enabled',motionAllowed);
+    mascot.classList.toggle('reduced-feedback',motionReduced());
+    panel.querySelector('h2').textContent = text('Sürpriz arkadaşını keşfet','Discover your surprise companion');
+    panel.querySelector('p').textContent = text('Bir gizemli kart seç; arkadaşın ortaya çıksın! Oynamak için dokun, taşımak için sürükle.','Choose a mystery card to reveal your companion! Tap to play, drag to move.');
     panel.querySelector('.companion-toggle').textContent = hidden ? text('Göster','Show') : text('Gizle','Hide');
-    panel.querySelector('.companion-pause').textContent = paused ? text('Hareketi başlat','Resume motion') : text('Hareketi durdur','Pause motion');
-    panel.querySelector('.companion-pause').setAttribute('aria-pressed',String(paused));
-    panel.querySelector('.companion-select').setAttribute('aria-pressed',String(!hidden));
-    if (hidden || paused || reduced.matches) bubble.hidden = true;
+    panel.querySelector('.companion-pause').textContent = (paused || motionReduced()) ? text('Hareketi başlat','Resume motion') : text('Hareketi durdur','Pause motion');
+    panel.querySelector('.companion-pause').setAttribute('aria-pressed',String(paused || motionReduced()));
+    choiceButtons.forEach((button,index) => {
+      button.setAttribute('aria-label',text('Sürpriz kart ','Mystery card ')+(index+1));
+      button.setAttribute('aria-pressed',String(!hidden && pets[index]===selected));
+    });
+    if (hidden || paused || motionReduced()) bubble.hidden = true;
   }
   function visibility(value) { hidden=value; save('rezCompanionHidden',String(value)); render(); }
   panel.querySelector('.companion-toggle').onclick = () => visibility(!hidden);
-  panel.querySelector('.companion-select').onclick = () => { save('rezCompanion','hazan'); visibility(false); };
+
   mascot.querySelector('.companion-hide').onclick = () => visibility(true);
-  panel.querySelector('.companion-pause').onclick = () => { paused=!paused; save('rezCompanionPaused',String(paused)); render(); };
+  panel.querySelector('.companion-pause').onclick = () => {
+    if(paused || motionReduced()) { paused=false; motionAllowed=true; }
+    else paused=true;
+    if(paused) { clearTimeout(danceTimer); dancing=false; mascot.classList.remove('dancing'); }
+    save('rezCompanionPaused',String(paused)); save('rezCompanionMotionAllowed',String(motionAllowed)); render();
+  };
   bubble.querySelector('button').onclick = () => { bubble.hidden=true; };
   const character = mascot.querySelector('.companion-character');
   character.querySelector('img').draggable = false;
   let drag = null, placed = false, suppressClick = false, danceTimer;
+  const tricks=['dance','hop','spin','wiggle','walk'];
+  let lastTrick='';
   function place(x,y) {
     const rect=mascot.getBoundingClientRect();
     const left=Math.max(0,Math.min(innerWidth-rect.width,x));
@@ -86,28 +115,35 @@
     // Pausing automatic motion must not disable an explicitly requested dance.
     clearTimeout(danceTimer);
     mascot.classList.remove('dancing');
+    const available=tricks.filter(t=>t!==lastTrick);
+    lastTrick=available[Math.floor(Math.random()*available.length)];
+    character.style.setProperty('--companion-trick','companion-'+lastTrick);
     void character.offsetWidth;
     dancing=true; mascot.classList.add('dancing');
     danceTimer=setTimeout(() => { mascot.classList.remove('dancing'); dancing=false; },1800);
   };
   const prompts = [
     ['Yeni şarkılara bakalım mı?','Shall we discover new songs?','#haberler'],
-    ['Benim hikâyemi keşfetmek ister misin?','Want to discover my story?','artists/hazan/'],
+    ['Bu arkadaşın müzik dünyasını keşfet!','Explore your companion’s music world!','artist'],
     ['Senin hikâyen hangi şarkıda?','Which song tells your story?','fan-club/']
   ];
   let index=0, bubbleTimer;
   function suggest() {
-    if (hidden || paused || reduced.matches || document.hidden) return;
+    if (hidden || paused || motionReduced() || document.hidden) return;
     const prompt=prompts[index++ % prompts.length];
-    link.textContent=text(prompt[0],prompt[1]); link.href=url(prompt[2]);
+    link.textContent=text(prompt[0],prompt[1]); link.href=url(prompt[2]==='artist' ? 'artists/'+selected+'/' : prompt[2]);
     bubble.hidden=false; clearTimeout(bubbleTimer);
     bubbleTimer=setTimeout(() => { if (!bubble.contains(document.activeElement)) bubble.hidden=true; },12000);
   }
   function move() {
-    if (placed || drag || hidden || paused || reduced.matches || document.hidden || dancing || mascot.matches(':hover') || mascot.contains(document.activeElement)) return;
+    if (placed || drag || hidden || paused || motionReduced() || document.hidden || dancing || mascot.matches(':hover') || mascot.matches(':focus-visible')) return;
     // Remain in the edge rail, leaving the central page content available.
     const mobile=innerWidth < 700;
     mascot.style.bottom=(mobile ? 12 : 16 + Math.random()*Math.min(180,innerHeight*0.22))+'px';
+    character.style.setProperty('--companion-trick','companion-walk');
+    dancing=true; mascot.classList.add('dancing');
+    clearTimeout(danceTimer);
+    danceTimer=setTimeout(()=>{mascot.classList.remove('dancing');dancing=false;},1800);
   }
   setTimeout(suggest,15000); setInterval(suggest,75000); setInterval(move,14000);
   document.addEventListener('keydown',e => { if (e.key === 'Escape') bubble.hidden=true; });
